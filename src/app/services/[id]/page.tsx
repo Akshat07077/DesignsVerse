@@ -28,7 +28,7 @@ export default async function ServicePost({ params }: ServicePostProps) {
     <main className="mt-[100px] max-w-4xl mx-auto p-2">
       <div className="flex flex-col lg:flex-row gap-5">
         {/* Sidebar with transparent background */}
-        <aside className="w-full  lg:w-1/4 p-5 pt-24 rounded-lg">
+        <aside className="w-full lg:w-1/4 p-5 pt-24 rounded-lg">
           <h2 className="text-xl font-semibold mb-4">Services</h2>
           <ul className="space-y-2">
             <li className="border border-gray-300 p-2 rounded hover:bg-gray-100 cursor-pointer">Website Development</li>
@@ -37,14 +37,14 @@ export default async function ServicePost({ params }: ServicePostProps) {
           </ul>
           <div className="mt-6 w-48 p-4 bg-blue-500 text-white rounded-lg">
             <h3 className="text-lg font-semibold">Let's talk</h3>
-            <p className=" text-sm mt-2">(+550) 647 876 093</p>
-            <p className="text-sm ">support@company.com</p>
-            <button className="mt-4  bg-white text-blue-500 px-4 py-2 rounded border border-white hover:bg-blue-100">Get a call back</button>
+            <p className="text-sm mt-2">(+550) 647 876 093</p>
+            <p className="text-sm">support@company.com</p>
+            <button className="mt-4 bg-white text-blue-500 px-4 py-2 rounded border border-white hover:bg-blue-100">Get a call back</button>
           </div>
         </aside>
 
         {/* Main Content Section */}
-        <section className="w-full  lg:w-3/4">
+        <section className="w-full lg:w-3/4">
           <h1 className="text-4xl font-bold text-left">{post.title}</h1>
 
           {/* Centered Author and Date */}
@@ -56,12 +56,12 @@ export default async function ServicePost({ params }: ServicePostProps) {
           {post.image && (
             <div className="relative mt-6">
               <div className="w-full h-64 bg-gray-200 rounded-lg">
-              <Image
-                src={post.image}
-                alt="Service Post Image"
-                fill
-                className="object-cover rounded-lg"
-              />
+                <Image
+                  src={post.image}
+                  alt="Service Post Image"
+                  fill
+                  className="object-cover rounded-lg"
+                />
               </div>
             </div>
           )}

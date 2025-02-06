@@ -29,7 +29,7 @@ export default async function BlogPost({ params }: BlogPostProps) {
       <h1 className="text-4xl font-bold text-center">{post.title}</h1>
 
       {/* Centered Author and Date */}
-      <div className="flex justify-center  mt-2">
+      <div className="flex justify-center mt-2">
         <p className="text-gray-500 text-right">By {post.author} on {new Date(post.publishedDate).toLocaleDateString()}</p>
       </div>
 
@@ -37,13 +37,14 @@ export default async function BlogPost({ params }: BlogPostProps) {
       {post.image && (
         <div className="relative mt-6">
           <div className="w-full h-64 bg-gray-200 rounded-lg">
-          <Image
-            src={post.image} // Dynamically loaded image path
-            alt="Blog Post Image"
-            width={500} // Provide default width
-            height={300} // Provide default height
-            className="w-full h-full object-cover rounded-lg"
-          />
+            <Image
+              src={post.image} // Dynamically loaded image path
+              alt="Blog Post Image"
+              layout="intrinsic" // Automatically adjusts image size
+              width={500} // Set default width for image
+              height={300} // Set default height for image
+              className="object-cover rounded-lg"
+            />
           </div>
         </div>
       )}
