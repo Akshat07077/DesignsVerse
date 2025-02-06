@@ -13,6 +13,11 @@ const Header = () => {
     setNavbarOpen(!navbarOpen);
   };
 
+  // Function to close navbar
+  const closeNavbar = () => {
+    setNavbarOpen(false);
+  };
+
   // Sticky Navbar
   const [sticky, setSticky] = useState(false);
   const handleStickyNavbar = () => {
@@ -21,10 +26,15 @@ const Header = () => {
     } else {
       setSticky(false);
     }
+    closeNavbar(); // Close navbar on scroll
   };
+
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
-  });
+    return () => {
+      window.removeEventListener("scroll", handleStickyNavbar);
+    };
+  }, []);
 
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
@@ -110,6 +120,7 @@ const Header = () => {
                         {menuItem.path ? (
                           <Link
                             href={menuItem.path}
+                            onClick={closeNavbar} // Close navbar when clicking a menu item
                             className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
                                 ? "text-primary dark:text-white"
@@ -145,6 +156,7 @@ const Header = () => {
                                 <Link
                                   href={submenuItem.path}
                                   key={index}
+                                  onClick={closeNavbar} // Close navbar when clicking a submenu item
                                   className="block rounded py-2.5 text-sm text-dark hover:text-primary dark:text-white/70 dark:hover:text-white lg:px-3"
                                 >
                                   {submenuItem.title}
@@ -158,23 +170,23 @@ const Header = () => {
                   </ul>
                 </nav>
               </div>
-              <div className="flex items-center justify-end pr-16 lg:pr-0">
-                {/* <Link
-                  href="/signin"
-                  className="hidden px-7 py-3 text-base font-medium text-dark hover:opacity-70 dark:text-white md:block"
-                >
-                  Sign In
-                </Link> */}
+              <div className="flex items-center justify-end pr-16 lg:pr-0 space-x-4">
+                {/* "Call Us" Button */}
                 <Link
                   href="tel:+919413466075"
-                  className="ease-in-up shadow-btn hover:shadow-btn-hover hidden rounded-sm bg-primary px-8 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 md:block md:px-9 lg:px-6 xl:px-9"
+                  className="shadow-btn flex items-center hover:shadow-btn-hover rounded-xl bg-primary px-6 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 hidden lg:flex" 
                 >
-                  Call us
+                  <img className="mr-2" src="/images/call.png" alt="Call Icon" />
+                  Call Us
                 </Link>
-                <div>
+
+                {/* Theme Toggler */}
+                <div className="ml-4"> {/* Add margin to the left for spacing */}
                   <ThemeToggler />
                 </div>
               </div>
+
+
             </div>
           </div>
         </div>

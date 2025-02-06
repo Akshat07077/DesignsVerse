@@ -148,17 +148,17 @@ const Footer = () => {
                   Terms
                 </h2>
                 <ul>
-                  <li>
+                  {/* <li>
                     <Link
                       href="/"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       TOS
-                    </Link>
-                  </li>
+                    </Link> 
+                  </li> */}
                   <li>
                     <Link
-                      href="/"
+                      href="/privacy-policy"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Privacy Policy
@@ -166,10 +166,10 @@ const Footer = () => {
                   </li>
                   <li>
                     <Link
-                      href="/"
+                      href="/tos"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
-                      Refund Policy
+                      Terms of Use
                     </Link>
                   </li>
                 </ul>
@@ -190,14 +190,14 @@ const Footer = () => {
                       Open Support Ticket
                     </Link>
                   </li>
-                  <li>
+                  {/* <li>
                     <Link
                       href="/"
                       className="mb-4 inline-block text-base text-body-color duration-300 hover:text-primary dark:text-body-color-dark dark:hover:text-primary"
                     >
                       Terms of Use
                     </Link>
-                  </li>
+                  </li> */}
                   <li>
                     <Link
                       href="/about"

@@ -19,16 +19,17 @@ const Hero = () => {
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
-                    href=""
-                    className="rounded-sm bg-primary px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
+                    href="tel:+919413466075"
+                    className="rounded-xl flex bg-primary px-8 py-4 text-base  font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    🔥 Call Us
+                    <img className="pr-1"  src="/images/call.png" alt="" /> Free Call 
                   </Link>
                   <Link
-                    href=""
-                    className="inline-block rounded-sm bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
+                    target="_blank" 
+                    href="http://api.whatsapp.com/send/?phone=9413466075&text=Hello,%20I%20Want%20to+book+a+free+consultancy+call&type=phone_number&app_absent=0 "
+                    className="inline-block target-blank  rounded-xl bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                   >
-                    Check Now
+                    Book Now 🎯
                   </Link>
                 </div>
               </div>

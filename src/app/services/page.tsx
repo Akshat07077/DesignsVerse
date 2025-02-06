@@ -32,16 +32,16 @@ const Service = () => {
       <section className="pb-[120px] pt-[0px]">
         <div className="container">
           <div className="relative">
-            {/* Scroll Buttons */}
+            {/* Scroll Buttons (hidden on mobile) */}
             <button
               onClick={scrollLeft}
-              className="absolute left-[-50px] z-10 top-1/2 transform -translate-y-1/2 bg-[#4563E2] text-white p-3 rounded-full shadow-lg hover:bg-red-600"
+              className="absolute left-[-50px] z-10 top-1/2 transform -translate-y-1/2 bg-[#4563E2] text-white p-3 rounded-full shadow-lg hover:bg-red-600 hidden md:block"
             >
               <ChevronLeft size={24} />
             </button>
             <button
               onClick={scrollRight}
-              className="absolute right-[-50px] z-10 top-1/2 transform -translate-y-1/2 bg-[#4563E2] text-white p-3 rounded-full shadow-lg hover:bg-red-600"
+              className="absolute right-[-50px] z-10 top-1/2 transform -translate-y-1/2 bg-[#4563E2] text-white p-3 rounded-full shadow-lg hover:bg-red-600 hidden md:block"
             >
               <ChevronRight size={24} />
             </button>
@@ -49,17 +49,16 @@ const Service = () => {
             {/* Slider Container */}
             <div
               ref={sliderRef}
-              className="flex overflow-x-auto gap-6  mt-10 scroll-smooth py-3 px-4 no-scrollbar"
+              className="flex flex-wrap md:flex-nowrap overflow-x-auto gap-6 mt-10 scroll-smooth py-3 px-4 no-scrollbar"
               style={{
                 scrollbarWidth: "none", // For Firefox
-                msOverflowStyle: "none", //or IE and Edge
+                msOverflowStyle: "none", // or IE and Edge
               }}
             >
               {serviceData.map((service) => (
                 <div
                   key={service.id}
-                  className="w-[427px] flex-shrink-0 p-4 rounded-2xl text-center transform transition-transform hover:scale-105 bg-gray-light dark:bg-gray-dark"
-
+                  className="w-full md:w-[427px] flex-shrink-0 p-4 rounded-2xl text-center transform transition-transform hover:scale-105 bg-gray-light dark:bg-gray-dark"
                 >
                   <Link href={`/service/${service.id}`}>
                     <SingleService services={service} />

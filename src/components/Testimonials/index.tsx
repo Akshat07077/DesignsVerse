@@ -38,7 +38,7 @@ const Testimonials = () => {
       <div className="container">
         <SectionTitle
           title="What Our Users Says"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+          paragraph="Our clients trust DesignVerse for delivering exceptional websites, strategic marketing, and impactful branding. Hear what they have to say about their experience with us!"
           center
         />
 
