@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import data from "@/data/servicedata.json";
+import Image from 'next/image';
 
 interface ServicePostProps {
   params: { id: string };
@@ -55,11 +56,12 @@ export default async function ServicePost({ params }: ServicePostProps) {
           {post.image && (
             <div className="relative mt-6">
               <div className="w-full h-64 bg-gray-200 rounded-lg">
-                <img
-                  src={post.image} // Dynamically loaded image path
-                  alt="Service Post Image"
-                  className="w-full h-full object-cover rounded-lg"
-                />
+              <Image
+                src={post.image}
+                alt="Service Post Image"
+                fill
+                className="object-cover rounded-lg"
+              />
               </div>
             </div>
           )}

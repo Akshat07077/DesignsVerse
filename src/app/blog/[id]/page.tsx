@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import data from "@/data/posts.json";
+import Image from 'next/image';
 
 interface BlogPostProps {
   params: { id: string };
@@ -36,11 +37,13 @@ export default async function BlogPost({ params }: BlogPostProps) {
       {post.image && (
         <div className="relative mt-6">
           <div className="w-full h-64 bg-gray-200 rounded-lg">
-            <img
-              src={post.image} // Dynamically loaded image path
-              alt="Blog Post Image"
-              className="w-full h-full object-cover rounded-lg"
-            />
+          <Image
+            src={post.image} // Dynamically loaded image path
+            alt="Blog Post Image"
+            width={500} // Provide default width
+            height={300} // Provide default height
+            className="w-full h-full object-cover rounded-lg"
+          />
           </div>
         </div>
       )}
