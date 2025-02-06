@@ -174,7 +174,7 @@ const Header = () => {
                 {/* "Call Us" Button */}
                 <Link
                   href="tel:+919413466075"
-                  className="shadow-btn flex items-center hover:shadow-btn-hover rounded-xl bg-primary px-6 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90 hidden lg:flex" 
+                  className="shadow-btn flex items-center hover:shadow-btn-hover rounded-xl bg-primary px-6 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90  lg:flex" 
                 >
                   <img className="mr-2" src="/images/call.png" alt="Call Icon" />
                   Call Us
