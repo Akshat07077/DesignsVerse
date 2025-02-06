@@ -1,34 +1,30 @@
 import { notFound } from "next/navigation";
-import { Metadata } from "next";
 import data from "@/data/posts.json";
 import Image from "next/image";
 
-interface BlogPostProps {
-  params: { id: any };
-}
-
-// Fetch metadata for SEO purposes
-export async function generateMetadata({ params }: BlogPostProps): Promise<Metadata> {
+// Fetch metadata for SEO
+export async function generateMetadata({ params }) {
   const post = data.find((post) => post.id === params.id);
   if (!post) return { title: "Post Not Found" };
+  
   return {
     title: post.title,
     description: post.excerpt,
   };
 }
 
-// Generate static paths for dynamic routes
+// Generate static paths
 export async function generateStaticParams() {
   return data.map((post) => ({
-    id: post.id.toString(),
+    id: post.id.toString(), // Ensuring id is always a string
   }));
 }
 
-export default function BlogPost({ params }: { params: { id: any } }) {
+export default function BlogPost({ params }) {
   const post = data.find((post) => post.id === params.id);
 
   if (!post) {
-    notFound();
+    return notFound();
   }
 
   return (
@@ -42,16 +38,16 @@ export default function BlogPost({ params }: { params: { id: any } }) {
         </p>
       </div>
 
-      {/* Dynamically Loaded Image Container */}
+      {/* Blog Post Image */}
       {post.image && (
         <div className="relative mt-6">
           <div className="w-full h-64 bg-gray-200 rounded-lg">
             <Image
               src={post.image}
-              alt="Blog Post Image"
-              width={500}
-              height={300}
-              className="object-cover rounded-lg"
+              alt={post.title}
+              width={800}
+              height={400}
+              className="object-cover rounded-lg w-full h-full"
             />
           </div>
         </div>

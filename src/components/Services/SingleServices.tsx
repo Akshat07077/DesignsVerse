@@ -10,7 +10,7 @@ const SingleServices = ({ services }: { services: Services }) => {
         <Link href={`/services/${id}`} className="relative block aspect-[37/22] w-full">
           <Image src={image} alt="image" fill />
         </Link>
-        <div className="p-6 sm:p-8 md:px-6 md:py-8 lg:p-8 xl:px-5 xl:py-8 2xl:p-8">
+        <div className="p-3">
           <h3>
             <Link href={`/services/${id}`} className="mb-4 block text-xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary sm:text-2xl">
               {title}
