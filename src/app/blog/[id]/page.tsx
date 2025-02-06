@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import { Metadata } from "next";
 import data from "@/data/posts.json";
-import Image from 'next/image';
+import Image from "next/image";
 
 interface BlogPostProps {
-  params: { id: string};
+  params: { id: string };
 }
 
 // Fetch metadata for SEO purposes
@@ -17,7 +17,14 @@ export async function generateMetadata({ params }: BlogPostProps): Promise<Metad
   };
 }
 
-export default async function BlogPost({ params }: BlogPostProps) {
+// Generate static paths for dynamic routes
+export async function generateStaticParams() {
+  return data.map((post) => ({
+    id: post.id.toString(),
+  }));
+}
+
+export default function BlogPost({ params }: BlogPostProps) {
   const post = data.find((post) => post.id === params.id);
 
   if (!post) {
@@ -30,7 +37,9 @@ export default async function BlogPost({ params }: BlogPostProps) {
 
       {/* Centered Author and Date */}
       <div className="flex justify-center mt-2">
-        <p className="text-gray-500 text-right">By {post.author} on {new Date(post.publishedDate).toLocaleDateString()}</p>
+        <p className="text-gray-500 text-right">
+          By {post.author} on {new Date(post.publishedDate).toLocaleDateString()}
+        </p>
       </div>
 
       {/* Dynamically Loaded Image Container */}
@@ -38,11 +47,10 @@ export default async function BlogPost({ params }: BlogPostProps) {
         <div className="relative mt-6">
           <div className="w-full h-64 bg-gray-200 rounded-lg">
             <Image
-              src={post.image} // Dynamically loaded image path
+              src={post.image}
               alt="Blog Post Image"
-              layout="intrinsic" // Automatically adjusts image size
-              width={500} // Set default width for image
-              height={300} // Set default height for image
+              width={500}
+              height={300}
               className="object-cover rounded-lg"
             />
           </div>
