@@ -24,7 +24,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function BlogPost({ params }: BlogPostProps) {
+export default function BlogPost({ params }: { params: { id: string } }) {
   const post = data.find((post) => post.id === params.id);
 
   if (!post) {
