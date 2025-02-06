@@ -1,4 +1,5 @@
 import { FC } from "react";
+import Image from 'next/image';
 
 interface BlogDetailProps {
   blog: {
@@ -18,17 +19,22 @@ const BlogDetail: FC<BlogDetailProps> = ({ blog }) => {
       <div className="container mx-auto max-w-4xl">
         <h1 className="text-4xl font-bold text-primary">{blog.title}</h1>
         <p className="mt-2 text-sm text-gray-600">Published on {blog.publishDate}</p>
-        <img
-          src={blog.image}
-          alt={blog.title}
-          className="mt-8 w-full rounded-lg"
+        <Image
+          src={blog.image} // Dynamically loaded image path
+          alt={blog.title} // Image alt text
+          width={1200} // Set the width of the image (you can adjust as needed)
+          height={800} // Set the height of the image (you can adjust as needed)
+          className="mt-8 w-full rounded-lg" // Retain the styling for full width and rounded corners
+          layout="intrinsic" // Ensures the image is displayed with its intrinsic aspect ratio
         />
         <p className="mt-6 text-lg text-body-color">{blog.paragraph}</p>
         <div className="mt-6 flex items-center">
-          <img
-            src={blog.author.image}
-            alt={blog.author.name}
-            className="h-10 w-10 rounded-full"
+        <Image
+            src={blog.author.image} // Dynamically loaded image path
+            alt={blog.author.name} // Image alt text
+            width={40} // Set the width of the image
+            height={40} // Set the height of the image
+            className="rounded-full" // Class to keep the round shape
           />
           <div className="ml-4">
             <h4 className="text-sm font-semibold">{blog.author.name}</h4>

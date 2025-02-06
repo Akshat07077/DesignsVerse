@@ -36,7 +36,7 @@ export default async function ServicePost({ params }: ServicePostProps) {
             <li className="border border-gray-300 p-2 rounded hover:bg-gray-100 cursor-pointer">App Development</li>
           </ul>
           <div className="mt-6 w-48 p-4 bg-blue-500 text-white rounded-lg">
-            <h3 className="text-lg font-semibold">Let's talk</h3>
+            <h3 className="text-lg font-semibold">Let&apos;s talk</h3>
             <p className="text-sm mt-2">(+550) 647 876 093</p>
             <p className="text-sm">support@company.com</p>
             <button className="mt-4 bg-white text-blue-500 px-4 py-2 rounded border border-white hover:bg-blue-100">Get a call back</button>
