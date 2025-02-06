@@ -4,7 +4,7 @@ import data from "@/data/posts.json";
 import Image from "next/image";
 
 interface BlogPostProps {
-  params: { id: string };
+  params: { id: any };
 }
 
 // Fetch metadata for SEO purposes
@@ -24,7 +24,7 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function BlogPost({ params }: { params: { id: string } }) {
+export default function BlogPost({ params }: { params: { id: any } }) {
   const post = data.find((post) => post.id === params.id);
 
   if (!post) {
