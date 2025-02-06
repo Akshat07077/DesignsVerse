@@ -4,7 +4,7 @@ import data from "@/data/posts.json";
 import Image from 'next/image';
 
 interface BlogPostProps {
-  params: { id: string };
+  params: { id: any};
 }
 
 // Fetch metadata for SEO purposes
