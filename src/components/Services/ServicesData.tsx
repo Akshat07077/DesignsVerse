@@ -3,7 +3,7 @@ import { Services } from "@/types/services";
 const servicesData: Services[] = [
   {
     id: 1,
-    title: "Custom Website Development",
+    title: "Website Development",
     paragraph:
       "We build high-performance, mobile-friendly, and SEO-optimized websites tailored to your business needs. Our responsive designs ensure a seamless user experience, fast loading speeds, and top-tier search engine rankings to drive organic traffic.",
     image: "/images/services/1.png",

@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import data from "@/data/servicedata.json";
 import Link from "next/link";
 
+
 // Fetch metadata for SEO
 export async function generateMetadata({ params }) {
   const post = data.find((post) => post.id === params.id);
@@ -25,8 +26,8 @@ export default async function ServicePost({ params }) {
         {/* Main Content */}
         <section className="w-full lg:w-2/3 border p-6 rounded-lg shadow-md">
           <h1 className="text-4xl font-bold text-left">{post.title}</h1>
-          <p className="text-gray-500 text-left">
-            By {post.author} on {new Date(post.publishedDate).toLocaleDateString()}
+          <p className="text-gray-500   pl-1 text-left">
+             By {post.author} 
           </p>
 
           {/* Video Section */}
@@ -44,24 +45,39 @@ export default async function ServicePost({ params }) {
           )}
 
           {/* Service Description */}
-          <article className="prose lg:prose-xl text-left mt-6">
-            <div dangerouslySetInnerHTML={{ __html: post.content }} />
+          <article className="prose lg:prose-xl justify-text text-left mt-6">
+            <div className="text-justify" dangerouslySetInnerHTML={{ __html: post.content }} />
           </article>
           
-          {/* Small Image with Content Below Main Content */}
-          <div className="flex flex-col md:flex-row items-center gap-6 mt-8 border p-4 rounded-lg">
-            <img src={post.smallImage} alt="Small Image" className="w-60 h-80 object-cover rounded-lg" />
-            <div>
-              <h3 className="text-2xl font-semibold">Points</h3>
-              <ul className="text-gray-600 space-y-2 mt-2">
-                {post.points?.map((point, index) => (
-                  <li key={index} className="flex items-center">
-                    <span className="text-blue-500 mr-2">✔</span> {point}
-                  </li>
-                ))}
-              </ul>
-            </div>
+          <div className="flex flex-col md:flex-row items-center md:items-start gap-3 mt-8 border p-4 rounded-lg shadow-lg">
+          {/* Video Section - Slightly Bigger */}
+          <div className="mt-5 relative w-[250px] h-[300px] rounded-lg overflow-hidden">
+            <video 
+              src={post.smallVideo} 
+              autoPlay 
+              loop 
+              muted 
+              playsInline
+              className="w-full h-full object-cover rounded-lg"
+            />
           </div>
+
+          {/* Content Section */}
+          <div className="flex-1">
+            <h3 className="text-2xl font-semibold">{post.heading}</h3>
+            <ul className="text-black  dark:text-gray-200 space-y-2 mt-2">
+              {post.points?.map((point, index) => (
+                <li key={index} className="flex text-s items-start">
+                  <span className="text-blue-500 mr-2">✔</span> 
+                  <span>{point}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+
+
           
         </section>
 
@@ -76,9 +92,9 @@ export default async function ServicePost({ params }) {
                   <span className="text-blue-500">→</span>
                 </Link>
               </li>
+              
             ))}
           </ul>
-
           <div className="mt-6 space-y-4">
             {/* Brochure Section */}
             <div className="p-4 bg-blue-500 text-white rounded-lg">
@@ -93,9 +109,16 @@ export default async function ServicePost({ params }) {
           </div>
           
           {/* Sidebar Image */}
-          <div className="mt-8 flex justify-center">
-            <img src={post.sidebarImage} alt="Sidebar Image" className="w-full h-150 object-cover rounded-lg shadow-md" />
-          </div>
+          <div className="relative mt-20 w-full rounded-lg overflow-hidden">
+              <video 
+                src="/video/sbimg.mp4" 
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-[400px] object-cover rounded-lg"
+              />
+            </div>
         </aside>
       </div>
     </main>
