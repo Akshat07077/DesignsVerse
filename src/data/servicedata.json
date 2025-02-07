@@ -5,52 +5,106 @@
     "author": "Author Name",
     "publishedDate": "2025-02-06",
     "excerpt": "This is an excerpt of the post.",
-    "content": "<p>This is the content about web development. There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>",
-    "video": "/video/services-icon/1.mp4"
+    "content": "<p>This is the content about web development...</p>",
+    "video": "/video/services-icon/1.mp4",
+    "smallImage": "/images/services/web-development-small.jpg",
+    "sidebarImage": "/images/services/web-development-sidebar.jpg",
+    "points": [
+      "Responsive Design",
+      "SEO Optimization",
+      "Fast Loading Speed",
+      "SEO Optimization",
+      "Fast Loading Speed"
+    ]
   },
   {
     "id": "2",
-    "title": "Post Title 2",
+    "title": "App Development",
     "author": "Author Name",
     "publishedDate": "2025-02-07",
     "excerpt": "This is another excerpt.",
-    "content": "<p>This is more content about another topic. There are many variations of passages of Lorem Ipsum available.</p>",
-    "video": "/video/services-icon/2.mp4"
+    "content": "<p>This is more content about app development...</p>",
+    "video": "/video/services-icon/2.mp4",
+    "smallImage": "/images/services/app-development-small.jpg",
+    "sidebarImage": "/images/services/app-development-sidebar.jpg",
+    "points": [
+      "Cross-Platform Apps",
+      "User-Friendly UI",
+      "High Performance",
+      "User-Friendly UI",
+      "High Performance"
+    ]
   },
   {
     "id": "3",
-    "title": "Post Title 3",
+    "title": "Digital Marketing",
     "author": "Author Name",
     "publishedDate": "2025-02-07",
     "excerpt": "This is another excerpt.",
-    "content": "<p>This is more content about another topic. There are many variations of passages of Lorem Ipsum available.</p>",
-    "video": "/video/services-icon/3.mp4"
+    "content": "<p>This is more content about digital marketing...</p>",
+    "video": "/video/services-icon/3.mp4",
+    "smallImage": "/images/services/digital-marketing-small.jpg",
+    "sidebarImage": "/images/services/digital-marketing-sidebar.jpg",
+    "points": [
+      "Social Media Ads",
+      "SEO & PPC",
+      "Lead Generation",
+      "SEO & PPC",
+      "Lead Generation"
+    ]
   },
   {
     "id": "4",
-    "title": "Post Title 4",
+    "title": "Graphic Design",
     "author": "Author Name",
     "publishedDate": "2025-02-07",
     "excerpt": "This is another excerpt.",
-    "content": "<p>This is more content about another topic. There are many variations of passages of Lorem Ipsum available.</p>",
-    "video": "/video/services-icon/4.mp4"
+    "content": "<p>This is more content about graphic design...</p>",
+    "video": "/video/services-icon/4.mp4",
+    "smallImage": "/images/services/graphic-design-small.jpg",
+    "sidebarImage": "/images/services/graphic-design-sidebar.jpg",
+    "points": [
+      "Logo & Branding",
+      "UI/UX Design",
+      "Custom Illustrations",
+      "UI/UX Design",
+      "Custom Illustrations"
+    ]
   },
   {
     "id": "5",
-    "title": "Post Title 5",
+    "title": "Cyber Security",
     "author": "Author Name",
     "publishedDate": "2025-02-07",
     "excerpt": "This is another excerpt.",
-    "content": "<p>This is more content about another topic. There are many variations of passages of Lorem Ipsum available.</p>",
-    "video": "/video/services-icon/5.mp4"
+    "content": "<p>This is more content about cyber security...</p>",
+    "video": "/video/services-icon/5.mp4",
+    "smallImage": "/images/services/cyber-security-small.jpg",
+    "sidebarImage": "/images/services/cyber-security-sidebar.jpg",
+    "points": [
+      "Threat Detection",
+      "Data Protection",
+      "Network Security",
+      "Data Protection",
+      "Network Security"
+    ]
   },
   {
     "id": "6",
-    "title": "Post Title 6",
+    "title": "Cloud Solutions",
     "author": "Author Name",
     "publishedDate": "2025-02-07",
     "excerpt": "This is another excerpt.",
-    "content": "<p>This is more content about another topic. There are many variations of passages of Lorem Ipsum available.</p>",
-    "video": "/video/services-icon/6.mp4"
+    "content": "<p>This is more content about cloud solutions...</p>",
+    "video": "/video/services-icon/6.mp4",
+    "smallImage": "/images/services/cloud-solutions-small.jpg",
+    "sidebarImage": "/images/services/cloud-solutions-sidebar.jpg",
+    "points": [
+      "Scalable Servers",
+      "Data Backup",
+      "24/7 Monitoring",
+      "Data Backup",
+      "24/7 Monitoring"
+    ]
   }
 ]
