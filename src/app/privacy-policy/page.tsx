@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 lg:w-2/3">
+            <div className="w-full px-4 lg:w-2/3 mt-[50px] mb-[80px]" >
               <SectionTitle
                 title="Privacy Policy"
                 paragraph="We are committed to protecting your personal information. This privacy policy outlines how we collect, use, and safeguard your data."

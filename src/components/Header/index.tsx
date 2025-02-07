@@ -171,15 +171,14 @@ const Header = () => {
                 </nav>
               </div>
               <div className="flex items-center justify-end pr-16 lg:pr-0 space-x-4">
-                {/* "Call Us" Button */}
+                {/* "Call Us" Button - Hidden on small screens, visible on large screens */}
                 <Link
                   href="tel:+919413466075"
-                  className="shadow-btn flex items-center hover:shadow-btn-hover rounded-xl bg-primary px-6 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90  lg:flex" 
+                  className="hidden md:flex shadow-btn items-center hover:shadow-btn-hover rounded-xl bg-primary px-6 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90"
                 >
                   <img className="mr-2" src="/images/call.png" alt="Call Icon" />
                   Call Us
                 </Link>
-
                 {/* Theme Toggler */}
                 <div className="ml-4"> {/* Add margin to the left for spacing */}
                   <ThemeToggler />

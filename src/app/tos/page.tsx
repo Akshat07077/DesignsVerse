@@ -18,7 +18,7 @@ const TermsOfUse = () => {
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 lg:w-2/3">
+            <div className="w-full px-4 lg:w-2/3 mt-[50px] mb-[100px]">
               <SectionTitle
                 title="Terms of Use"
                 paragraph="By using our services, you agree to abide by the following terms and conditions."
