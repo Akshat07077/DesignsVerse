@@ -5,8 +5,8 @@ import featuresData from "./featuresData";
 const Features = () => {
   return (
     <>
-      <section id="features" className="py-16 md:py-20 lg:py-28">
-        <div className="container">
+      <section id="features" className="py-16 md:py-20 lg:py-28 ">
+        <div className="container "> {/*bg-[#F0F2F9] */ }
           <SectionTitle
             title="Main Features"
             paragraph="At DesignsVerse, we specialize in website development, digital marketing, and personal branding, delivering innovative solutions that drive success."

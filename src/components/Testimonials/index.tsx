@@ -59,7 +59,7 @@ const Testimonials = () => {
   }, []);
 
   return (
-    <section className="relative z-10 py-16 md:py-20 lg:py-28 overflow-hidden bg-gray-900">
+    <section className="relative z-10 py-16 md:py-20 lg:py-28 overflow-hidden bg-[#F0F2F9] dark:bg-[black]">
       
 
       <div className="container col-span-1 relative z-10">
