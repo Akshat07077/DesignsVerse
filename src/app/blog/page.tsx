@@ -3,6 +3,13 @@ import SingleBlog from "@/components/Blog/SingleBlog";
 import Link from "next/link";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
+import { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Blog Page | Insights on Web Development, Digital Marketing & Branding |",
+  description: "Stay updated with the latest trends in website development, digital marketing, and personal branding. Read expert insights, industry tips, and strategies from DesignsVerse to enhance your online presence and business growth. "
+  // other metadata
+};
 const Blog = () => {
   return (
     <>
