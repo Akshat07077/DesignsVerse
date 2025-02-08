@@ -9,15 +9,14 @@ const SingleServices = ({ services }: { services: Services }) => {
       <div className="group relative overflow-hidden rounded-md bg-white shadow-one duration-300 hover:shadow-two dark:bg-dark dark:hover:shadow-gray-dark mb-8">
         <Link href={`/services/${id}`} className="relative block w-full">
           <div className="relative w-full h-[200px] md:h-[250px] lg:h-[280px] overflow-hidden">
-            <Image
-              loading="lazy"
-              src={image}
-              alt="image"
-              layout="intrinsic"
-              width={500} // Set a defined width
-              height={300} // Set a defined height
-              className="rounded-md object-cover"
-            />
+          <Image
+            src={image}
+            alt="image"
+            width={500}
+            height={300}
+            priority // Ensures it loads early
+            className="rounded-md object-cover"
+          />
           </div>
         </Link>
         <div className="p-4">
