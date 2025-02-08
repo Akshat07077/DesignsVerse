@@ -18,6 +18,7 @@ const TermsOfUse = () => {
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap">
+            {/* Left Side - Terms Content */}
             <div className="w-full px-4 lg:w-2/3 mt-[50px] mb-[100px]">
               <SectionTitle
                 title="Terms of Use"
@@ -32,6 +33,22 @@ const TermsOfUse = () => {
                 <PolicyPoint text="All content and trademarks are the property of our company." />
               </div>
             </div>
+
+            {/* Right Side - Animated Video */}
+            <div className="w-full pr-25 px-4 lg:w-1/3 flex justify-center items-center">
+              <video
+                width="100%"
+                height="auto"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="rounded-lg shadow-lg"
+              >
+                <source src="/video/termofuse.mp4" type="video/mp4" />
+                
+              </video>
+            </div>
           </div>
         </div>
       </div>
@@ -39,4 +56,4 @@ const TermsOfUse = () => {
   );
 };
 
-export default TermsOfUse;
+export default TermsOfUse;

@@ -1,6 +1,5 @@
 import SectionTitle from "@/components/Common/SectionTitle";
 
-
 const PrivacyPolicy = () => {
   const PolicyPoint = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">
@@ -19,7 +18,8 @@ const PrivacyPolicy = () => {
       <div className="container">
         <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
           <div className="-mx-4 flex flex-wrap">
-            <div className="w-full px-4 lg:w-2/3 mt-[50px] mb-[80px]" >
+            {/* Left Side - Text Content */}
+            <div className="w-full px-4 lg:w-2/3 mt-[50px] mb-[80px]">
               <SectionTitle
                 title="Privacy Policy"
                 paragraph="We are committed to protecting your personal information. This privacy policy outlines how we collect, use, and safeguard your data."
@@ -32,6 +32,21 @@ const PrivacyPolicy = () => {
                 <PolicyPoint text="Cookies are used to enhance user experience and analyze traffic." />
                 <PolicyPoint text="You can opt-out of communications and request data deletion anytime." />
               </div>
+            </div>
+
+            {/* Right Side - Animated Video */}
+            <div className="w-full pr-25 px-4 lg:w-1/3 flex justify-center items-center">
+              <video
+                width="100%"
+                height="auto"
+                autoPlay
+                loop
+                muted
+                playsInline
+                className="rounded-lg shadow-lg"
+              >
+                <source src="/video/privatpolicy.mp4" type="video/mp4" />
+              </video>
             </div>
           </div>
         </div>
