@@ -35,6 +35,7 @@ export default async function ServicePost({ params }) {
             <div className="relative mt-6 w-full rounded-lg overflow-hidden">
               <video 
                 src={post.video} 
+                alt='video'
                 autoPlay 
                 loop 
                 muted 
@@ -112,6 +113,7 @@ export default async function ServicePost({ params }) {
           <div className="relative mt-20 w-full rounded-lg overflow-hidden">
               <video 
                 src="/video/sbimg.mp4" 
+                alt='video'
                 autoPlay 
                 loop 
                 muted 

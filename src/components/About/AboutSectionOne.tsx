@@ -54,7 +54,7 @@ const AboutSectionOne = () => {
                 whileHover={{ scale: 1.05 }}
                 className="relative mx-auto aspect-[25/24] max-w-[450px] md:max-w-[500px] lg:max-w-[550px]"
               >
-                <video src="video/s1.mp4" width="100%" autoPlay loop muted className="rounded-lg shadow-lg w-full h-[500px]" />
+                <video  src="video/s1.mp4" width="100%" autoPlay loop muted className="rounded-lg shadow-lg w-full h-[500px]" />
               </motion.div>
             </div>
           </div>
