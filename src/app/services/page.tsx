@@ -6,13 +6,13 @@ import SingleService from "@/components/Services/SingleServices";
 import Link from "next/link";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { Metadata } from "next";
+// import { Metadata } from "next";
 
-export const metadata: Metadata = {
-  title: "Services | Expert Website Development & Digital Marketing | DesignsVerse",
-  description: "Explore our premium website development, digital marketing, and personal branding services at DesignsVerse. We craft SEO-friendly websites, powerful marketing strategies, and brand identities to elevate your online presence."
-  // other metadata
-};
+// export const metadata: Metadata = {
+//   title: "Services | Expert Website Development & Digital Marketing | DesignsVerse",
+//   description: "Explore our premium website development, digital marketing, and personal branding services at DesignsVerse. We craft SEO-friendly websites, powerful marketing strategies, and brand identities to elevate your online presence."
+//   // other metadata
+// };
 
 const Service = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
