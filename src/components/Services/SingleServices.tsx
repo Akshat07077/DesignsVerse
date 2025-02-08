@@ -10,6 +10,7 @@ const SingleServices = ({ services }: { services: Services }) => {
         <Link href={`/services/${id}`} className="relative block w-full">
           <div className="relative w-full h-[200px] md:h-[250px] lg:h-[280px] overflow-hidden">
             <Image
+              loading="lazy"
               src={image}
               alt="image"
               layout="intrinsic"
