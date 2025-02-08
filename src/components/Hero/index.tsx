@@ -22,7 +22,7 @@ const Hero = () => {
                     href="tel:+919413466075"
                     className="rounded-xl flex bg-primary px-8 py-4 text-base  font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    <img className="pr-1"  src="/images/call.png" alt="" /> Free Call 
+                    <img className="pr-1"  src="/images/call.png" alt="img" /> Free Call 
                   </Link>
                   <Link
                     target="_blank" 
