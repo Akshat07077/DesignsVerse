@@ -1,3 +1,4 @@
+"use client";
 
 import { useRef } from "react";
 import serviceData from "@/components/Services/ServicesData";
@@ -12,6 +13,7 @@ export const metadata: Metadata = {
   description: "Explore our premium website development, digital marketing, and personal branding services at DesignsVerse. We craft SEO-friendly websites, powerful marketing strategies, and brand identities to elevate your online presence."
   // other metadata
 };
+
 const Service = () => {
   const sliderRef = useRef<HTMLDivElement>(null);
 
@@ -63,7 +65,6 @@ const Service = () => {
               {serviceData.map((service) => (
                 <div
                   key={service.id}
-      
                   className="w-full md:w-[427px] flex-shrink-0 p-4 rounded-2xl text-center transform transition-transform hover:scale-105 bg-gray-light dark:bg-gray-dark"
                 >
                   <Link href={`/service/${service.id}`}>
@@ -80,3 +81,4 @@ const Service = () => {
 };
 
 export default Service;
+
