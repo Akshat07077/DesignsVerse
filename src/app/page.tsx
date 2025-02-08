@@ -10,18 +10,36 @@ import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Metadata } from "next";
+import Head from "next/head";  // Import Head for adding Schema
 import Service from "./services/page";
 
 export const metadata: Metadata = {
   title: "DesignsVerse",
   description: "India's Leading Solutions providing Agency",
-  // other metadata
-  
 };
 
 export default function Home() {
   return (
     <>
+      <Head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "DesignsVerse",
+              "url": "https://designsverse.vercel.app/",
+              "description": "India's Leading Solutions providing Agency",
+              "publisher": {
+                "@type": "Organization",
+                "name": "DesignsVerse",
+              },
+            }),
+          }}
+        />
+      </Head>
+
       <ScrollUp />
       <Hero />
       <Features />
@@ -33,8 +51,6 @@ export default function Home() {
       <Pricing />
       <Blog />
       <Contact />
-      
-      
     </>
   );
 }
