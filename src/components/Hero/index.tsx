@@ -11,7 +11,7 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
-                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight">
+                <h1 className="mb-5 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight md:text-4x1 md:leading-tight">
                 Transforming Brands with Cutting-Edge Digital Solutions
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
@@ -22,7 +22,7 @@ const Hero = () => {
                     href="tel:+919413466075"
                     className="rounded-xl flex bg-primary px-8 py-4 text-base  font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
                   >
-                    <img className="pr-1"  src="/images/call.png" alt="free-Call" /> Free Call 
+                    <img className="pr-1"  src="/images/call.png" width="auto" height="auto" alt="free-Call" /> Free Call 
                   </Link>
                   <Link
                     target="_blank" 
