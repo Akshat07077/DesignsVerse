@@ -1,5 +1,5 @@
 "use client";
-
+import { siteMetadata } from "@/types/metadata";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import ScrollToTop from "@/components/ScrollToTop";
@@ -24,19 +24,13 @@ export default function RootLayout({
   return (
     <html suppressHydrationWarning lang="en">
       <Head>
-        {/* Open Graph Meta Tags */}
-        <meta property="og:title" content="DesignsVerse - The Best Designs & Inspiration" />
-        <meta property="og:type" content="website" />
+      <Head>
+        <meta property="og:title" content={siteMetadata.title} />
+        <meta property="og:description" content={siteMetadata.description} />
         <meta property="og:url" content={fullUrl} />
-        <meta property="og:image" content={`${baseUrl}/og-image.jpg`} />
-        <meta property="og:description" content="Get the latest design inspiration, UI/UX ideas, and creative projects on DesignsVerse." />
-        <meta property="og:site_name" content="DesignsVerse" />
-        
-        {/* Twitter Card Meta Tags */}
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="DesignsVerse - The Best Designs & Inspiration" />
-        <meta name="twitter:description" content="Get the latest design inspiration, UI/UX ideas, and creative projects on DesignsVerse." />
-        <meta name="twitter:image" content={`${baseUrl}/og-image.jpg`} />
+        <meta property="og:image" content={`${baseUrl}${siteMetadata.image}`} />
+      </Head>
+
       </Head>
       
       <body className={`bg-[#FCFCFC] dark:bg-black ${inter.className}`}>
