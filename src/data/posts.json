@@ -6,24 +6,9 @@
     "publishedDate": "2024-10-06",
     "author": "Harsh",
     "content": "<p>This is a blog post content</p>",
-    "image": "/path/to/image.jpg" 
-  },
-  {
-    "id": "2",
-    "title": "Sample Post",
-    "excerpt": "This is a sample post",
-    "publishedDate": "2024-10-06",
-    "author": "Harsh",
-    "content": "<p>This is a blog post content</p>",
-    "image": "/path/to/image.jpg"
-  },
-  {
-    "id": "3",
-    "title": "Sample Post",
-    "excerpt": "This is a sample post",
-    "publishedDate": "2024-10-06",
-    "author": "Harsh",
-    "content": "<p>This is a blog post content</p>",
-    "image": "/path/to/image.jpg"
+    "image": "/images/blog-01.jpg",
+    "dynamicTitle":"harsh",
+    "video":"/video/Blog/blog-1.mp4",
+    "dynamicContent":"ahakfhksadfhkshfd"
   }
 ]
