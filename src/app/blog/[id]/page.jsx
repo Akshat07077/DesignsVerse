@@ -28,7 +28,7 @@ export default function BlogPost({ params }) {
   }
 
   return (
-    <main className="mt-[100px] max-w-4xl mx-auto p-6">
+    <main className="w-full min-h-screen flex flex-col justify-center items-center pt-24 p-6 bg-[#121723]">
       <h1 className="text-4xl font-bold text-center">{post.title}</h1>
 
       {/* Centered Author and Date */}
@@ -38,25 +38,35 @@ export default function BlogPost({ params }) {
         </p>
       </div>
 
-      {/* Blog Post Image */}
-      {post.image && (
-        <div className="relative mt-6">
-          <div className="w-full h-64 bg-gray-200 rounded-lg">
-            <Image
-              src={post.image}
-              alt={post.title}
-              width={800}
-              height={400}
-              className="object-cover rounded-lg w-full h-full"
-            />
+      {/* Remote Work Section */}
+      <div className="w-full h-full flex items-center justify-center p-4">
+        <div className="w-full flex flex-col md:flex-row items-center">
+          <div className="md:w-1/2 p-4">
+            <h1 className="text-4xl font-bold text-white mb-4">
+              How remote work drastically improved my skills as a designer
+            </h1>
+            <p className="text-lg text-white">
+              Remote working might not only be feasible but beneficial. Stanford University found that
+              remote employees were 13% more productive, with absolutely “no difference in the
+              effectiveness, performance ratings, or promotions”.
+            </p>
+          </div>
+          <div className="md:w-1/2 p-4">
+          {post.video && (
+              <video
+                src={post.video}
+                width="100%"
+                height="100%"
+                autoPlay
+                loop
+                muted
+                className="rounded-lg"
+                controls
+              />
+            )}
           </div>
         </div>
-      )}
-
-      {/* Blog Post Content */}
-      <article className="prose lg:prose-xl text-justify p-1 mt-6">
-        <div dangerouslySetInnerHTML={{ __html: post.content }} />
-      </article>
+      </div>
     </main>
   );
 }
