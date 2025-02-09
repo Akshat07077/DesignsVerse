@@ -14,7 +14,7 @@ import Service from "./services/page";
 
 export const metadata: Metadata = {
   title: "DesignsVerse",
-  description: "India's Leading Solutions providing Agency",
+  description: "DesignsVerse is an India's leading digital solutions agency offering custom website development, ERP software, digital marketing, UI/UX design, mobile app development, and branding services to enhance your online presence and drive business growth.",
   // other metadata
   
 };
