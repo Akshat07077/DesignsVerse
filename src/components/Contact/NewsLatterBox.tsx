@@ -11,8 +11,8 @@ const NewsLatterBox = () => {
         Subscribe to receive future updates
       </h3>
       <p className="mb-11 border-b border-body-color border-opacity-25 pb-11 text-base leading-relaxed text-body-color dark:border-white dark:border-opacity-25">
-        Lorem ipsum dolor sited Sed ullam corper consectur adipiscing Mae ornare
-        massa quis lectus.
+     Join the DesignsVerse Community!
+Stay ahead in the world of design with exclusive insights, industry trends, and creative inspiration—delivered straight to your inbox!
       </p>
       <div>
         <input
