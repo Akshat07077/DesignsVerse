@@ -15,7 +15,8 @@ const AboutPage = () => {
     <>
       <Breadcrumb
         pageName="About Page"
-        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
+        description="Welcome to DesignsVerse – Where Creativity Meets Innovation!
+At DesignsVerse, we believe that design is more than just aesthetics—it's an experience, a story, and a powerful tool for transformation. Our mission is to inspire, educate, and empower designers, businesses, and creative enthusiasts with cutting-edge insights and trends."
       />
       <AboutSectionOne />
       <AboutSectionTwo />
