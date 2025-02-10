@@ -28,15 +28,15 @@ export default function BlogPost({ params }) {
   }
 
   return (
-    <main className="mt-20  w-full min-h-screen flex flex-col items-center pt-24 px-6 md:px-10 lg:px-20 bg-[#121723]">
+    <main className="mt-20 w-full min-h-screen flex flex-col items-center pt-24 px-6 md:px-10 lg:px-20 bg-white dark:bg-[#121723] text-black dark:text-white transition-colors duration-300">
       {/* Blog Content Section */}
       <div className="w-full mb-30 flex flex-col lg:flex-row items-center lg:items-start gap-10">
         {/* Text Content */}
         <div className="lg:w-2/3 flex flex-col items-start">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 text-center lg:text-left">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center lg:text-left">
             {post.title}
           </h1>
-          <p className="text-base sm:text-lg text-justify text-white leading-relaxed">
+          <p className="text-base sm:text-lg text-justify leading-relaxed">
             {post.content} 
           </p>
         </div>
@@ -56,7 +56,7 @@ export default function BlogPost({ params }) {
       </div>
 
       {/* New Section with Image on Left & Text on Right */}
-      <div className="w-full flex flex-col md:flex-row items-center md:items-start gap-6 mt-12 p-6 bg-gray-800 rounded-lg">
+      <div className="w-full flex flex-col md:flex-row items-center md:items-start gap-6 mt-12 p-6 bg-gray-200 dark:bg-gray-800 rounded-lg transition-colors duration-300">
         {/* Left Side Image */}
         <div className="w-full md:w-1/3 flex justify-center">
           {post.extraImage && (
@@ -71,9 +71,9 @@ export default function BlogPost({ params }) {
         </div>
 
         {/* Right Side Text */}
-        <div className="w-full md:w-2/3 text-white text-justify mb-30">
+        <div className="w-full md:w-2/3 text-justify">
           <h2 className="text-xl md:text-2xl font-bold mb-2">{post.extraHeading}</h2>
-          <p className=" text-justify md:text-lg leading-relaxed">jjj{post.extraContent}</p>
+          <p className="md:text-lg leading-relaxed">{post.extraContent}</p>
         </div>
       </div>
     </main>
