@@ -15,7 +15,7 @@ const Hero = () => {
                     Transforming Brands with Cutting-Edge Digital Solutions
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                We help businesses build powerful websites, streamline operations with ERP solutions, and grow online through strategic digital marketing. Let&aposs take your brand to the next level.
+                We help businesses build powerful websites, streamline operations with ERP solutions, and grow online through strategic digital marketing. Let's take your brand to the next level.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
                   <Link
