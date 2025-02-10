@@ -4,12 +4,12 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import SectionTitle from "../Common/SectionTitle";
 import SingleBlog from "./SingleBlog";
 import blogData from "./blogData";
+import Link from "next/link";
 
 const Blog = () => {
   const sliderRef = useRef(null);
-
   const scrollAmount = 3 * 300; // Adjusted for 3 items per scroll
-
+  
   const scrollLeft = () => {
     if (sliderRef.current) {
       sliderRef.current.scrollBy({ left: -scrollAmount, behavior: "smooth" });
@@ -33,36 +33,45 @@ const Blog = () => {
 
         {/* Scroll Buttons */}
         <section className="pb-[120px] pt-[10px]">
-        <div className="container"> 
-        <div className="relative">
-          <button
-            onClick={scrollLeft}
-            className="absolute left-[-50px] z-10 top-1/2 transform -translate-y-1/2 bg-[#4563E2] text-white p-3 rounded-full shadow-lg hover:bg-red-600 hidden md:block"
-          >
-            <ChevronLeft size={24} />
-          </button>
-          <button
-            onClick={scrollRight}
-            className="absolute right-[-50px] z-10 top-1/2 transform -translate-y-1/2 bg-[#4563E2] text-white p-3 rounded-full shadow-lg hover:bg-red-600 hidden md:block"
-          >
-            <ChevronRight size={24} />
-          </button>
+          <div className="container">
+            <div className="relative">
+              <button
+                onClick={scrollLeft}
+                className="absolute left-[-50px] z-10 top-1/2 transform -translate-y-1/2 bg-[#4563E2] text-white p-3 rounded-full shadow-lg hover:bg-red-600 hidden md:block"
+              >
+                <ChevronLeft size={24} />
+              </button>
+              <button
+                onClick={scrollRight}
+                className="absolute right-[-50px] z-10 top-1/2 transform -translate-y-1/2 bg-[#4563E2] text-white p-3 rounded-full shadow-lg hover:bg-red-600 hidden md:block"
+              >
+                <ChevronRight size={24} />
+              </button>
 
-          {/* Slider Container */}
-          <div
-            ref={sliderRef}
-            className="flex flex-wrap md:flex-nowrap overflow-x-auto gap-6 mt-10 scroll-smooth py- px-4 no-scrollbar"
-            style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
-          >
-            {blogData.map((blog) => (
-              <div key={blog.id} className="w-full md:w-[427px] flex-shrink-0 p-4 rounded-2xl text-center transform transition-transform hover:scale-105 bg-gray-light dark:bg-gray-dark">
-                <SingleBlog blog={blog} />
+              {/* Slider Container */}
+              <div
+                ref={sliderRef}
+                className="flex flex-wrap md:flex-nowrap overflow-x-auto gap-6 mt-10 scroll-smooth px-4 no-scrollbar"
+                style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+              >
+                {blogData.slice(0, 3).map((blog) => (
+                  <div key={blog.id} className="w-full md:w-[427px] flex-shrink-0 p-4 rounded-2xl text-center transform transition-transform hover:scale-105 bg-gray-light dark:bg-gray-dark">
+                    <SingleBlog blog={blog} />
+                  </div>
+                ))}
               </div>
-            ))}
+              
+              {/* View More Button */}
+              <div className="flex justify-center mt-6">
+                <Link href="/blog">
+                  <button className="bg-[#4563E2] text-white px-6 py-2 rounded-lg shadow-md hover:bg-red-600 transition-all">
+                    View More
+                  </button>
+                </Link>
+              </div>
+            </div>
           </div>
-        </div>
-        </div>
-      </section>
+        </section>
       </div>
     </section>
   );
