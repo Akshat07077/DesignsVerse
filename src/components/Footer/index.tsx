@@ -219,7 +219,7 @@ const Footer = () => {
               {" "}
               
               <a
-                href="https://nextjstemplates.com"
+                href=""
                 target="_blank"
                 rel="noopener noreferrer"
                 className="hover:text-primary"
