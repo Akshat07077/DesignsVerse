@@ -215,7 +215,7 @@ const Footer = () => {
           <div className="py-8">
             <p className="text-center text-base text-body-color dark:text-white">
               Copyright © 
-                2022-2025
+                2025
               {" "}
               
               <a
