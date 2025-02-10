@@ -10,19 +10,23 @@ const crossIcon = (
   </svg>
 );
 
-const OfferList = ({
-  text,
-  status,
-}: {
-  text: string;
-  status: "active" | "inactive";
-}) => {
+const OfferList = ({ text, status }) => {
   return (
     <div className="mb-3 flex items-center">
-      <span className="mr-3 flex h-[18px] w-full max-w-[18px] items-center justify-center rounded-full bg-primary bg-opacity-10 text-primary">
+      <span
+        className={`mr-3 flex h-[18px] w-full max-w-[18px] items-center justify-center rounded-full ${
+          status === "active" ? "bg-primary text-primary" : "bg-gray-300 text-gray-500"
+        }`}
+      >
         {status === "active" ? checkIcon : crossIcon}
       </span>
-      <p className="m-0 text-base font-medium text-body-color">{text}</p>
+      <p
+        className={`m-0 text-base font-medium ${
+          status === "inactive" ? "text-gray-500 line-through" : "text-body-color"
+        }`}
+      >
+        {text}
+      </p>
     </div>
   );
 };

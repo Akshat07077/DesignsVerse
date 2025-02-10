@@ -5,154 +5,86 @@ import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
 
 const Pricing = () => {
-  const [isMonthly, setIsMonthly] = useState(true);
+  const [withDigitalMarketing, setWithDigitalMarketing] = useState(false);
 
   return (
     <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
       <div className="container">
         <SectionTitle
           title="Simple and Affordable Pricing"
-          paragraph="We offer affordable, value-packed solutions tailored to your business needs—no hidden fees, just great results!"
+          paragraph="We offer affordable, value-packed solutions tailored to your business needs—no hidden fees, just great results!"
           center
           width="665px"
         />
 
-        <div className="w-full">
-          <div className="mb-8 flex justify-center md:mb-12 lg:mb-16">
-            <span
-              onClick={() => setIsMonthly(true)}
-              className={`${
-                isMonthly
-                  ? "pointer-events-none text-primary"
-                  : "text-dark dark:text-white"
-              } mr-4 cursor-pointer text-base font-semibold`}
-            >
-              Monthly
-            </span>
-            <div
-              onClick={() => setIsMonthly(!isMonthly)}
-              className="flex cursor-pointer items-center"
-            >
-              <div className="relative">
-                <div className="h-5 w-14 rounded-full bg-[#1D2144] shadow-inner"></div>
-                <div
-                  className={`${
-                    isMonthly ? "" : "translate-x-full"
-                  } shadow-switch-1 absolute left-0 top-[-4px] flex h-7 w-7 items-center justify-center rounded-full bg-primary transition`}
-                >
-                  <span className="active h-4 w-4 rounded-full bg-white"></span>
-                </div>
-              </div>
-            </div>
-            <span
-              onClick={() => setIsMonthly(false)}
-              className={`${
-                isMonthly
-                  ? "text-dark dark:text-white"
-                  : "pointer-events-none text-primary"
-              } ml-4 cursor-pointer text-base font-semibold`}
-            >
-              Yearly
-            </span>
+        {/* Toggle Button */}
+        <div className="flex justify-center mb-8">
+          <div className="relative flex items-center w-64 bg-gray-300 rounded-full p-1 cursor-pointer" onClick={() => setWithDigitalMarketing(!withDigitalMarketing)}>
+            <div className={`absolute top-0 left-0 w-1/2 h-full bg-blue-500 rounded-full transition-all ${withDigitalMarketing ? "translate-x-full" : "translate-x-0"}`} />
+            <span className={`w-1/2 text-center font-semibold z-10 ${!withDigitalMarketing ? "text-white" : "text-black"}`}>Without DM</span>
+            <span className={`w-1/2 text-center font-semibold z-10 ${withDigitalMarketing ? "text-white" : "text-black"}`}>With DM</span>
           </div>
         </div>
 
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3">
-          <PricingBox
-            packageName="Lite"
-            price={isMonthly ? "40" : "120"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
-          >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="inactive" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
-          </PricingBox>
-          <PricingBox
-            packageName="Basic"
-            price={isMonthly ? "399" : "789"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
-          >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="inactive" />
-          </PricingBox>
-          <PricingBox
-            packageName="Plus"
-            price={isMonthly ? "589" : "999"}
-            duration={isMonthly ? "mo" : "yr"}
-            subtitle="Lorem ipsum dolor sit amet adiscing elit Mauris egestas enim."
-          >
-            <OfferList text="All UI Components" status="active" />
-            <OfferList text="Use with Unlimited Projects" status="active" />
-            <OfferList text="Commercial Use" status="active" />
-            <OfferList text="Email Support" status="active" />
-            <OfferList text="Lifetime Access" status="active" />
-            <OfferList text="Free Lifetime Updates" status="active" />
-          </PricingBox>
-        </div>
-      </div>
+        {/* Pricing Boxes */}
+        <div className=" rounded-xl grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3 justify-center">
+          {!withDigitalMarketing ? (
+            // Without Digital Marketing
+            <>
+              <PricingBox packageName="Standard">
+                <OfferList text="Website Development" status="active" />
+                <OfferList text="SEO Optimization" status="active" />
+                <OfferList text="Multi-Language Support" status="active" />
+                <OfferList text="90 Days Technical Support" status="active" />
+                <OfferList text="Social Media Management" status="inactive" />
+                <OfferList text="Product Selling Management" status="inactive" />
+              </PricingBox>
 
-      <div className="absolute bottom-0 left-0 z-[-1]">
-        <svg
-          width="239"
-          height="601"
-          viewBox="0 0 239 601"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <rect
-            opacity="0.3"
-            x="-184.451"
-            y="600.973"
-            width="196"
-            height="541.607"
-            rx="2"
-            transform="rotate(-128.7 -184.451 600.973)"
-            fill="url(#paint0_linear_93:235)"
-          />
-          <rect
-            opacity="0.3"
-            x="-188.201"
-            y="385.272"
-            width="59.7544"
-            height="541.607"
-            rx="2"
-            transform="rotate(-128.7 -188.201 385.272)"
-            fill="url(#paint1_linear_93:235)"
-          />
-          <defs>
-            <linearGradient
-              id="paint0_linear_93:235"
-              x1="-90.1184"
-              y1="420.414"
-              x2="-90.1184"
-              y2="1131.65"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#4A6CF7" />
-              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-            </linearGradient>
-            <linearGradient
-              id="paint1_linear_93:235"
-              x1="-159.441"
-              y1="204.714"
-              x2="-159.441"
-              y2="915.952"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop stopColor="#4A6CF7" />
-              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
-            </linearGradient>
-          </defs>
-        </svg>
+              <PricingBox packageName="Professional">
+                <OfferList text="All Standard Features" status="active" />
+                <OfferList text="Advanced SEO Strategies" status="active" />
+                <OfferList text="24/7 Support" status="active" />
+                <OfferList text="Custom Branding" status="active" />
+              </PricingBox>
+
+              <PricingBox packageName="Premium">
+                <OfferList text="All Professional Features" status="active" />
+                <OfferList text="Dedicated Manager" status="active" />
+                <OfferList text="Social Media Growth" status="active" />
+                <OfferList text="Ad Campaign Management" status="active" />
+              </PricingBox>
+            </>
+          ) : (
+            // With Digital Marketing
+            <>
+              <PricingBox packageName="Standard Digital">
+                <OfferList text="Website Development" status="active" />
+                <OfferList text="SEO Optimization" status="active" />
+                <OfferList text="Multi-Language Support" status="active" />
+                <OfferList text="90 Days Technical Support" status="active" />
+                <OfferList text="Social Media Management" status="active" />
+                <OfferList text="Product Selling Management" status="active" />
+                <OfferList text="Digital Marketing" status="active" />
+              </PricingBox>
+
+              <PricingBox packageName="Professional Digital">
+                <OfferList text="All Standard Features" status="active" />
+                <OfferList text="Advanced SEO Strategies" status="active" />
+                <OfferList text="24/7 Support" status="active" />
+                <OfferList text="Custom Branding" status="active" />
+                <OfferList text="Content Marketing" status="active" />
+              </PricingBox>
+
+              <PricingBox packageName="Premium Digital">
+                <OfferList text="All Professional Features" status="active" />
+                <OfferList text="Dedicated Manager" status="active" />
+                <OfferList text="Social Media Growth" status="active" />
+                <OfferList text="Ad Campaign Management" status="active" />
+                <OfferList text="Conversion Rate Optimization" status="active" />
+              </PricingBox>
+            </>
+          )}
+        </div>
       </div>
     </section>
   );
