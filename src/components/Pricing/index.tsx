@@ -19,7 +19,7 @@ const Pricing = () => {
 
         {/* Toggle Button */}
         <div className="flex justify-center mb-8">
-          <div className="relative flex items-center w-64 bg-gray-300 rounded-full p-1 cursor-pointer" onClick={() => setWithDigitalMarketing(!withDigitalMarketing)}>
+          <div className="relative flex items-center bg-gray-300 rounded-full p-1 cursor-pointer" onClick={() => setWithDigitalMarketing(!withDigitalMarketing)}>
             <div className={`absolute top-0 left-0 w-1/2 h-full bg-blue-500 rounded-full transition-all ${withDigitalMarketing ? "translate-x-full" : "translate-x-0"}`} />
             <span className={`w-1/2 text-center font-semibold z-10 ${!withDigitalMarketing ? "text-white" : "text-black"}`}>Without Digital Marketing</span>
             <span className={`w-1/2 text-center font-semibold z-10 ${withDigitalMarketing ? "text-white" : "text-black"}`}>With Digital Marketing</span>
