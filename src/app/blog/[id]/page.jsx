@@ -73,7 +73,7 @@ export default function BlogPost({ params }) {
         {/* Right Side Text */}
         <div className="w-full md:w-2/3 text-white text-justify mb-30">
           <h2 className="text-xl md:text-2xl font-bold mb-2">{post.extraHeading}</h2>
-          <p className=" text-justify md:text-lg leading-relaxed">{post.extraContent}</p>
+          <p className=" text-justify md:text-lg leading-relaxed">jjj{post.extraContent}</p>
         </div>
       </div>
     </main>

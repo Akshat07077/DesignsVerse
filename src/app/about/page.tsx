@@ -1,24 +1,26 @@
-import BlogSection from "@/components/Blog/1";
+import AboutSectionOne from "@/components/About/AboutSectionOne";
+import AboutSectionTwo from "@/components/About/AboutSectionTwo";
 import Breadcrumb from "@/components/Common/Breadcrumb";
 
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Blog Page | DesignsVerse",
-  description:
-    "Explore our latest blogs and articles on website development, digital marketing, and personal branding. Stay updated with our insightful content and industry trends."
+  title: "About Page | DesignsVerse",
+  description: "Learn more about DesignsVerse, a leading agency specializing in website development, digital marketing, and personal branding. We create SEO-friendly, high-performance websites and result-driven strategies to help businesses and professionals succeed in the digital world."
+  // other metadata
 };
 
-const BlogPage = () => {
+const AboutPage = () => {
   return (
     <>
       <Breadcrumb
-        pageName="Blog Page"
-        description="Explore our latest blogs and articles."
+        pageName="About Page"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. In varius eros eget sapien consectetur ultrices. Ut quis dapibus libero."
       />
-      <BlogSection />
+      <AboutSectionOne />
+      <AboutSectionTwo />
     </>
   );
 };
 
-export default BlogPage;
+export default AboutPage;
