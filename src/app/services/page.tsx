@@ -14,7 +14,7 @@ const ServicePage = () => {
     <>
       <Breadcrumb
         pageName="Services Page"
-        description="Explore our latest services and offerings."
+        description="At DesignsVerse, we offer a wide range of design services to bring your ideas to life. Whether you're looking for Website Development,ERP SOlution, UI/UX design, or marketing materials, our expert team is here to craft visually stunning and strategically effective designs."
       />
       <ServiceSection />
     </>
