@@ -14,7 +14,7 @@ const BlogPage = () => {
     <>
       <Breadcrumb
         pageName="Blog Page"
-        description="Explore our latest blogs and articles."
+        description="Stay updated with the latest trends, expert tips, and industry insights in the world of design. Our blog covers everything from UI/UX, graphic design, branding, and creative technology to design inspiration and success stories."
       />
       <BlogSection />
     </>
