@@ -73,7 +73,7 @@ const Footer = () => {
                     </svg>
                   </a>
                   <a
-                    href="/https://www.instagram.com/designsverse_/"
+                    href="https://www.instagram.com/designsverse_/"
                     aria-label="social-link"
                     target="_blank"
                     rel="noopener noreferrer"
