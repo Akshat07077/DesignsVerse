@@ -1,6 +1,6 @@
 [
   {
-    "id": "sample",
+    "id": 1,
     "title": "Sample Post",
     "excerpt": "This is a sample post",
     "publishedDate": "2024-10-06",
