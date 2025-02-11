@@ -9,7 +9,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: post.title,
-    description: post.excerpt,
+    description: post.sections[0]?.content || "Read more about this topic.",
   };
 }
 
@@ -29,51 +29,51 @@ export default function BlogPost({ params }) {
 
   return (
     <main className="mt-20 w-full min-h-screen flex flex-col items-center pt-24 px-6 md:px-10 lg:px-20 bg-white dark:bg-[#121723] text-black dark:text-white transition-colors duration-300">
-      {/* Blog Content Section */}
-      <div className="w-full mb-30 flex flex-col lg:flex-row items-center lg:items-start gap-10">
-        {/* Text Content */}
-        <div className="lg:w-2/3 flex flex-col items-start">
-          <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-4 text-center lg:text-left">
-            {post.title}
-          </h1>
-          <p className="text-base sm:text-lg text-justify leading-relaxed">
-            {post.content} 
-          </p>
-        </div>
-
-        {/* Image Section */}
-        <div className="lg:w-1/3 flex justify-center">
-          {post.image && (
-            <Image
-              src={post.image}
-              width={400}
-              height={500}
-              alt="Blog Image"
-              className="rounded-lg w-full max-w-[400px] sm:h-[400px] md:h-[450px] lg:h-[500px] object-cover"
-            />
-          )}
-        </div>
+      {/* Blog Header Section */}
+      <div className="w-full mb-10 flex flex-col items-center text-center">
+        <h1 className="text-3xl md:text-4xl font-bold">{post.title}</h1>
+        <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
+          Published on {post.publishDate} • {post.readTime} min read
+        </p>
       </div>
 
-      {/* New Section with Image on Left & Text on Right */}
-      <div className="w-full flex flex-col md:flex-row items-center md:items-start gap-6 mt-12 p-6 bg-gray-200 dark:bg-gray-800 rounded-lg transition-colors duration-300">
-        {/* Left Side Image */}
-        <div className="w-full md:w-1/3 flex justify-center">
-          {post.extraImage && (
-            <Image
-              src={post.extraImage}
-              width={200}
-              height={200}
-              alt="Extra Image"
-              className="rounded-lg object-cover"
-            />
-          )}
+      {/* Blog Thumbnail */}
+      {post.thumbnail && (
+        <div className="w-full flex justify-center">
+          <Image
+            src={post.thumbnail}
+            width={800}
+            height={450}
+            alt={post.title}
+            className="rounded-lg object-cover"
+          />
         </div>
+      )}
 
-        {/* Right Side Text */}
-        <div className="w-full md:w-2/3 text-justify">
-          <h2 className="text-xl md:text-2xl font-bold mb-2">{post.extraHeading}</h2>
-          <p className="md:text-lg leading-relaxed">{post.extraContent}</p>
+      {/* Blog Content Sections */}
+      <div className="w-full max-w-3xl mt-10">
+        {post.sections.map((section, index) => (
+          <div key={index} className="mb-10">
+            <h2 className="text-2xl font-semibold mb-4">{section.heading}</h2>
+            <p className="text-lg text-justify leading-relaxed">{section.content}</p>
+          </div>
+        ))}
+      </div>
+
+      {/* Author Section */}
+      <div className="w-full max-w-3xl flex items-center mt-10 p-6 border-t border-gray-300 dark:border-gray-700">
+        <div className="flex items-center">
+          <Image
+            src={post.author.image}
+            width={50}
+            height={50}
+            alt={post.author.name}
+            className="rounded-full"
+          />
+          <div className="ml-4">
+            <p className="text-lg font-semibold">{post.author.name}</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400">{post.author.designation}</p>
+          </div>
         </div>
       </div>
     </main>
