@@ -2,7 +2,7 @@ import { Blog } from "@/types/blog";
 
 const blogData: Blog[] = [
   {
-    id: 1,
+    id: 'sample',
     title: "Exploring the Future of AI",
     video: "/video/blog/blog-1.mp4",
     paragraph: "Cloud computing has revolutionized data storage...",
