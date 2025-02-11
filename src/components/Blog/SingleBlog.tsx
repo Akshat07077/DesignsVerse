@@ -1,7 +1,7 @@
 import { Blog } from "@/types/blog";
 import Image from "next/image";
 import Link from "next/link";
-import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
+//import { FaFacebookF, FaTwitter, FaLinkedinIn } from "react-icons/fa";
 
 const SingleBlog = ({ blog }: { blog: Blog }) => {
   const { id, title, video, thumbnail, author, tags, publishDate, category, readTime, sections } = blog;
@@ -61,13 +61,13 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
         {/* Social Share Buttons */}
         <div className="mt-6 flex space-x-3">
           <a href={`https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com/blog/${id}`} target="_blank" className="p-2 text-white bg-blue-600 rounded-full hover:bg-blue-700">
-            <FaFacebookF />
+            //<FaFacebookF />
           </a>
           <a href={`https://twitter.com/intent/tweet?url=https://yourwebsite.com/blog/${id}&text=${title}`} target="_blank" className="p-2 text-white bg-blue-400 rounded-full hover:bg-blue-500">
-            <FaTwitter />
+            //<FaTwitter />
           </a>
           <a href={`https://www.linkedin.com/shareArticle?mini=true&url=https://yourwebsite.com/blog/${id}`} target="_blank" className="p-2 text-white bg-blue-700 rounded-full hover:bg-blue-800">
-            <FaLinkedinIn />
+            //<FaLinkedinIn />
           </a>
         </div>
       </div>
