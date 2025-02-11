@@ -30,7 +30,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
 
         {/* Blog Title */}
         <h3 className="text-2xl font-bold text-black hover:text-primary dark:text-white dark:hover:text-primary">
-          <Link href={`/blog/${id}`}>{title}hii</Link>
+          <Link href={`/blog/${id}`}>{title}</Link>
         </h3>
 
         {/* Blog Sections */}
