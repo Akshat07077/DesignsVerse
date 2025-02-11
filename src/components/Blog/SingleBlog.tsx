@@ -37,7 +37,7 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
         {sections.map((section, index) => (
           <div key={index} className="mt-6">
             <h4 className="text-lg font-semibold text-dark dark:text-white">{section.heading}</h4>
-            <p className="mt-2 text-base text-gray-600 dark:text-gray-400">{section.content}</p>
+{/*             <p className="mt-2 text-base text-gray-600 dark:text-gray-400">{section.content}</p> */}
           </div>
         ))}
 
