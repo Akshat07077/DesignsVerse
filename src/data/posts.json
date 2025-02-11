@@ -1,29 +1,60 @@
-{
-  id: "1",
-  title: "How to Improve Website SEO in 2024",
-  video: "",
-  thumbnail: "/images/seo-blog.jpg",
-  author: {
-    name: "John Doe",
-    image: "/images/john-doe.jpg",
-    designation: "SEO Expert",
+[
+  {
+    "id": "1",
+    "title": "How to Improve Website SEO in 2024",
+    "video": "",
+    "thumbnail": "/images/seo-blog.jpg",
+    "author": {
+      "name": "John Doe",
+      "image": "/images/john-doe.jpg",
+      "designation": "SEO Expert"
+    },
+    "publishDate": "Feb 12, 2024",
+    "tags": ["SEO", "Marketing"],
+    "category": "Digital Marketing",
+    "readTime": 6,
+    "sections": [
+      {
+        "heading": "Introduction",
+        "content": "SEO is essential for driving organic traffic to your website. In this guide, we will explore key strategies to enhance your SEO performance in 2024."
+      },
+      {
+        "heading": "Key SEO Strategies",
+        "content": "1. Optimize for Core Web Vitals.\n2. Focus on high-quality backlinks.\n3. Use long-tail keywords.\n4. Improve page load speed."
+      },
+      {
+        "heading": "Conclusion",
+        "content": "SEO is constantly evolving, but by implementing the right strategies, you can stay ahead in the game and improve your search engine rankings effectively."
+      }
+    ]
   },
-  publishDate: "Feb 12, 2024",
-  tags: ["SEO", "Marketing"],
-  category: "Digital Marketing",
-  readTime: 6,
-  sections: [
-    {
-      heading: "Introduction",
-      content: "SEO is essential for driving organic traffic to your website. In this guide, we will explore key strategies to enhance your SEO performance in 2024.",
+  {
+    "id": "2",
+    "title": "Why Responsive Design Matters for SEO",
+    "video": "",
+    "thumbnail": "/images/responsive-design.jpg",
+    "author": {
+      "name": "Jane Smith",
+      "image": "/images/jane-smith.jpg",
+      "designation": "Web Designer"
     },
-    {
-      heading: "Key SEO Strategies",
-      content: "1. Optimize for Core Web Vitals. 2. Focus on high-quality backlinks. 3. Use long-tail keywords. 4. Improve page load speed.",
-    },
-    {
-      heading: "Conclusion",
-      content: "SEO is constantly evolving, but by implementing the right strategies, you can stay ahead in the game and improve your search engine rankings effectively.",
-    },
-  ],
-};
+    "publishDate": "Feb 15, 2024",
+    "tags": ["Web Design", "SEO"],
+    "category": "Web Development",
+    "readTime": 5,
+    "sections": [
+      {
+        "heading": "Introduction",
+        "content": "A responsive website is crucial for SEO and user experience. Google prioritizes mobile-friendly websites, and in this blog, we’ll discuss why it matters."
+      },
+      {
+        "heading": "Benefits of Responsive Design",
+        "content": "1. Better user experience.\n2. Higher Google rankings.\n3. Increased mobile traffic.\n4. Faster page load speeds."
+      },
+      {
+        "heading": "Conclusion",
+        "content": "Ensuring your website is mobile-friendly is no longer optional. It directly impacts SEO, conversions, and user engagement."
+      }
+    ]
+  }
+]
