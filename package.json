@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "react-markdown": "^9.0.3",
     "clsx": "^2.1.1",
     "cn": "^0.1.1",
     "eslint": "^8.56.0",
