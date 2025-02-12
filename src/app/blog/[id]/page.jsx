@@ -1,6 +1,7 @@
 import { notFound } from "next/navigation";
 import data from "@/data/posts.json";
 import Image from "next/image";
+import ReactMarkdown from "react-markdown";
 
 // Fetch metadata for SEO
 export async function generateMetadata({ params }) {
@@ -55,7 +56,9 @@ export default function BlogPost({ params }) {
         {post.sections.map((section, index) => (
           <div key={index} className="mb-10">
             <h2 className="text-2xl font-semibold mb-4">{section.heading}</h2>
-            <p className="text-lg text-justify leading-relaxed">{section.content}</p>
+            <ReactMarkdown className="text-lg text-justify leading-relaxed">
+              {section.content}
+            </ReactMarkdown>
           </div>
         ))}
       </div>
@@ -79,3 +82,4 @@ export default function BlogPost({ params }) {
     </main>
   );
 }
+
