@@ -2,151 +2,153 @@ import { Blog } from "@/types/blog";
 
 const blogData: Blog[] = [
   {
-    id: "1",
-    title: "How to Improve Website SEO in 2024",
-    video: "",
-    thumbnail: "//images/blog/blog-1.jpg",
-    author: {
-      name: "Harsh",
-      image: "/images/blog/author-01.png",
-      designation: "SEO Expert",
+    "id": "1",
+    "title": "Boost Your Business with Digital Marketing | DesignsVerse",
+    "video": "",
+    "thumbnail": "/images/blog/digital-marketing.jpg",
+    "author": {
+      "name": "DesignsVerse Team",
+      "image": "/images/blog/author-01.png",
+      "designation": "Digital Marketing Experts"
     },
-    publishDate: "2024-02-12",
-    tags: ["SEO", "Marketing"],
-    category: "Digital Marketing",
-    readTime: 6,
-    sections: [
+    "publishDate": "2025-02-22",
+    "tags": ["Digital Marketing", "Growth", "Online Presence"],
+    "category": "Marketing & Strategy",
+    "readTime": 7,
+    "sections": [
       {
-        heading: "Introduction",
-        content: "SEO is essential for driving organic traffic to your website. In this guide, we will explore key strategies to enhance your SEO performance in 2024.",
+        "heading": "Introduction",
+        "content": "Discover how DesignsVerse leverages cutting-edge digital marketing strategies to enhance brand visibility and drive growth for businesses of all sizes."
       },
       {
-        heading: "Key SEO Strategies",
-        content: "1. Optimize for Core Web Vitals. 2. Focus on high-quality backlinks. 3. Use long-tail keywords. 4. Improve page load speed.",
+        "heading": "Key Digital Strategies",
+        "content": "1. SEO Optimization 2. Social Media Marketing 3. Email Campaigns 4. Paid Advertising (PPC)."
       },
       {
-        heading: "Conclusion",
-        content: "SEO is constantly evolving, but by implementing the right strategies, you can stay ahead in the game and improve your search engine rankings effectively.",
-      },
-    ],
+        "heading": "Conclusion",
+        "content": "A well-planned digital marketing strategy helps businesses scale faster. DesignsVerse provides expert-driven solutions for success."
+      }
+    ]
   },
   {
-    id: "2",
-    title: "Why Responsive Design Matters for SEO",
-    video: "",
-    thumbnail: "/images/blog/blog-2.jpg",
-    author: {
-      name: "Jane Smith",
-      image: "/images/blog/author-02.png",
-      designation: "Web Designer",
+    "id": "2",
+    "title": "SEO Strategies That Drive Results | DesignsVerse",
+    "video": "",
+    "thumbnail": "/images/blog/seo-strategies.jpg",
+    "author": {
+      "name": "DesignsVerse SEO Team",
+      "image": "/images/blog/author-02.png",
+      "designation": "SEO Specialists"
     },
-    publishDate: "2024-02-15",
-    tags: ["Web Design", "SEO"],
-    category: "Web Development",
-    readTime: 5,
-    sections: [
+    "publishDate": "2025-02-22",
+    "tags": ["SEO", "Search Engine Optimization", "Rankings"],
+    "category": "SEO & Traffic",
+    "readTime": 6,
+    "sections": [
       {
-        heading: "Introduction",
-        content: "With more users accessing websites on mobile devices, having a responsive design is no longer optional—it's a necessity for SEO and user experience.",
+        "heading": "Introduction",
+        "content": "Maximize your online presence with SEO techniques tailored by DesignsVerse. Learn about keyword research, on-page optimization, and ranking improvements."
       },
       {
-        heading: "Best Practices",
-        content: "1. Use flexible grid layouts. 2. Optimize images for faster loading. 3. Implement mobile-first design. 4. Improve touch-friendly navigation.",
+        "heading": "Core SEO Strategies",
+        "content": "1. Keyword Research 2. On-Page Optimization 3. Technical SEO 4. Link Building."
       },
       {
-        heading: "Conclusion",
-        content: "A responsive website enhances SEO rankings and improves user engagement. Ensure your site adapts to all screen sizes effectively.",
-      },
-    ],
+        "heading": "Conclusion",
+        "content": "SEO is a long-term investment for business success. DesignsVerse provides expert SEO solutions to rank higher and grow organically."
+      }
+    ]
   },
   {
-    id: "3",
-    title: "Top Web Design Trends for 2024",
-    video: "",
-    thumbnail: "/images/blog/blog-3.jpg",
-    author: {
-      name: "Christy",
-      image: "/images/blog/author-03.png",
-      designation: "UI/UX Designer",
+    "id": "3",
+    "title": "Website Development: The Key to Online Success | DesignsVerse",
+    "video": "",
+    "thumbnail": "/images/blog/web-development.jpg",
+    "author": {
+      "name": "DesignsVerse Dev Team",
+      "image": "/images/blog/author-03.png",
+      "designation": "Web Developers"
     },
-    publishDate: "2024-02-18",
-    tags: ["Web Design", "UI/UX"],
-    category: "Design Trends",
-    readTime: 7,
-    sections: [
+    "publishDate": "2025-02-22",
+    "tags": ["Web Development", "Responsive Design", "SEO"],
+    "category": "Website & Design",
+    "readTime": 8,
+    "sections": [
       {
-        heading: "Introduction",
-        content: "Web design trends evolve constantly. Staying updated ensures your website remains visually appealing and user-friendly.",
+        "heading": "Introduction",
+        "content": "DesignsVerse specializes in high-performance website development, ensuring responsive, SEO-optimized, and fast-loading sites that convert visitors into customers."
       },
       {
-        heading: "Latest Trends",
-        content: "1. Dark mode UI. 2. Glassmorphism effects. 3. Minimalist typography. 4. AI-powered design tools.",
+        "heading": "Key Development Features",
+        "content": "1. Responsive Design 2. Fast Load Times 3. SEO Optimization 4. Scalable Architecture."
       },
       {
-        heading: "Conclusion",
-        content: "By embracing new design trends, you can create modern and engaging websites that enhance user experience.",
+        "heading": "Conclusion",
+        "content": "A well-structured website is crucial for online success. DesignsVerse delivers top-notch web solutions for businesses of all sizes."
+      }
+    ]
+  }
+  ,
+  {
+    "id": "4",
+    "title": "Best SEO Strategies for Businesses to Growth | DesignsVerse",
+    "video": "",
+    "thumbnail": "/images/blog/web-development.jpg",
+    "author": {
+      "name": "DesignsVerse Dev Team",
+      "image": "/images/blog/author-03.png",
+      "designation": "Web Developers"
+    },
+    "publishDate": "2025-02-22",
+    "tags": ["Web Development", "Responsive Design", "SEO"],
+    "category": "Website & Design",
+    "readTime": 8,
+    "sections": [
+      {
+        "heading": "Introduction",
+        "content": "DesignsVerse specializes in high-performance website development, ensuring responsive, SEO-optimized, and fast-loading sites that convert visitors into customers."
       },
-    ],
+      {
+        "heading": "Key Development Features",
+        "content": "1. Responsive Design 2. Fast Load Times 3. SEO Optimization 4. Scalable Architecture."
+      },
+      {
+        "heading": "Conclusion",
+        "content": "A well-structured website is crucial for online success. DesignsVerse delivers top-notch web solutions for businesses of all sizes."
+      }
+    ]
   },
   {
-    id: "4",
-    title: "The Importance of Fast-Loading Websites",
-    video: "",
-    thumbnail: "/images/blog/blog-2.jpg",
-    author: {
-      name: "Harsh",
-      image: "/images/blog/author-04.png",
-      designation: "Performance Analyst",
+    "id": "5",
+    "title": "Transform Your Business with Smart ERP Solutions | DesignsVerse Agency",
+    "video": "",
+    "thumbnail": "/images/blog/web-development.jpg",
+    "author": {
+      "name": "DesignsVerse Dev Team",
+      "image": "/images/blog/author-03.png",
+      "designation": "Web Developers"
     },
-    publishDate: "2024-02-20",
-    tags: ["Performance", "SEO"],
-    category: "Web Performance",
-    readTime: 6,
-    sections: [
+    "publishDate": "2025-02-22",
+    "tags": ["Web Development", "Responsive Design", "SEO"],
+    "category": "Website & Design",
+    "readTime": 8,
+    "sections": [
       {
-        heading: "Introduction",
-        content: "Page speed affects both SEO rankings and user retention. A slow website can lead to higher bounce rates and lower conversions.",
+        "heading": "Introduction",
+        "content": "DesignsVerse specializes in high-performance website development, ensuring responsive, SEO-optimized, and fast-loading sites that convert visitors into customers."
       },
       {
-        heading: "How to Improve Speed",
-        content: "1. Optimize images. 2. Use a content delivery network (CDN). 3. Minimize JavaScript and CSS files. 4. Enable browser caching.",
+        "heading": "Key Development Features",
+        "content": "1. Responsive Design 2. Fast Load Times 3. SEO Optimization 4. Scalable Architecture."
       },
       {
-        heading: "Conclusion",
-        content: "Improving your site's speed will enhance user experience and boost your SEO rankings significantly.",
-      },
-    ],
-  },
-  {
-    id: "5",
-    title: "How Digital Marketing Can Grow Your Business",
-    video: "",
-    thumbnail: "/images/blog/blog-1.jpg",
-    author: {
-      name: "Akshat",
-      image: "/images/blog/author-05.png",
-      designation: "Digital Marketer",
-    },
-    publishDate: "2024-02-22",
-    tags: ["Marketing", "Strategy"],
-    category: "Business Growth",
-    readTime: 8,
-    sections: [
-      {
-        heading: "Introduction",
-        content: "In today's digital world, businesses need a strong online presence. Digital marketing strategies help attract and retain customers effectively.",
-      },
-      {
-        heading: "Key Strategies",
-        content: "1. SEO optimization. 2. Social media marketing. 3. Email campaigns. 4. Paid advertising (PPC).",
-      },
-      {
-        heading: "Conclusion",
-        content: "A well-planned digital marketing strategy will increase brand awareness, generate leads, and drive sales growth.",
-      },
-    ],
-  },
-];
+        "heading": "Conclusion",
+        "content": "A well-structured website is crucial for online success. DesignsVerse delivers top-notch web solutions for businesses of all sizes."
+      }
+    ]
+  }
+]
+
 
 export default blogData;
 
