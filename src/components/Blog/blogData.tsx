@@ -5,7 +5,8 @@ const blogData: Blog[] = [
     id: "1",
     title: "How to Improve Website SEO in 2024",
     video: "",
-    thumbnail: "//images/blog/blog-1.jpg",
+    image:"/images/blog/blog-1.jpg",
+    thumbnail: "/images/blog/blog-1.jpg",
     author: {
       name: "Harsh",
       image: "/images/blog/author-01.png",

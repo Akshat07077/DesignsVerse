@@ -11,6 +11,7 @@ import Testimonials from "@/components/Testimonials";
 import Video from "@/components/Video";
 import { Metadata } from "next";
 import Service from "./services/page";
+import FAQ from "@/components/FAQ";
 
 export const metadata: Metadata = {
   title: "DesignsVerse | Software Development | Digital Marketing",
@@ -32,6 +33,7 @@ export default function Home() {
       <Testimonials />
       <Pricing />
       <Blog />
+      {/* <FAQ/> */}
       <Contact />
       
       
