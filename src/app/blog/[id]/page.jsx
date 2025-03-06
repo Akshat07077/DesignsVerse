@@ -39,10 +39,10 @@ export default function BlogPost({ params }) {
       </div>
 
       {/* Blog Thumbnail */}
-      {post.thumbnail && (
+      {post.image && (
         <div className="w-full flex justify-center">
           <Image
-            src={post.thumbnail}
+            src={post.image}
             width={800}
             height={450}
             alt={post.title}
