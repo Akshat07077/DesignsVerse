@@ -1,9 +1,7 @@
 [{
   "id": "1",
   "title": "Boost Your Business with Digital Marketing | DesignsVerse",
-  "video": "",
-  "image":"images/blog/blog-1.jpg",
-  "thumbnail": "/images/blog/digital-marketing.jpg",
+  "image":"/images/blog/blog-1.jpg",
   "author": {
     "name": "DesignsVerse Team",
     "image": "/images/blog/author-01.png",
@@ -44,8 +42,9 @@
 {
   "id": "2",
   "title": "SEO Strategies That Drive Results | DesignsVerse",
-  "video": "",
-  "thumbnail": "/images/blog/seo-strategies.jpg",
+  
+  "image":"/images/blog/blog-1.jpg",
+  
   "author": {
     "name": "DesignsVerse Team",
     "image": "/images/blog/author-03.png",
@@ -100,8 +99,9 @@
 {
   "id": "3",
   "title": "WEB DEVELOPMENT: The Ultimate Guide to Website Development & Online Growth by DESIGNSVERSE",
-  "video": "",
-  "thumbnail": "/images/blog/webdevelopment-success.jpg",
+  
+  "image":"/images/blog/blog-1.jpg",
+  
   "author": {
     "name": "DESIGNSVERSE Team",
     "image": "/images/blog/author-04.png",
@@ -153,8 +153,9 @@
   {
     "id": "4",
     "title": "Best SEO Strategies for Businesses to Growth | DesignsVerse",
-    "video": "",
-    "thumbnail": "/images/blog/webdevelopment-success.jpg",
+    
+    "image":"/images/blog/blog-1.jpg",
+    
     "author": {
       "name": "DESIGNSVERSE Team",
       "image": "/images/blog/author-04.png",
@@ -213,8 +214,7 @@
   {
     "id": "5",
     "title": "Transform Your Business with Smart ERP Solutions | DesignsVerse Agency",
-    "video": "",
-    "thumbnail": "/images/blog/webdevelopment-success.jpg",
+    "image":"/images/blog/blog-1.jpg",
     "author": {
       "name": "DESIGNSVERSE Team",
       "image": "/images/blog/author-04.png",
