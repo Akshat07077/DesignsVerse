@@ -33,7 +33,7 @@ export default function Home() {
       <Testimonials />
       <Pricing />
       <Blog />
-      {/* <FAQ/> */}
+      <FAQ/> 
       <Contact />
       
       

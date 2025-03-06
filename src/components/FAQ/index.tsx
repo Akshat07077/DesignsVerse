@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 import Head from 'next/head';
 import { useTheme } from 'next-themes';
+import SectionTitle from "../Common/SectionTitle";
 
 const FAQ: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState<string | null>(null);
@@ -51,12 +52,10 @@ const FAQ: React.FC = () => {
   const initialFAQs = Object.keys(faqData).map(category => faqData[category][0]);
   const displayedFAQs = activeCategory ? faqData[activeCategory] : initialFAQs;
 
-  // Set initial openItems and adjust height on category change
   useEffect(() => {
     setOpenItems(new Array(displayedFAQs.length).fill(false));
   }, [activeCategory, displayedFAQs.length]);
 
-  // Adjust height whenever openItems changes
   useEffect(() => {
     const adjustHeight = () => {
       document.querySelectorAll('.faq-item .content').forEach((content, index) => {
@@ -81,7 +80,6 @@ const FAQ: React.FC = () => {
     });
   };
 
-  // Set default theme to dark on first load if not already set
   useEffect(() => {
     if (theme === undefined) {
       setTheme('dark');
@@ -91,81 +89,83 @@ const FAQ: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Advanced FAQ Page</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
-      <div className="flex items-center justify-center min-h-[80vh] bg-[#FCFCFC] dark:bg-[#121723]">
-        <div className="rounded-xl shadow-three p-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center my-6 mt-20 bg-white dark:bg-gray-dark">
-          <div className="w-full md:w-1/2 flex justify-center mb-6 md:mb-0">
-            <Image
-              src="/images/blog/blog-1.jpg"
-              alt="Illustration"
-              width={300}
-              height={300}
-              className="w-3/4 transform hover:scale-105 transition-transform duration-300"
-            />
-          </div>
-          <div className="w-full md:w-1/2">
-            <h2 className="text-3xl font-bold text-black dark:text-white mb-6">
-              Frequently Asked Questions
-            </h2>
-
-            {/* Desktop Filter */}
-            <div className="hidden md:flex flex-wrap gap-2 mb-4">
-              <button
-                className={`px-3 py-1 rounded-sm font-medium border border-primary text-primary dark:border-white dark:text-white ${!activeCategory ? 'bg-primary text-white dark:bg-primary dark:text-white' : ''} hover:bg-primary/90 hover:text-white dark:hover:bg-primary dark:hover:text-white`}
-                onClick={() => setActiveCategory(null)}
-              >
-                All
-              </button>
-              {Object.keys(faqData).map((category) => (
+      <div className="flex items-center justify-center min-h-[80vh] bg-[#F0F2F9] pb-20 dark:bg-[#121723] pt-16"> {/* Reduced mt-20 to pt-16 */}
+        <div className="container mx-auto px-4">
+          <SectionTitle
+            title="FAQ"
+            paragraph="Stay updated with expert tips, industry trends, and digital strategies to grow your business online. 🚀"
+            center
+          />
+          <div className="rounded-xl p-6 max-w-6xl mx-auto flex flex-col md:flex-row items-center my-4 bg-white dark:bg-gray-dark"> {/* Reduced my-6 to my-4 */}
+            <div className="w-full md:w-1/2 flex justify-center mb-4 md:mb-0"> {/* Reduced mb-6 to mb-4 */}
+              <Image
+                src="/images/blog/blog-1.jpg"
+                alt="Illustration"
+                width={300}
+                height={300}
+                className="w-3/4 transform hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+            <div className="w-full md:w-1/2">
+              {/* Desktop Filter */}
+              <div className="hidden md:flex flex-wrap gap-2 mb-3"> {/* Reduced mb-4 to mb-3 */}
                 <button
-                  key={category}
-                  className={`px-3 py-1 rounded-sm font-medium border border-primary text-primary dark:border-white dark:text-white ${activeCategory === category ? 'bg-primary text-white dark:bg-primary dark:text-white' : ''} hover:bg-primary/90 hover:text-white dark:hover:bg-primary dark:hover:text-white`}
-                  onClick={() => setActiveCategory(category)}
+                  className={`px-3 py-1 rounded-sm font-medium border border-primary text-primary dark:border-white dark:text-white ${!activeCategory ? 'bg-primary text-white dark:bg-primary dark:text-white' : ''} hover:bg-primary/90 hover:text-white dark:hover:bg-primary dark:hover:text-white`}
+                  onClick={() => setActiveCategory(null)}
                 >
-                  {category}
+                  All
                 </button>
-              ))}
-            </div>
-
-            {/* Mobile Filter */}
-            <div className="md:hidden mb-4">
-              <select
-                className="w-full p-2 rounded-sm border bg-[#f8f8f8] text-primary border-primary focus:border-primary dark:bg-[#2C303B] dark:text-white dark:border-white dark:focus:border-primary"
-                value={activeCategory || ""}
-                onChange={(e) => setActiveCategory(e.target.value || null)}
-              >
-                <option value="" className="bg-[#f8f8f8] text-black dark:bg-[#2C303B] dark:text-white">All</option>
                 {Object.keys(faqData).map((category) => (
-                  <option key={category} value={category} className="bg-[#f8f8f8] text-black dark:bg-[#2C303B] dark:text-white">
+                  <button
+                    key={category}
+                    className={`px-3 py-1 rounded-sm font-medium border border-primary text-primary dark:border-white dark:text-white ${activeCategory === category ? 'bg-primary text-white dark:bg-primary dark:text-white' : ''} hover:bg-primary/90 hover:text-white dark:hover:bg-primary dark:hover:text-white`}
+                    onClick={() => setActiveCategory(category)}
+                  >
                     {category}
-                  </option>
+                  </button>
                 ))}
-              </select>
-            </div>
+              </div>
 
-            {/* FAQ Items */}
-            <div className="space-y-4">
-              {displayedFAQs.map((faq, index) => (
-                <div className={`faq-item ${openItems[index] ? 'open' : ''}`} key={index}>
-                  <div
-                    className="flex justify-between items-center cursor-pointer py-2 rounded-sm shadow-md px-3 bg-white text-black border-primary dark:bg-[#2C303B] dark:text-white dark:border-white"
-                    onClick={() => toggleFAQ(index)}
-                  >
-                    <p className="text-lg font-medium">{faq.question}</p>
-                    <span className="transition-transform duration-300 text-primary dark:text-white">
-                      {openItems[index] ? "↑" : "↓"}
-                    </span>
+              {/* Mobile Filter */}
+              <div className="md:hidden mb-3"> {/* Reduced mb-4 to mb-3 */}
+                <select
+                  className="w-full p-2 rounded-sm border bg-[#f8f8f8] text-primary border-primary focus:border-primary dark:bg-[#2C303B] dark:text-white dark:border-white dark:focus:border-primary"
+                  value={activeCategory || ""}
+                  onChange={(e) => setActiveCategory(e.target.value || null)}
+                >
+                  <option value="" className="bg-[#f8f8f8] text-black dark:bg-[#2C303B] dark:text-white">All</option>
+                  {Object.keys(faqData).map((category) => (
+                    <option key={category} value={category} className="bg-[#f8f8f8] text-black dark:bg-[#2C303B] dark:text-white">
+                      {category}
+                    </option>
+                  ))}
+                </select>
+              </div>
+
+              {/* FAQ Items */}
+              <div className="space-y-3"> {/* Reduced space-y-4 to space-y-3 */}
+                {displayedFAQs.map((faq, index) => (
+                  <div className={`faq-item ${openItems[index] ? 'open' : ''}`} key={index}>
+                    <div
+                      className="flex justify-between items-center cursor-pointer py-2 rounded-sm shadow-md px-3 bg-white text-black border-primary dark:bg-[#2C303B] dark:text-white dark:border-white"
+                      onClick={() => toggleFAQ(index)}
+                    >
+                      <p className="text-lg font-medium">{faq.question}</p>
+                      <span className="transition-transform duration-300 text-primary dark:text-white">
+                        {openItems[index] ? "↑" : "↓"}
+                      </span>
+                    </div>
+                    <div
+                      className="content mt-2 text-base text-body-color dark:text-body-color-dark" 
+                      style={{ maxHeight: openItems[index] ? '1000px' : '0', overflow: 'hidden', transition: 'max-height 0.5s ease-in-out' }}
+                    >
+                      <p>{faq.answer}</p>
+                    </div>
                   </div>
-                  <div
-                    className="content mt-3 text-base text-body-color dark:text-body-color-dark"
-                    style={{ maxHeight: openItems[index] ? '1000px' : '0', overflow: 'hidden', transition: 'max-height 0.5s ease-in-out' }}
-                  >
-                    <p>{faq.answer}</p>
-                  </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
         </div>
