@@ -4,9 +4,8 @@ const blogData: Blog[] = [
   {
     "id": "1",
     "title": "Boost Your Business with Digital Marketing | DesignsVerse",
-    "video": "",
     "image":"/images/blog/blog-1.jpg",
-    "thumbnail": "/images/blog/digital-marketing.jpg",
+   
     "author": {
       "name": "DesignsVerse Team",
       "image": "/images/blog/author-01.png",
@@ -34,9 +33,9 @@ const blogData: Blog[] = [
   {
     "id": "2",
     "title": "SEO Strategies That Drive Results | DesignsVerse",
-    "video": "",
-    "image":"",
-    "thumbnail": "/images/blog/seo-strategies.jpg",
+   
+    "image":"/images/blog/blog-1.jpg",
+   
     "author": {
       "name": "DesignsVerse SEO Team",
       "image": "/images/blog/author-02.png",
@@ -64,9 +63,8 @@ const blogData: Blog[] = [
   {
     "id": "3",
     "title": "Website Development: The Key to Online Success | DesignsVerse",
-    "video": "",
-    "image":"",
-    "thumbnail": "/images/blog/web-development.jpg",
+    
+    "image":"/images/blog/blog-1.jpg",
     "author": {
       "name": "DesignsVerse Dev Team",
       "image": "/images/blog/author-03.png",
@@ -95,9 +93,8 @@ const blogData: Blog[] = [
   {
     "id": "4",
     "title": "Best SEO Strategies for Businesses to Growth | DesignsVerse",
-    "video": "",
-    "image":"",
-    "thumbnail": "/images/blog/web-development.jpg",
+    
+    "image":"/images/blog/blog-1.jpg",
     "author": {
       "name": "DesignsVerse Dev Team",
       "image": "/images/blog/author-03.png",
@@ -125,9 +122,7 @@ const blogData: Blog[] = [
   {
     "id": "5",
     "title": "Transform Your Business with Smart ERP Solutions | DesignsVerse Agency",
-    "video": "",
-    "image":"",
-    "thumbnail": "/images/blog/web-development.jpg",
+    "image":"/images/blog/blog-1.jpg",
     "author": {
       "name": "DesignsVerse Dev Team",
       "image": "/images/blog/author-03.png",
