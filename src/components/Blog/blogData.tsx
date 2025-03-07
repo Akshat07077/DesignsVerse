@@ -34,7 +34,7 @@ const blogData: Blog[] = [
     "id": "2",
     "title": "SEO Strategies That Drive Results | DesignsVerse",
    
-    "image":"/images/blog/blog-1.jpg",
+    "image":"/images/blog/blog-2.jpg",
    
     "author": {
       "name": "DesignsVerse SEO Team",
@@ -64,7 +64,7 @@ const blogData: Blog[] = [
     "id": "3",
     "title": "Website Development: The Key to Online Success | DesignsVerse",
     
-    "image":"/images/blog/blog-1.jpg",
+    "image":"/images/blog/blog-3.jpg",
     "author": {
       "name": "DesignsVerse Dev Team",
       "image": "/images/blog/author-03.png",
@@ -94,7 +94,7 @@ const blogData: Blog[] = [
     "id": "4",
     "title": "Best SEO Strategies for Businesses to Growth | DesignsVerse",
     
-    "image":"/images/blog/blog-1.jpg",
+    "image":"/images/blog/blog-4.jpg",
     "author": {
       "name": "DesignsVerse Dev Team",
       "image": "/images/blog/author-03.png",
@@ -122,7 +122,7 @@ const blogData: Blog[] = [
   {
     "id": "5",
     "title": "Transform Your Business with Smart ERP Solutions | DesignsVerse Agency",
-    "image":"/images/blog/blog-1.jpg",
+    "image":"/images/blog/blog-5.jpg",
     "author": {
       "name": "DesignsVerse Dev Team",
       "image": "/images/blog/author-03.png",
@@ -152,7 +152,7 @@ const blogData: Blog[] = [
 {
   "id": "6",
   "title": "Top Web Design Trends in 2025: What Businesses Need to Know | DesignsVerse Agency",
-  "image": "/images/blog/web-design-trends-2025.jpg",
+  "image": "/images/blog/blog-6.jpg",
   "author": {
     "name": "DesignsVerse Team",
     "image": "/images/blog/author-01.png",
@@ -206,7 +206,7 @@ const blogData: Blog[] = [
 {
   "id": "7",
   "title": "How UX Design Impacts Your Website’s Conversion Rate | DesignsVerse Agency",
-  "image": "/images/blog/ux-conversion-rate.jpg",
+  "image": "/images/blog/blog-7.jpg",
   "author": {
     "name": "DesignsVerse Team",
     "image": "/images/blog/author-03.png",
@@ -267,7 +267,7 @@ const blogData: Blog[] = [
 {
   "id": "8",
   "title": "Custom Website Development for E-commerce: Pros & Cons | DesignsVerse Agency",
-  "image": "/images/blog/custom-ecommerce.jpg",
+  "image": "/images/blog/blog-8.jpg",
   "author": {
     "name": "DesignsVerse Team",
     "image": "/images/blog/author-01.png",
