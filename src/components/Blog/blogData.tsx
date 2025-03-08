@@ -328,7 +328,7 @@ const blogData: Blog[] = [
 {
   "id": "9",
   "title": "How to Optimize a Custom Website for Speed and Performance | DesignsVerse Agency",
-  "image": "/images/blog/website-speed-performance.jpg",
+  "image": "/images/blog/blog-9.jpg",
   "author": {
     "name": "DesignsVerse Team",
     "image": "/images/blog/author-01.png",
@@ -389,7 +389,7 @@ const blogData: Blog[] = [
 {
   "id": "10",
   "title": "The Role of Social Media in SEO: How to Rank Higher on Google | DesignsVerse Agency",
-  "image": "/images/blog/social-media-seo.jpg",
+  "image": "/images/blog/blog-10.jpg",
   "author": {
     "name": "DesignsVerse Team",
     "image": "/images/blog/author-01.png",
@@ -450,7 +450,7 @@ const blogData: Blog[] = [
 {
   "id": "11",
   "title": "Custom Web Development with ReactJS: Building Scalable, High-Performance Websites | DesignsVerse Agency",
-  "image": "/images/blog/react-web-development.jpg",
+  "image": "/images/blog/blog-11.jpg",
   "author": {
     "name": "DesignsVerse Team",
     "image": "/images/blog/author-01.png",
@@ -512,7 +512,7 @@ const blogData: Blog[] = [
 {
   "id": "12",
   "title": "How to Choose the Right Tech Stack for Custom Website Development | DesignsVerse Agency",
-  "image": "/images/blog/tech-stack-selection.jpg",
+  "image": "/images/blog/blog-12.jpg",
   "author": {
     "name": "DesignsVerse Team",
     "image": "/images/blog/author-01.png",
@@ -578,7 +578,7 @@ const blogData: Blog[] = [
 {
   "id": "13",
   "title": "Why Custom Website Development is Better Than Templates | DesignsVerse Agency",
-  "image": "/images/blog/custom-web-development.jpg",
+  "image": "/images/blog/blog-13.jpg",
   "author": {
     "name": "DesignsVerse Team",
     "image": "/images/blog/author-01.png",
