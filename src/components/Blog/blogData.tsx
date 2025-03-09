@@ -636,7 +636,7 @@ const blogData: Blog[] = [
 {
   "id": "14",
   "title": "The Role of AI in Modern SEO | DesignsVerse Agency",
-  "image": "/images/blog-14.jpg",
+  "image": "/images/blog/blog-14.jpg",
   "author": {
     "name": "DesignsVerse Team",
     "image": "/images/blog/author-01.png",
@@ -694,7 +694,7 @@ const blogData: Blog[] = [
 {
   "id": "15",
   "title": "The Power of Content Marketing in Lead Generation | DesignsVerse Agency",
-  "image": "/images/blog/content-marketing-leads.jpg",
+  "image": "/images/blog/blog-15.jpg",
   "author": {
     "name": "DesignsVerse Team",
     "image": "/images/blog/author-01.png",
