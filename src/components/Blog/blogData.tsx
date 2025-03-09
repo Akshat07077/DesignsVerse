@@ -576,7 +576,7 @@ const blogData: Blog[] = [
 
 
 {
-  "id": "14",
+  "id": "13",
   "title": "Why Custom Website Development is Better Than Templates | DesignsVerse Agency",
   "image": "/images/blog/blog-13.jpg",
   "author": {
@@ -634,9 +634,9 @@ const blogData: Blog[] = [
 },
 
 {
-  "id": "7",
+  "id": "14",
   "title": "The Role of AI in Modern SEO | DesignsVerse Agency",
-  "image": "/images/blog/ai-modern-seo.jpg",
+  "image": "/images/blog-14.jpg",
   "author": {
     "name": "DesignsVerse Team",
     "image": "/images/blog/author-01.png",
