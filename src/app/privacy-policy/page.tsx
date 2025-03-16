@@ -1,3 +1,4 @@
+import Head from "next/head";
 import SectionTitle from "@/components/Common/SectionTitle";
 
 const PrivacyPolicy = () => {
@@ -14,44 +15,61 @@ const PrivacyPolicy = () => {
   );
 
   return (
-    <section id="privacy" className="pt-16 md:pt-20 lg:pt-28">
-      <div className="container">
-        <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
-          <div className="-mx-4 flex flex-wrap">
-            {/* Left Side - Text Content */}
-            <div className="w-full px-4 lg:w-2/3 mt-[50px] mb-[80px]">
-              <SectionTitle
-                title="Privacy Policy"
-                paragraph="We are committed to protecting your personal information. This privacy policy outlines how we collect, use, and safeguard your data."
-                mb="44px"
-              />
-              <div>
-                <PolicyPoint text="We collect only necessary user data for service improvement." />
-                <PolicyPoint text="Your information is never shared with third parties without consent." />
-                <PolicyPoint text="We use secure protocols to protect your personal data." />
-                <PolicyPoint text="Cookies are used to enhance user experience and analyze traffic." />
-                <PolicyPoint text="You can opt-out of communications and request data deletion anytime." />
-              </div>
-            </div>
+    <>
+      <Head>
+        <title>Privacy Policy - Your Website Name</title>
+        <meta
+          name="description"
+          content="Learn how we collect, use, and protect your data in our privacy policy."
+        />
+      </Head>
 
-            {/* Right Side - Animated Video */}
-            <div className="w-full pr-25 px-4 lg:w-1/3 flex justify-center items-center">
-              <video
-                width="100%"
-                height="auto"
-                autoPlay
-                loop
-                muted
-                playsInline
-                className="rounded-lg shadow-lg"
-              >
-                <source src="/video/privatpolicy.mp4" type="video/mp4" />
-              </video>
+      <section id="privacy" className="pt-16 md:pt-20 lg:pt-28">
+        <div className="container">
+          <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
+            <div className="-mx-4 flex flex-wrap">
+              {/* Left Side - Text Content */}
+              <div className="w-full px-4 lg:w-2/3 mt-[50px] mb-[80px]">
+                
+                {/* H1 Heading for SEO and Accessibility */}
+                <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
+                  Privacy Policy
+                </h1>
+
+                <SectionTitle
+                  title="Our Commitment to Your Privacy"
+                  paragraph="We are committed to protecting your personal information. This privacy policy outlines how we collect, use, and safeguard your data."
+                  mb="44px"
+                />
+                
+                <div>
+                  <PolicyPoint text="We collect only necessary user data for service improvement." />
+                  <PolicyPoint text="Your information is never shared with third parties without consent." />
+                  <PolicyPoint text="We use secure protocols to protect your personal data." />
+                  <PolicyPoint text="Cookies are used to enhance user experience and analyze traffic." />
+                  <PolicyPoint text="You can opt-out of communications and request data deletion anytime." />
+                </div>
+              </div>
+
+              {/* Right Side - Animated Video */}
+              <div className="w-full pr-25 px-4 lg:w-1/3 flex justify-center items-center">
+                <video
+                  width="100%"
+                  height="auto"
+                  autoPlay
+                  loop
+                  muted
+                  playsInline
+                  className="rounded-lg shadow-lg"
+                >
+                  <source src="/video/privatpolicy.mp4" type="video/mp4" />
+                </video>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 };
 

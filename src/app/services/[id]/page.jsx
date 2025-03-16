@@ -93,10 +93,10 @@ export default async function ServicePost({ params }) {
           {/* Services List */}
           <h2 className="text-xl font-semibold mb-4 mt-6">All Services</h2>
           <ul className="space-y-2">
-            {data.map((service) => (
-              <li key={service.id} className="border p-2 rounded hover:bg-gray-200 cursor-pointer transition-colors">
-                <Link href={`/services/${service.id}`} className="flex justify-between items-center">
-                  {service.title}
+            {data.map((services) => (
+              <li key={services.id} className="border p-2 rounded hover:bg-gray-200 cursor-pointer transition-colors">
+                <Link href={`/services/${services.id}`} className="flex justify-between items-center">
+                  {services.title}
                   <span className="text-blue-500">→</span>
                 </Link>
               </li>

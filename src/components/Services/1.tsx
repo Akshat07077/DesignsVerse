@@ -62,7 +62,7 @@ const Service = () => {
                   key={service.id}
                   className="w-full md:w-[427px] flex-shrink-0 p-4 rounded-2xl text-center transform transition-transform hover:scale-105 bg-gray-light dark:bg-gray-dark"
                 >
-                  <Link href={`/service/${service.id}`}>
+                  <Link href={`/services/${service.id}`}>
                     <SingleService services={service} />
                   </Link>
                 </div>

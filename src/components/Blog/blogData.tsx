@@ -266,7 +266,7 @@ const blogData: Blog[] = [
 
 {
   "id": "8",
-  "title": "Custom Website Development for E-commerce: Pros & Cons | DesignsVerse Agency",
+  "title": "Custom E-commerce Website Development: Benefits & Drawbacks | DesignsVerse ",
   "image": "/images/blog/blog-8.jpg",
   "author": {
     "name": "DesignsVerse Team",
@@ -327,7 +327,7 @@ const blogData: Blog[] = [
 
 {
   "id": "9",
-  "title": "How to Optimize a Custom Website for Speed and Performance | DesignsVerse Agency",
+  "title": "Optimizing Custom Websites for Speed & Performance | DesignsVerse",
   "image": "/images/blog/blog-9.jpg",
   "author": {
     "name": "DesignsVerse Team",
