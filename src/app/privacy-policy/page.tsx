@@ -1,6 +1,13 @@
 import Head from "next/head";
 import SectionTitle from "@/components/Common/SectionTitle";
+import { Metadata } from "next";
 
+export const metadata: Metadata = {
+  title: "Privacy and Policy | DesignsVerse",
+  description: "Privacy and Policy of my company ",
+  // other metadata
+  
+};
 const PrivacyPolicy = () => {
   const PolicyPoint = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">
@@ -18,10 +25,7 @@ const PrivacyPolicy = () => {
     <>
       <Head>
         <title>Privacy Policy - Your Website Name</title>
-        <meta
-          name="description"
-          content="Learn how we collect, use, and protect your data in our privacy policy."
-        />
+        
       </Head>
 
       <section id="privacy" className="pt-16 md:pt-20 lg:pt-28">

@@ -97,7 +97,7 @@ const blogData: Blog[] = [
     "image":"/images/blog/blog-4.jpg",
     "author": {
       "name": "DesignsVerse Dev Team",
-      "image": "/images/blog/author-03.png",
+      "image": "/images/blog/author-04.png",
       "designation": "Web Developers"
     },
     "publishDate": "2025-02-22",

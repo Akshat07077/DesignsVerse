@@ -1,5 +1,13 @@
+import { Metadata } from "next";
 import Head from "next/head";
 import SectionTitle from "@/components/Common/SectionTitle";
+
+export const metadata: Metadata = {
+  title: "Terms of use | DesignsVerse",
+  description: "Terms of use of my company ",
+  // other metadata
+  
+};
 
 const PolicyPoint = ({ text }) => (
   <p className="mb-5 flex items-center text-lg font-medium text-body-color">
@@ -16,14 +24,6 @@ const PolicyPoint = ({ text }) => (
 const TermsOfUse = () => {
   return (
     <>
-      <Head>
-        <title>Terms of Use - Our Services</title>
-        <meta
-          name="description"
-          content="Read the terms and conditions for using our services."
-        />
-      </Head>
-
       <section id="terms" className="pt-16 md:pt-20 lg:pt-28">
         <div className="container">
           <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
