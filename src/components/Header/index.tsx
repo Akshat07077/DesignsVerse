@@ -176,9 +176,16 @@ const Header = () => {
                   href="tel:+919413466075"
                   className="hidden md:flex shadow-btn items-center hover:shadow-btn-hover rounded-xl bg-primary px-6 py-3 text-base font-medium text-white transition duration-300 hover:bg-opacity-90"
                 >
-                  <img className="mr-2" src="/images/call.png" alt="CallIcon" />
+                  <img 
+                    className="mr-2" 
+                    src="/images/call.png" 
+                    alt="Call Icon"
+                    width={24} 
+                    height={24} 
+                  />
                   Call Us
                 </Link>
+
                 {/* Theme Toggler */}
                 <div className="ml-4"> {/* Add margin to the left for spacing */}
                   <ThemeToggler />

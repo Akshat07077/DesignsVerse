@@ -18,12 +18,19 @@ const Hero = () => {
                 We help businesses build powerful websites, streamline operations with ERP solutions, and grow online through strategic digital marketing. Let us take your brand to the next level.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                  <Link
-                    href="tel:+919413466075"
-                    className="rounded-xl flex bg-primary px-8 py-4 text-base  font-semibold text-white duration-300 ease-in-out hover:bg-primary/80"
-                  >
-                    <img className="pr-1"  src="/images/call.png" width="auto" height="auto" alt="free-Call" /> Free Call 
-                  </Link>
+                <Link
+                  href="tel:+919413466075"
+                  className="hidden md:flex shadow-btn items-center hover:shadow-btn-hover rounded-xl bg-primary px-8 py-4 text-base font-medium text-white transition duration-300 hover:bg-opacity-90"
+                >
+                  <img 
+                    className="mr-2" 
+                    src="/images/call.png" 
+                    alt="Call Icon"
+                    width={24} 
+                    height={24} 
+                  />
+                  Call Us
+                </Link>
                   <Link
                     target="_blank" 
                     href="http://api.whatsapp.com/send/?phone=9413466075&text=Hello,%20I%20Want%20to+book+a+free+consultancy+call&type=phone_number&app_absent=0 "
