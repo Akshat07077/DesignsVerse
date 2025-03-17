@@ -4,10 +4,11 @@ type Author = {
   designation: string;
 };
 
-export type Blog = {
+// components/Blog/blog.ts
+export interface Blog {
   id: string;
   title: string;
-  image:string; 
+  image: string;
   author: {
     name: string;
     image: string;
@@ -21,4 +22,4 @@ export type Blog = {
     heading: string;
     content: string;
   }[];
-};
+}

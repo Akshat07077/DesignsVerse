@@ -1,14 +1,22 @@
 "use client";
+
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import SectionTitle from "../Common/SectionTitle";
 import SingleBlog from "./SingleBlog";
 import blogData from "./blogData";
 import Link from "next/link";
+// Use type-only import for Blog type
+import type { Blog } from "@/types/blog";
 
-const Blog = () => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
+const Blog: React.FC = () => {
+  const [currentIndex, setCurrentIndex] = useState<number>(0);
+  const [isMobile, setIsMobile] = useState<boolean>(false);
+
+  // Sort blogs by publishDate in descending order (newest first)
+  const sortedBlogs: Blog[] = [...blogData].sort((a: Blog, b: Blog) => 
+    new Date(b.publishDate).getTime() - new Date(a.publishDate).getTime()
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -19,18 +27,18 @@ const Blog = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  const cardsToShow = isMobile ? 3 : 3;
-  const cardWidth = isMobile ? 300 : 427; // Reduced width for mobile
-  const gap = isMobile ? 15 : 20; // Slightly smaller gap for mobile
-  const maxIndex = Math.max(0, blogData.length - cardsToShow);
-  const containerWidth = cardWidth * cardsToShow + gap * (cardsToShow - 1);
+  const cardsToShow: number = isMobile ? 3 : 3;
+  const cardWidth: number = isMobile ? 300 : 427;
+  const gap: number = isMobile ? 15 : 20;
+  const maxIndex: number = Math.max(0, sortedBlogs.length - cardsToShow);
+  const containerWidth: number = cardWidth * cardsToShow + gap * (cardsToShow - 1);
 
-  const handlePrev = () => {
-    setCurrentIndex((prev) => Math.max(prev - 1, 0));
+  const handlePrev = (): void => {
+    setCurrentIndex((prev: number) => Math.max(prev - 1, 0));
   };
 
-  const handleNext = () => {
-    setCurrentIndex((prev) => Math.min(prev + 1, maxIndex));
+  const handleNext = (): void => {
+    setCurrentIndex((prev: number) => Math.min(prev + 1, maxIndex));
   };
 
   return (
@@ -43,8 +51,8 @@ const Blog = () => {
         />
 
         <section className="pb-[20px] pt-[10px]">
-          <div className="relative  md:px-4">
-            {!isMobile && blogData.length > 3 && (
+          <div className="relative md:px-4">
+            {!isMobile && sortedBlogs.length > 3 && (
               <>
                 <button
                   onClick={handlePrev}
@@ -81,7 +89,7 @@ const Blog = () => {
                         }
                   }
                 >
-                  {blogData.slice(0, isMobile ? 3 : blogData.length).map((blog) => (
+                  {sortedBlogs.slice(0, isMobile ? 3 : sortedBlogs.length).map((blog: Blog) => (
                     <div
                       key={blog.id}
                       className="w-full rounded-2xl text-center transform transition-transform hover:scale-105 bg-gray-light dark:bg-gray-dark flex-shrink-0 mb-4 md:mb-0"

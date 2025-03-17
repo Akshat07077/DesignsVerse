@@ -2,11 +2,48 @@ import { Metadata } from "next";
 import Head from "next/head";
 import SectionTitle from "@/components/Common/SectionTitle";
 
+// Define Metadata for Terms of Use page SEO
 export const metadata: Metadata = {
-  title: "Terms of use | DesignsVerse",
-  description: "Terms of use of my company ",
-  // other metadata
-  
+  title: "Terms of Use | DesignsVerse",
+  description:
+    "Review the Terms of Use for DesignsVerse. By using our website development, digital marketing, and personal branding services, you agree to these terms and conditions.",
+  keywords: [
+    "DesignsVerse", "Designverse", "designverse", "DesignVerse", "Design", "Verse",
+    "terms of use", "terms and conditions", "DesignsVerse terms",
+    "website development terms", "digital marketing terms", "personal branding terms",
+    "service agreement", "India design agency", "Indore terms of use",
+  ],
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1.0",
+  authors: [{ name: "DesignsVerse Team", url: "https://www.designsverse.in" }],
+  alternates: {
+    canonical: "https://www.designsverse.in/terms-of-use", // Canonical URL for terms of use page
+  },
+  openGraph: {
+    title: "Terms of Use | DesignsVerse",
+    description:
+      "Review the Terms of Use for DesignsVerse. By using our website development, digital marketing, and personal branding services, you agree to these terms and conditions.",
+    url: "https://www.designsverse.in/terms-of-use", // Updated OG URL
+    siteName: "DesignsVerse",
+    images: [
+      {
+        url: "https://www.designsverse.in/og-image-terms.jpg", // Updated OG image URL (specific to terms of use)
+        width: 1200,
+        height: 630,
+        alt: "Terms of Use - DesignsVerse",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Terms of Use | DesignsVerse",
+    description:
+      "Review the Terms of Use for DesignsVerse. By using our services, you agree to these terms and conditions.",
+    images: ["https://www.designsverse.in/og-image-terms.jpg"], // Updated Twitter image URL
+    site: "@DesignsVerse", // Replace with your Twitter handle
+  },
 };
 
 const PolicyPoint = ({ text }) => (
@@ -22,16 +59,56 @@ const PolicyPoint = ({ text }) => (
 );
 
 const TermsOfUse = () => {
+  // Structured Data (JSON-LD) for Terms of Use page
+  const termsSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Terms of Use",
+    url: "https://www.designsverse.in/terms-of-use",
+    description:
+      "Review the Terms of Use for DesignsVerse. By using our website development, digital marketing, and personal branding services, you agree to these terms and conditions.",
+    publisher: {
+      "@type": "Organization",
+      name: "DesignsVerse",
+      url: "https://www.designsverse.in",
+      logo: "https://www.designsverse.in/image/logo/LOGO-1.png",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Inore",
+        addressLocality: "Indore",
+        addressRegion: "Madhya Pradesh",
+        postalCode: "452001",
+        addressCountry: "IN",
+      },
+    },
+    sameAs: [
+      "https://www.facebook.com/profile.php?id=100086505502218",
+      "https://x.com/designs_verse",
+      "https://www.linkedin.com/company/designsverse/posts/?feedView=all",
+      "https://www.instagram.com/designsverse.in/",
+    ],
+  };
+
   return (
     <>
+      <Head>
+        {/* Add Structured Data (JSON-LD) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(termsSchema) }}
+        />
+        {/* Additional Meta Tags */}
+        <meta name="theme-color" content="#317EFB" /> {/* Replace with your brand color */}
+        <link rel="icon" href="/favicon.ico" /> {/* Replace with actual favicon */}
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> {/* Replace with actual icon */}
+      </Head>
+
       <section id="terms" className="pt-16 md:pt-20 lg:pt-28">
         <div className="container">
           <div className="border-b border-body-color/[.15] pb-16 dark:border-white/[.15] md:pb-20 lg:pb-28">
             <div className="-mx-4 flex flex-wrap">
-              
               {/* Left Side - Terms Content */}
               <div className="w-full px-4 lg:w-2/3 mt-[50px] mb-[100px]">
-                
                 {/* H1 Heading for SEO */}
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                   Terms of Use
@@ -42,13 +119,13 @@ const TermsOfUse = () => {
                   paragraph="By using our services, you agree to abide by the following terms and conditions."
                   mb="44px"
                 />
-                
+
                 <div>
                   <PolicyPoint text="Users must comply with all applicable laws and regulations." />
                   <PolicyPoint text="Unauthorized use of our services is strictly prohibited." />
                   <PolicyPoint text="We reserve the right to modify or terminate services at any time." />
                   <PolicyPoint text="Users are responsible for maintaining account security." />
-                  <PolicyPoint text="All content and trademarks are the property of our company." />
+                  <PolicyPoint text="All content and trademarks are the property of DesignsVerse." /> {/* Updated to DesignsVerse */}
                 </div>
               </div>
 
@@ -64,9 +141,9 @@ const TermsOfUse = () => {
                   className="rounded-lg shadow-lg"
                 >
                   <source src="/video/termofuse.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
                 </video>
               </div>
-
             </div>
           </div>
         </div>

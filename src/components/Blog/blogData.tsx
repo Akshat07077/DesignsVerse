@@ -97,7 +97,7 @@ const blogData: Blog[] = [
     "image":"/images/blog/blog-4.jpg",
     "author": {
       "name": "DesignsVerse Dev Team",
-      "image": "/images/blog/author-04.png",
+      "image": "/images/blog/author-03.png",
       "designation": "Web Developers"
     },
     "publishDate": "2025-02-22",
@@ -852,7 +852,7 @@ const blogData: Blog[] = [
 {
   "id": "17",
   "title": "Why Website Speed Matters and How to Improve It | DesignsVerse Agency",
-  "image": "/images/blog/website-speed-optimization.jpg",
+  "image": "/images/blog/blog-5.jpg",
   "author": {
     "name": "DesignsVerse Team",
     "image": "/images/blog/author-01.png",

@@ -1,16 +1,96 @@
 import Link from "next/link";
-
 import { Metadata } from "next";
+import Head from "next/head"; // For structured data and additional meta tags
 
+// Define Metadata for Error page SEO
 export const metadata: Metadata = {
-  title: "Error Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Error Page for Startup Nextjs Template",
-  // other metadata
+  title: "404 Error Page | DesignsVerse",
+  description:
+    "Oops! The page you’re looking for at DesignsVerse can’t be found. It might have been moved, deleted, or doesn’t exist. Return to our homepage for website development, digital marketing, and personal branding solutions.",
+  keywords: [
+    "DesignsVerse", "Designverse", "designverse", "DesignVerse", "Design", "Verse", // Added your requested tags
+    "404 error", "page not found", "error page DesignsVerse",
+    "website development", "digital marketing", "personal branding",
+    "design agency India", "Indore design agency",
+  ],
+  robots: "noindex, follow", // 404 pages should not be indexed
+  viewport: "width=device-width, initial-scale=1.0",
+  authors: [{ name: "DesignsVerse Team", url: "https://www.designsverse.in" }],
+  alternates: {
+    canonical: "https://www.designsverse.in/404", // Canonical URL for error page
+  },
+  openGraph: {
+    title: "404 Error Page | DesignsVerse",
+    description:
+      "Oops! The page you’re looking for at DesignsVerse can’t be found. Return to our homepage for website development, digital marketing, and personal branding solutions.",
+    url: "https://www.designsverse.in/404", // Updated OG URL
+    siteName: "DesignsVerse",
+    images: [
+      {
+        url: "https://www.designsverse.in/og-image-404.jpg", // Updated OG image URL (specific to error page)
+        width: 1200,
+        height: 630,
+        alt: "404 Error - DesignsVerse",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "404 Error Page | DesignsVerse",
+    description:
+      "Oops! The page you’re looking for at DesignsVerse can’t be found. Return to our homepage for digital solutions.",
+    images: ["https://www.designsverse.in/og-image-404.jpg"], // Updated Twitter image URL
+    site: "@DesignsVerse", // Replace with your Twitter handle
+  },
 };
 
 const ErrorPage = () => {
+  // Structured Data (JSON-LD) for Error page
+  const errorSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "404 Error Page",
+    url: "https://www.designsverse.in/404",
+    description:
+      "The page you’re looking for at DesignsVerse can’t be found. It might have been moved, deleted, or doesn’t exist.",
+    publisher: {
+      "@type": "Organization",
+      name: "DesignsVerse",
+      url: "https://www.designsverse.in",
+      logo: "https://www.designsverse.in/image/logo/LOGO-1.png",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Inore",
+        addressLocality: "Indore",
+        addressRegion: "Madhya Pradesh",
+        postalCode: "452001",
+        addressCountry: "IN",
+      },
+    },
+    sameAs: [
+      "https://www.facebook.com/profile.php?id=100086505502218",
+      "https://x.com/designs_verse",
+      "https://www.linkedin.com/company/designsverse/posts/?feedView=all",
+      "https://www.instagram.com/designsverse.in/",
+    ],
+  };
+
   return (
     <>
+      <Head>
+        {/* Add Structured Data (JSON-LD) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(errorSchema) }}
+        />
+        {/* Additional Meta Tags */}
+        <meta name="theme-color" content="#317EFB" /> {/* Replace with your brand color */}
+        <link rel="icon" href="/favicon.ico" /> {/* Replace with actual favicon */}
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> {/* Replace with actual icon */}
+      </Head>
+
       <section className="relative z-10 pb-16 pt-36 md:pb-20 lg:pb-28 lg:pt-[180px]">
         <div className="container">
           <div className="flex flex-wrap -mx-4">
@@ -145,8 +225,7 @@ const ErrorPage = () => {
                   Sorry, the page can’t be found
                 </h3>
                 <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed">
-                  The page you were looking for appears to have been moved,
-                  deleted or does not exist.
+                  The page you were looking for appears to have been moved, deleted, or does not exist.
                 </p>
                 <Link
                   href="/"

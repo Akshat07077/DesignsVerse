@@ -11,30 +11,33 @@ const Hero = () => {
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4">
               <div className="mx-auto max-w-[800px] text-center">
-              <h1 className="mb-5 text-3xl font-normal text-black dark:text-white sm:text-4xl sm:font-bold md:text-5xl md:font-bold">
-                    Transforming Brands with Cutting-Edge Digital Solutions
+                <h1 className="mb-5 text-3xl font-normal text-black dark:text-white sm:text-4xl sm:font-bold md:text-5xl md:font-bold">
+                  Transforming Brands with Cutting-Edge Digital Solutions
                 </h1>
                 <p className="mb-12 text-base !leading-relaxed text-body-color dark:text-body-color-dark sm:text-lg md:text-xl">
-                We help businesses build powerful websites, streamline operations with ERP solutions, and grow online through strategic digital marketing. Let us take your brand to the next level.
+                  We help businesses build powerful websites, streamline
+                  operations with ERP solutions, and grow online through
+                  strategic digital marketing. Let us take your brand to the
+                  next level.
                 </p>
                 <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-                <Link
-                  href="tel:+919413466075"
-                  className="hidden md:flex shadow-btn items-center hover:shadow-btn-hover rounded-xl bg-primary px-8 py-4 text-base font-medium text-white transition duration-300 hover:bg-opacity-90"
-                >
-                  <img 
-                    className="mr-2" 
-                    src="/images/call.png" 
-                    alt="Call Icon"
-                    width={24} 
-                    height={24} 
-                  />
-                  Call Us
-                </Link>
                   <Link
-                    target="_blank" 
+                    href="tel:+919413466075"
+                    className="flex items-center rounded-xl bg-primary px-8 py-4 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover"
+                  >
+                    <img
+                      className="mr-2"
+                      src="/images/call.png"
+                      alt="Call Icon"
+                      width={26}
+                      height={24}
+                    />
+                    Call Us
+                  </Link>
+                  <Link
+                    target="_blank"
                     href="http://api.whatsapp.com/send/?phone=9413466075&text=Hello,%20I%20Want%20to+book+a+free+consultancy+call&type=phone_number&app_absent=0 "
-                    className="inline-block target-blank  rounded-xl bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
+                    className="target-blank inline-block  rounded-xl bg-black px-8 py-4 text-base font-semibold text-white duration-300 ease-in-out hover:bg-black/90 dark:bg-white/10 dark:text-white dark:hover:bg-white/5"
                   >
                     Book Now 🎯
                   </Link>

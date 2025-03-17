@@ -2,12 +2,50 @@ import Head from "next/head";
 import SectionTitle from "@/components/Common/SectionTitle";
 import { Metadata } from "next";
 
+// Define Metadata for Privacy Policy page SEO
 export const metadata: Metadata = {
-  title: "Privacy and Policy | DesignsVerse",
-  description: "Privacy and Policy of my company ",
-  // other metadata
-  
+  title: "Privacy Policy | DesignsVerse",
+  description:
+    "Learn how DesignsVerse protects your privacy. Our Privacy Policy outlines how we collect, use, and safeguard your personal data for website development, digital marketing, and personal branding services.",
+  keywords: [
+    "DesignsVerse", "Designverse", "designverse", "DesignVerse", "Design", "Verse",
+    "privacy policy", "data protection", "personal data", "DesignsVerse privacy",
+    "website development privacy", "digital marketing privacy", "personal branding privacy",
+    "secure data", "India design agency", "Indore privacy policy",
+  ],
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1.0",
+  authors: [{ name: "DesignsVerse Team", url: "https://www.designsverse.in" }],
+  alternates: {
+    canonical: "https://www.designsverse.in/privacy-policy", // Canonical URL for privacy policy page
+  },
+  openGraph: {
+    title: "Privacy Policy | DesignsVerse",
+    description:
+      "Learn how DesignsVerse protects your privacy. Our Privacy Policy outlines how we collect, use, and safeguard your personal data for website development, digital marketing, and personal branding services.",
+    url: "https://www.designsverse.in/privacy-policy", // Updated OG URL
+    siteName: "DesignsVerse",
+    images: [
+      {
+        url: "https://www.designsverse.in/og-image-privacy.jpg", // Updated OG image URL (specific to privacy policy)
+        width: 1200,
+        height: 630,
+        alt: "Privacy Policy - DesignsVerse",
+      },
+    ],
+    locale: "en_IN",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Privacy Policy | DesignsVerse",
+    description:
+      "Learn how DesignsVerse protects your privacy. Our Privacy Policy outlines how we collect, use, and safeguard your personal data.",
+    images: ["https://www.designsverse.in/og-image-privacy.jpg"], // Updated Twitter image URL
+    site: "@DesignsVerse", // Replace with your Twitter handle
+  },
 };
+
 const PrivacyPolicy = () => {
   const PolicyPoint = ({ text }) => (
     <p className="mb-5 flex items-center text-lg font-medium text-body-color">
@@ -21,11 +59,48 @@ const PrivacyPolicy = () => {
     </p>
   );
 
+  // Structured Data (JSON-LD) for Privacy Policy page
+  const privacySchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    name: "Privacy Policy",
+    url: "https://www.designsverse.in/privacy-policy",
+    description:
+      "Learn how DesignsVerse protects your privacy. Our Privacy Policy outlines how we collect, use, and safeguard your personal data for website development, digital marketing, and personal branding services.",
+    publisher: {
+      "@type": "Organization",
+      name: "DesignsVerse",
+      url: "https://www.designsverse.in",
+      logo: "https://www.designsverse.in/image/logo/LOGO-1.png",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Inore",
+        addressLocality: "Indore",
+        addressRegion: "Madhya Pradesh",
+        postalCode: "452001",
+        addressCountry: "IN",
+      },
+    },
+    sameAs: [
+      "https://www.facebook.com/profile.php?id=100086505502218",
+      "https://x.com/designs_verse",
+      "https://www.linkedin.com/company/designsverse/posts/?feedView=all",
+      "https://www.instagram.com/designsverse.in/",
+    ],
+  };
+
   return (
     <>
       <Head>
-        <title>Privacy Policy - Your Website Name</title>
-        
+        {/* Add Structured Data (JSON-LD) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(privacySchema) }}
+        />
+        {/* Additional Meta Tags */}
+        <meta name="theme-color" content="#317EFB" /> {/* Replace with your brand color */}
+        <link rel="icon" href="/favicon.ico" /> {/* Replace with actual favicon */}
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> {/* Replace with actual icon */}
       </Head>
 
       <section id="privacy" className="pt-16 md:pt-20 lg:pt-28">
@@ -34,7 +109,6 @@ const PrivacyPolicy = () => {
             <div className="-mx-4 flex flex-wrap">
               {/* Left Side - Text Content */}
               <div className="w-full px-4 lg:w-2/3 mt-[50px] mb-[80px]">
-                
                 {/* H1 Heading for SEO and Accessibility */}
                 <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-6">
                   Privacy Policy
@@ -45,7 +119,7 @@ const PrivacyPolicy = () => {
                   paragraph="We are committed to protecting your personal information. This privacy policy outlines how we collect, use, and safeguard your data."
                   mb="44px"
                 />
-                
+
                 <div>
                   <PolicyPoint text="We collect only necessary user data for service improvement." />
                   <PolicyPoint text="Your information is never shared with third parties without consent." />
@@ -67,6 +141,7 @@ const PrivacyPolicy = () => {
                   className="rounded-lg shadow-lg"
                 >
                   <source src="/video/privatpolicy.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
                 </video>
               </div>
             </div>

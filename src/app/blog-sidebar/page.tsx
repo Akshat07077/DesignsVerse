@@ -3,26 +3,121 @@ import SharePost from "@/components/Blog/SharePost";
 import TagButton from "@/components/Blog/TagButton";
 import NewsLatterBox from "@/components/Contact/NewsLatterBox";
 import Image from "next/image";
-
 import { Metadata } from "next";
+import Head from "next/head"; // For structured data and additional meta tags
 
+// Define Metadata for Blog Details page SEO
 export const metadata: Metadata = {
-  title: "Blog Details Page | Free Next.js Template for Startup and SaaS",
-  description: "This is Blog Details Page for Startup Nextjs Template",
-  // other metadata
+  title: "10 Amazing Sites to Download Stock Photos & Digital Assets for Free | DesignsVerse",
+  description:
+    "Discover 10 amazing websites to download free stock photos and digital assets for your design projects. Learn tips and tricks from DesignsVerse to enhance your website development, digital marketing, and personal branding efforts.",
+  keywords: [
+    "DesignsVerse", "DesignVerse", "Design", "Verse",
+    "stock photos", "free stock photos", "digital assets", "free digital assets",
+    "website development", "digital marketing", "personal branding",
+    "design resources", "UI/UX design", "graphic design", "India",
+  ],
+  robots: "index, follow",
+  viewport: "width=device-width, initial-scale=1.0",
+  authors: [
+    { name: "Musharof Chy" }, // Specific author from content
+    { name: "DesignsVerse Team", url: "https://www.designsverse.in" },
+  ],
+  alternates: {
+    canonical: "https://www.designsverse.in/blog/10-amazing-sites-to-download-stock-photos", // Canonical URL for this blog post
+  },
+  openGraph: {
+    title: "10 Amazing Sites to Download Stock Photos & Digital Assets for Free | DesignsVerse",
+    description:
+      "Discover 10 amazing websites to download free stock photos and digital assets for your design projects. Learn tips and tricks from DesignsVerse to enhance your website development, digital marketing, and personal branding efforts.",
+    url: "https://www.designsverse.in/blog/10-amazing-sites-to-download-stock-photos", // Updated OG URL
+    siteName: "DesignsVerse",
+    images: [
+      {
+        url: "https://www.designsverse.in/images/blog/blog-details-01.jpg", // Updated OG image URL (specific to this post)
+        width: 1200,
+        height: 630,
+        alt: "10 Amazing Sites to Download Stock Photos - DesignsVerse",
+      },
+    ],
+    locale: "en_IN",
+    type: "article",
+    publishedTime: "2024-01-12", // Date from content
+    authors: ["Musharof Chy"], // Specific author
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "10 Amazing Sites to Download Stock Photos & Digital Assets for Free | DesignsVerse",
+    description:
+      "Discover 10 amazing websites to download free stock photos and digital assets for your design projects. Learn tips and tricks from DesignsVerse.",
+    images: ["https://www.designsverse.in/images/blog/blog-details-01.jpg"], // Updated Twitter image URL
+    site: "@DesignsVerse", // Replace with your Twitter handle
+  },
 };
 
 const BlogSidebarPage = () => {
+  // Structured Data (JSON-LD) for Blog Post
+  const blogPostSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    headline: "10 Amazing Sites to Download Stock Photos & Digital Assets for Free",
+    description:
+      "Discover 10 amazing websites to download free stock photos and digital assets for your design projects. Learn tips and tricks from DesignsVerse to enhance your website development, digital marketing, and personal branding efforts.",
+    image: "https://www.designsverse.in/images/blog/blog-details-01.jpg", // Specific image from content
+    datePublished: "2024-01-12", // Date from content
+    dateModified: "2024-01-12", // Assuming no modified date, using publish date
+    author: {
+      "@type": "Person",
+      name: "Musharof Chy", // Specific author from content
+      url: "https://www.designsverse.in", // Assuming no specific author URL, using site URL
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "DesignsVerse",
+      url: "https://www.designsverse.in",
+      logo: "https://www.designsverse.in/image/logo/LOGO-1.png",
+      address: {
+        "@type": "PostalAddress",
+        streetAddress: "Inore",
+        addressLocality: "Indore",
+        addressRegion: "Madhya Pradesh",
+        postalCode: "452001",
+        addressCountry: "IN",
+      },
+    },
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": "https://www.designsverse.in/blog/10-amazing-sites-to-download-stock-photos", // Specific blog post URL
+    },
+    sameAs: [
+      "https://www.facebook.com/profile.php?id=100086505502218",
+      "https://x.com/designs_verse",
+      "https://www.linkedin.com/company/designsverse/posts/?feedView=all",
+      "https://www.instagram.com/designsverse.in/",
+    ],
+  };
+
   return (
     <>
+      <Head>
+        {/* Add Structured Data (JSON-LD) */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostSchema) }}
+        />
+        {/* Additional Meta Tags */}
+        <meta name="theme-color" content="#317EFB" /> {/* Replace with your brand color */}
+        <link rel="icon" href="/favicon.ico" /> {/* Replace with actual favicon */}
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> {/* Replace with actual icon */}
+      </Head>
+
       <section className="overflow-hidden pb-[120px] pt-[180px]">
         <div className="container">
           <div className="-mx-4 flex flex-wrap">
             <div className="w-full px-4 lg:w-8/12">
               <div>
                 <h1 className="mb-8 text-3xl font-bold leading-tight text-black dark:text-white sm:text-4xl sm:leading-tight">
-                  10 amazing sites to download stock photos & digital assets for
-                  free
+                  10 Amazing Sites to Download Stock Photos & Digital Assets for Free
                 </h1>
                 <div className="mb-10 flex flex-wrap items-center justify-between border-b border-body-color border-opacity-10 pb-4 dark:border-white dark:border-opacity-10">
                   <div className="flex flex-wrap items-center">
@@ -31,14 +126,14 @@ const BlogSidebarPage = () => {
                         <div className="relative h-10 w-10 overflow-hidden rounded-full">
                           <Image
                             src="/images/blog/author-02.png"
-                            alt="author"
+                            alt="Musharof Chy - Author"
                             fill
                           />
                         </div>
                       </div>
                       <div className="w-full">
                         <span className="mb-1 text-base font-medium text-body-color">
-                          By <span> Musharof Chy</span>
+                          By <span>Musharof Chy</span>
                         </span>
                       </div>
                     </div>
@@ -106,50 +201,33 @@ const BlogSidebarPage = () => {
                 </div>
                 <div>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat.
                   </p>
                   <div className="mb-10 w-full overflow-hidden rounded">
                     <div className="relative aspect-[97/60] w-full sm:aspect-[97/44]">
                       <Image
                         src="/images/blog/blog-details-01.jpg"
-                        alt="image"
+                        alt="10 Amazing Sites to Download Stock Photos"
                         fill
                         className="h-full w-full object-cover object-center"
                       />
                     </div>
                   </div>
                   <p className="mb-8 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Quis enim lobortis scelerisque fermentum. Neque
-                    sodales ut etiam sit amet. Ligula ullamcorper
-                    <strong className="text-primary dark:text-white">
-                      {" "}
-                      malesuada{" "}
-                    </strong>
-                    proin libero nunc consequat interdum varius. Quam
-                    pellentesque nec nam aliquam sem et tortor consequat.
-                    Pellentesque adipiscing commodo elit at imperdiet.
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis enim lobortis scelerisque fermentum. Neque sodales ut etiam sit amet. Ligula ullamcorper{" "}
+                    <strong className="text-primary dark:text-white">malesuada</strong>{" "}
+                    proin libero nunc consequat interdum varius. Quam pellentesque nec nam aliquam sem et tortor consequat. Pellentesque adipiscing commodo elit at imperdiet.
                   </p>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    Semper auctor neque vitae tempus quam pellentesque nec.
-                    <span className="text-primary underline dark:text-white">
-                      {" "}
-                      Amet dictum sit amet justo{" "}
-                    </span>
-                    donec enim diam. Varius sit amet mattis vulputate enim nulla
-                    aliquet porttitor. Odio pellentesque diam volutpat commodo
-                    sed.
+                    Semper auctor neque vitae tempus quam pellentesque nec.{" "}
+                    <span className="text-primary underline dark:text-white">Amet dictum sit amet justo</span>{" "}
+                    donec enim diam. Varius sit amet mattis vulputate enim nulla aliquet porttitor. Odio pellentesque diam volutpat commodo sed.
                   </p>
                   <h3 className="font-xl mb-10 font-bold leading-tight text-black dark:text-white sm:text-2xl sm:leading-tight lg:text-xl lg:leading-tight xl:text-2xl xl:leading-tight">
-                    Digital marketplace for Ui/Ux designers.
+                    Digital Marketplace for UI/UX Designers
                   </h3>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    consectetur adipiscing elit in voluptate velit esse cillum
-                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    mattis vulputate cupidatat.
+                    Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat mattis vulputate cupidatat.
                   </p>
                   <ul className="mb-10 list-inside list-disc text-body-color">
                     <li className="mb-2 text-base font-medium text-body-color sm:text-lg lg:text-base xl:text-lg">
@@ -167,10 +245,7 @@ const BlogSidebarPage = () => {
                   </ul>
                   <div className="relative z-10 mb-10 overflow-hidden rounded-md bg-primary bg-opacity-10 p-8 md:p-9 lg:p-8 xl:p-9">
                     <p className="text-center text-base font-medium italic text-body-color">
-                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                      sed do eiusmod incididunt utionals labore et dolore magna
-                      aliqua. Quis lobortis scelerisque fermentum, The Neque ut
-                      etiam sit amet.
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod incididunt ut labore et dolore magna aliqua. Quis lobortis scelerisque fermentum, The Neque ut etiam sit amet.
                     </p>
                     <span className="absolute left-0 top-0 z-[-1]">
                       <svg
@@ -200,11 +275,7 @@ const BlogSidebarPage = () => {
                             gradientUnits="userSpaceOnUse"
                           >
                             <stop stopColor="white" stopOpacity="0.06" />
-                            <stop
-                              offset="1"
-                              stopColor="white"
-                              stopOpacity="0"
-                            />
+                            <stop offset="1" stopColor="white" stopOpacity="0" />
                           </linearGradient>
                           <linearGradient
                             id="paint1_linear_111:606"
@@ -215,11 +286,7 @@ const BlogSidebarPage = () => {
                             gradientUnits="userSpaceOnUse"
                           >
                             <stop stopColor="white" stopOpacity="0.06" />
-                            <stop
-                              offset="1"
-                              stopColor="white"
-                              stopOpacity="0"
-                            />
+                            <stop offset="1" stopColor="white" stopOpacity="0" />
                           </linearGradient>
                         </defs>
                       </svg>
@@ -232,13 +299,7 @@ const BlogSidebarPage = () => {
                         fill="none"
                         xmlns="http://www.w3.org/2000/svg"
                       >
-                        <circle
-                          opacity="0.8"
-                          cx="37.5"
-                          cy="37.5"
-                          r="37.5"
-                          fill="#4A6CF7"
-                        />
+                        <circle opacity="0.8" cx="37.5" cy="37.5" r="37.5" fill="#4A6CF7" />
                         <mask
                           id="mask0_111:596"
                           style={{ maskType: "alpha" }}
@@ -248,13 +309,7 @@ const BlogSidebarPage = () => {
                           width="75"
                           height="75"
                         >
-                          <circle
-                            opacity="0.8"
-                            cx="37.5"
-                            cy="37.5"
-                            r="37.5"
-                            fill="#4A6CF7"
-                          />
+                          <circle opacity="0.8" cx="37.5" cy="37.5" r="37.5" fill="#4A6CF7" />
                         </mask>
                         <g mask="url(#mask0_111:596)">
                           <circle
@@ -265,12 +320,7 @@ const BlogSidebarPage = () => {
                             fill="url(#paint0_radial_111:596)"
                           />
                           <g opacity="0.8" filter="url(#filter0_f_111:596)">
-                            <circle
-                              cx="40.8089"
-                              cy="19.853"
-                              r="15.4412"
-                              fill="white"
-                            />
+                            <circle cx="40.8089" cy="19.853" r="15.4412" fill="white" />
                           </g>
                         </g>
                         <defs>
@@ -283,20 +333,9 @@ const BlogSidebarPage = () => {
                             filterUnits="userSpaceOnUse"
                             colorInterpolationFilters="sRGB"
                           >
-                            <feFlood
-                              floodOpacity="0"
-                              result="BackgroundImageFix"
-                            />
-                            <feBlend
-                              mode="normal"
-                              in="SourceGraphic"
-                              in2="BackgroundImageFix"
-                              result="shape"
-                            />
-                            <feGaussianBlur
-                              stdDeviation="10.5"
-                              result="effect1_foregroundBlur_111:596"
-                            />
+                            <feFlood floodOpacity="0" result="BackgroundImageFix" />
+                            <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                            <feGaussianBlur stdDeviation="10.5" result="effect1_foregroundBlur_111:596" />
                           </filter>
                           <radialGradient
                             id="paint0_radial_111:596"
@@ -314,9 +353,7 @@ const BlogSidebarPage = () => {
                     </span>
                   </div>
                   <p className="mb-10 text-base font-medium leading-relaxed text-body-color sm:text-lg sm:leading-relaxed lg:text-base lg:leading-relaxed xl:text-lg xl:leading-relaxed">
-                    consectetur adipiscing elit in voluptate velit esse cillum
-                    dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                    mattis vulputate cupidatat.
+                    Consectetur adipiscing elit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat mattis vulputate cupidatat.
                   </p>
                   <div className="items-center justify-between sm:flex">
                     <div className="mb-5">
