@@ -8,11 +8,11 @@ const Popup = () => {
 
   // Updated color scheme based on #4A6CF7
   const colors = {
-    primary: "#4A6CF7",      // Your website's main color
-    secondary: "#FFB020",    // Complementary accent color
-    background: "rgba(255, 255, 255, 0.95)", // Light blog opacity
-    text: "#1A2B6D",        // Darker shade for contrast
-    overlay: "rgba(26, 43, 109, 0.5)", // Overlay with blue tint
+    primary: "#4A6CF7",
+    secondary: "#FFB020",
+    background: "rgba(255, 255, 255, 0.95)",
+    text: "#1A2B6D",
+    overlay: "rgba(0, 0, 0, 0.6)", // Darker black opacity (60%)
     gradient: "linear-gradient(135deg, #4A6CF7, #3B5BDB)",
   };
 
@@ -40,6 +40,10 @@ const Popup = () => {
           transition={{ duration: 0.4, ease: "easeInOut" }}
           className="fixed inset-0 flex justify-center items-center z-50"
           onClick={handleClose}
+          style={{
+            backgroundColor: colors.overlay,
+            backdropFilter: "blur(4px)", // Optional blur effect
+          }as React.CSSProperties}
         >
           <motion.div
             initial={{ scale: 0.9, opacity: 0, y: 20 }}
@@ -88,7 +92,7 @@ const Popup = () => {
                 className="text-center mb-6 leading-relaxed text-lg"
                 style={{ color: colors.text }}
               >
-                Click the <span className="font-medium">&quot;Call Now&quot;</span> button below to speak with us instantly.
+                Click the <span className="font-medium">"Call Now"</span> button below to speak with us instantly.
               </p>
 
               {/* Call Button */}
