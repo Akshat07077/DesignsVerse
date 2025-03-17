@@ -39,7 +39,6 @@ const Popup = () => {
           exit={{ opacity: 0 }}
           transition={{ duration: 0.4, ease: "easeInOut" }}
           className="fixed inset-0 flex justify-center items-center z-50"
-          
           onClick={handleClose}
         >
           <motion.div
