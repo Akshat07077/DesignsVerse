@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Popup = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const callNumber = "+919153164444";
+  const callNumber = "+919413466075";
 
   // Updated color scheme based on #4A6CF7
   const colors = {
