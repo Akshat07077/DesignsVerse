@@ -88,7 +88,7 @@ const Popup = () => {
                 className="text-center mb-6 leading-relaxed text-lg"
                 style={{ color: colors.text }}
               >
-                Click the <span className="font-medium">"Call Now"</span> button below to speak with us instantly.
+                Click the <span className="font-medium">&quot;Call Now&quot;</span> button below to speak with us instantly.
               </p>
 
               {/* Call Button */}

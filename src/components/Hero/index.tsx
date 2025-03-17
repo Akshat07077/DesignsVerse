@@ -1,5 +1,5 @@
 import Link from "next/link";
-
+import Image from "next/image";
 const Hero = () => {
   return (
     <>
@@ -25,7 +25,7 @@ const Hero = () => {
                     href="tel:+919413466075"
                     className="flex items-center rounded-xl bg-primary px-8 py-4 text-base font-medium text-white shadow-btn transition duration-300 hover:bg-opacity-90 hover:shadow-btn-hover"
                   >
-                    <img
+                    <Image
                       className="mr-2"
                       src="/images/call.png"
                       alt="Call Icon"
