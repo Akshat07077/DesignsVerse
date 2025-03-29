@@ -19,7 +19,7 @@ const Popup = () => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 1000);
+    }, 10000);
     return () => clearTimeout(timer);
   }, []);
 
@@ -61,14 +61,24 @@ const Popup = () => {
 
               {/* Close Button */}
               <button
-                onClick={handleClose}
-                className="absolute top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center transition-all duration-300 hover:rotate-90 hover:bg-opacity-100 focus:ring-2 focus:ring-offset-2 focus:ring-[#4A6CF7]"
-                style={{ color: colors.text, backgroundColor: "rgba(74, 108, 247, 0.1)" }}
+                onClick={(e) => {
+                  e.stopPropagation(); // Prevent event propagation
+                  handleClose();
+                }}
+                className="absolute top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center 
+                          transition-colors duration-200 ease-in-out hover:bg-[#4A6CF7]/20 active:bg-[#4A6CF7]/30
+                          focus:outline-none focus:ring-2 focus:ring-[#4A6CF7] focus:ring-offset-2"
+                style={{ 
+                  color: colors.text,
+                  backgroundColor: "rgba(74, 108, 247, 0.1)",
+                  border: "1px solid rgba(74, 108, 247, 0.2)"
+                }}
                 aria-label="Close popup"
               >
                 <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
                 </svg>
+                <span className="sr-only">Close popup</span>
               </button>
 
               {/* Header */}
