@@ -135,7 +135,7 @@ const Popup = () => {
                 className="text-center text-sm mt-6 opacity-80 italic"
                 style={{ color: colors.text }}
               >
-                We're eagerly waiting for your call!
+                We&apos;re eagerly waiting for your call!
               </p>
             </div>
           </motion.div>
