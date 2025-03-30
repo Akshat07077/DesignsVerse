@@ -136,6 +136,7 @@ const Testimonials = () => {
     return () => ctx.revert(); // Cleanup on unmount
   }, []);
 
+
   return (
     <section className="relative z-10 overflow-hidden bg-[#F0F2F9] py-16 dark:bg-[black] md:py-20 lg:py-28">
       <div className="container relative z-10">
@@ -150,7 +151,7 @@ const Testimonials = () => {
             {[...testimonialData, ...testimonialData].map((testimonial) => (
               <div
                 key={testimonial.id}
-                className="testimonial-item w-[calc(100%/3)] min-w-[300px]"
+                className="testimonial-item w-[calc(100%/3)] min-w-[300px] h-[350px]" // Added fixed height
               >
                 <SingleTestimonial testimonial={testimonial} />
               </div>
