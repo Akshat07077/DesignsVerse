@@ -8,11 +8,11 @@ const Popup = () => {
 
   // Updated color scheme based on #4A6CF7
   const colors = {
-    primary: "#4A6CF7",      // Your website's main color
-    secondary: "#FFB020",    // Complementary accent color
-    background: "rgba(255, 255, 255, 0.95)", // Light blog opacity
-    text: "#1A2B6D",        // Darker shade for contrast
-    overlay: "rgba(26, 43, 109, 0.5)", // Overlay with blue tint
+    primary: "#4A6CF7",
+    secondary: "#FFB020",
+    background: "rgba(255, 255, 255, 0.95)",
+    text: "#1A2B6D",
+    overlay: "rgba(26, 43, 109, 0.5)",
     gradient: "linear-gradient(135deg, #4A6CF7, #3B5BDB)",
   };
 
@@ -24,10 +24,8 @@ const Popup = () => {
   }, []);
 
   const handleClose = () => {
-    if (isOpen) {
-      setIsOpen(false);
-      localStorage.setItem("popupShown", "true");
-    }
+    setIsOpen(false);
+    localStorage.setItem("popupShown", "true");
   };
 
   return (
@@ -41,6 +39,9 @@ const Popup = () => {
           className="fixed inset-0 flex justify-center items-center z-50"
           onClick={handleClose}
         >
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/30 backdrop-blur-sm" />
+          
           <motion.div
             initial={{ scale: 0.9, opacity: 0, y: 20 }}
             animate={{ scale: 1, opacity: 1, y: 0 }}
@@ -50,8 +51,11 @@ const Popup = () => {
             onClick={(e) => e.stopPropagation()}
           >
             <div
-              className="rounded-2xl shadow-xl p-8 relative overflow-hidden backdrop-blur-sm"
-              style={{ background: colors.background, border: "1px solid rgba(74, 108, 247, 0.1)" }}
+              className="rounded-2xl shadow-xl p-8 relative overflow-hidden"
+              style={{ 
+                background: colors.background, 
+                border: "1px solid rgba(74, 108, 247, 0.1)" 
+              }}
             >
               {/* Decorative Element */}
               <div
@@ -59,12 +63,9 @@ const Popup = () => {
                 style={{ background: colors.gradient }}
               />
 
-              {/* Close Button */}
+              {/* Optimized Close Button */}
               <button
-                onClick={(e) => {
-                  e.stopPropagation(); // Prevent event propagation
-                  handleClose();
-                }}
+                onClick={handleClose}
                 className="absolute top-4 right-4 w-10 h-10 rounded-full flex items-center justify-center 
                           transition-colors duration-200 ease-in-out hover:bg-[#4A6CF7]/20 active:bg-[#4A6CF7]/30
                           focus:outline-none focus:ring-2 focus:ring-[#4A6CF7] focus:ring-offset-2"
@@ -75,10 +76,19 @@ const Popup = () => {
                 }}
                 aria-label="Close popup"
               >
-                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                <svg 
+                  className="w-6 h-6 pointer-events-none" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  viewBox="0 0 24 24"
+                >
+                  <path 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round" 
+                    strokeWidth={2} 
+                    d="M6 18L18 6M6 6l12 12" 
+                  />
                 </svg>
-                <span className="sr-only">Close popup</span>
               </button>
 
               {/* Header */}
@@ -125,7 +135,7 @@ const Popup = () => {
                 className="text-center text-sm mt-6 opacity-80 italic"
                 style={{ color: colors.text }}
               >
-                We’re eagerly waiting for your call!
+                We&apos;re eagerly waiting for your call!
               </p>
             </div>
           </motion.div>

@@ -58,25 +58,55 @@ const Blog: React.FC = () => {
             <button 
               onClick={prevPage} 
               disabled={currentPage === 1} 
-              className="px-4 py-2 bg-gray-300 rounded-md disabled:opacity-50"
+              className="flex items-center justify-center px-4 py-2 rounded-md bg-gray-300 hover:bg-gray-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className="h-5 w-5" 
+                viewBox="0 0 20 20" 
+                fill="currentColor"
+              >
+                <path 
+                  fillRule="evenodd" 
+                  d="M12.707 5.293a1 1 0 010 1.414L9.414 10l3.293 3.293a1 1 0 01-1.414 1.414l-4-4a1 1 0 010-1.414l4-4a1 1 0 011.414 0z" 
+                  clipRule="evenodd" 
+                />
+              </svg>
+              <span className="ml-1">Previous</span>
             </button>
+            
             {Array.from({ length: totalPages }, (_, index: number) => (
               <button 
                 key={index + 1} 
                 onClick={() => setCurrentPage(index + 1)}
-                className={`px-4 py-2 rounded-md ${currentPage === index + 1 ? "bg-blue-500 text-white" : "bg-gray-300"}`}
+                className={`px-4 py-2 rounded-md transition-colors ${
+                  currentPage === index + 1 
+                    ? "bg-blue-500 text-white" 
+                    : "bg-gray-300 hover:bg-gray-400"
+                }`}
               >
                 {index + 1}
               </button>
             ))}
+            
             <button 
               onClick={nextPage} 
               disabled={currentPage === totalPages} 
-              className="px-4 py-2 bg-gray-300 rounded-md disabled:opacity-50"
+              className="flex items-center justify-center px-4 py-2 rounded-md bg-gray-300 hover:bg-gray-400 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              
+              <span className="mr-1">Next</span>
+              <svg 
+                xmlns="http://www.w3.org/2000/svg" 
+                className="h-5 w-5" 
+                viewBox="0 0 20 20" 
+                fill="currentColor"
+              >
+                <path 
+                  fillRule="evenodd" 
+                  d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" 
+                  clipRule="evenodd" 
+                />
+              </svg>
             </button>
           </div>
         </div>
