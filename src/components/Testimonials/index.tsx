@@ -39,7 +39,7 @@ const testimonialData: Testimonial[] = [
     designation: "CEO @CreativeHub",
     content:
       "They crafted an incredible website! DesignsVerse delivered an elegant, user-friendly design that perfectly matches our brand identity.",
-    image: "/images/testimonials/auth-04.png",
+    image: "/images/testimonials/girl-2.png",
     star: 5,
   },
   {
@@ -48,7 +48,7 @@ const testimonialData: Testimonial[] = [
     designation: "Manager @TechFlow",
     content:
       "DesignsVerse optimized our website for speed and SEO, and our organic traffic has significantly increased in just a few months!",
-    image: "/images/testimonials/auth-05.png",
+    image: "/images/testimonials/boy-2.png",
     star: 5,
   },
   {
@@ -57,7 +57,7 @@ const testimonialData: Testimonial[] = [
     designation: "Founder @BrandBoost",
     content:
       "The branding strategy by DesignsVerse was outstanding! Our brand visibility improved, and engagement levels soared instantly.",
-    image: "/images/testimonials/auth-06.png",
+    image: "/images/testimonials/girl-1.png",
     star: 5,
   },
   {
@@ -66,7 +66,7 @@ const testimonialData: Testimonial[] = [
     designation: "CTO @InnoTech",
     content:
       "We trusted DesignsVerse for our web app, and they exceeded expectations! Robust, secure, and beautifully designed!",
-    image: "/images/testimonials/auth-07.png",
+    image: "/images/testimonials/boy-3.png",
     star: 5,
   },
   {
