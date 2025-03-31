@@ -21,7 +21,7 @@ const OfferList = ({ text, status }) => {
         className={`mr-3 flex h-5 w-5 items-center justify-center rounded-full ${
           status === "active" 
             ? "bg-primary text-white" 
-            : "bg-gray-300 text-gray-500"
+            : "bg-gray-300 dark:bg-gray-600 text-gray-500 dark:text-gray-300"
         }`}
       >
         {status === "active" ? checkIcon : crossIcon}
@@ -29,8 +29,8 @@ const OfferList = ({ text, status }) => {
       <p
         className={`m-0 text-base font-medium ${
           status === "inactive" 
-            ? "text-gray-500 line-through" 
-            : "text-gray-700 dark:text-gray-300"
+            ? "text-gray-500 dark:text-gray-500 line-through" 
+            : "text-gray-700 dark:text-gray-200"
         }`}
       >
         {text}
