@@ -1,89 +1,130 @@
+// index.tsx
 "use client";
 import { useState } from "react";
 import SectionTitle from "../Common/SectionTitle";
 import OfferList from "./OfferList";
 import PricingBox from "./PricingBox";
+import { motion } from "framer-motion";
 
 const Pricing = () => {
   const [withDigitalMarketing, setWithDigitalMarketing] = useState(false);
 
+  const toggleHandler = () => {
+    setWithDigitalMarketing(!withDigitalMarketing);
+  };
+
   return (
-    <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28">
+    <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28 bg-gray-50 dark:bg-dark">
       <div className="container">
         <SectionTitle
-          title="Simple and Affordable Pricing"
-          paragraph="We offer affordable, value-packed solutions tailored to your business needs—no hidden fees, just great results!"
+          title="Tailored Web & Marketing Plans"
+          paragraph="Choose the perfect package for your digital journey with all-inclusive features and dedicated support."
           center
           width="665px"
         />
 
-        {/* Toggle Button */}
-        <div className="flex justify-center mb-8">
-          <div className="relative flex items-center bg-gray-300 rounded-full p-1 cursor-pointer" onClick={() => setWithDigitalMarketing(!withDigitalMarketing)}>
-            <div className={`absolute top-0 left-0 w-1/2 h-full bg-blue-500 rounded-full transition-all ${withDigitalMarketing ? "translate-x-full" : "translate-x-0"}`} />
-            <span className={`w-1/2 text-center font-semibold z-10 ${!withDigitalMarketing ? "text-white" : "text-black"}`}>Without Digital Marketing</span>
-            <span className={`w-1/2 text-center font-semibold z-10 ${withDigitalMarketing ? "text-white" : "text-black"}`}>With Digital Marketing</span>
-          </div>
+        {/* Toggle Switch */}
+        <div className="mb-16 flex justify-center">
+          <motion.div
+            className="bg-gray-200 dark:bg-gray-800 p-1 rounded-full flex"
+            whileHover={{ scale: 1.05 }}
+          >
+            <button
+              onClick={toggleHandler}
+              className={`px-6 py-2 rounded-full transition-colors ${
+                !withDigitalMarketing
+                  ? "bg-primary text-white"
+                  : "bg-transparent text-gray-600 dark:text-gray-300"
+              }`}
+            >
+              Standard Packages
+            </button>
+            <button
+              onClick={toggleHandler}
+              className={`px-6 py-2 rounded-full transition-colors ${
+                withDigitalMarketing
+                  ? "bg-primary text-white"
+                  : "bg-transparent text-gray-600 dark:text-gray-300"
+              }`}
+            >
+              With Marketing
+            </button>
+          </motion.div>
         </div>
 
-        {/* Pricing Boxes */}
-        <div className=" rounded-xl grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 lg:grid-cols-3 justify-center">
-          {!withDigitalMarketing ? (
-            // Without Digital Marketing
-            <>
-              <PricingBox packageName="Standard">
-                <OfferList text="Website Development" status="active" />
-                <OfferList text="SEO Optimization" status="active" />
-                <OfferList text="Multi-Language Support" status="active" />
-                <OfferList text="90 Days Technical Support" status="active" />
-                <OfferList text="Social Media Management" status="inactive" />
-                <OfferList text="Product Selling Management" status="inactive" />
-              </PricingBox>
+        <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 items-stretch">
+          {/* Standard Plan */}
+          <div className="h-full">
+            <PricingBox
+              packageName="Standard"
+              price={withDigitalMarketing ? "" : ""}
+              duration=""
+            >
+              <OfferList text="Custom Website Development" status="active" />
+              <OfferList text="Basic SEO Optimization" status="active" />
+              <OfferList
+                text={withDigitalMarketing ? "3 Months Social Media Management" : "Free Domain & Hosting (1 Year)"}
+                status="active"
+              />
+              <OfferList text="Mobile Responsive Design" status="active" />
+              <OfferList text="60 Days Technical Support" status="active" />
+              <OfferList
+                text={withDigitalMarketing ? "Content Marketing Strategy" : "Free Logo & Graphics Package"}
+                status="active"
+              />
+              <OfferList text="Social Media Integration" status="active" />
+            </PricingBox>
+          </div>
 
-              <PricingBox packageName="Professional">
-                <OfferList text="All Standard Features" status="active" />
-                <OfferList text="Advanced SEO Strategies" status="active" />
-                <OfferList text="24/7 Support" status="active" />
-                <OfferList text="Custom Branding" status="active" />
-              </PricingBox>
+          {/* Premium Plan - Highlighted */}
+          <div className="h-full relative">
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-6 bg-primary text-white px-4 py-2 rounded-full text-sm font-semibold z-20 shadow-md">
+              Most Popular
+            </div>
+            <PricingBox 
+              packageName="Premium" 
+              price={withDigitalMarketing ? "" : ""}
+              duration=""
+              className="border-2 border-primary relative"
+            >
+              <OfferList text="All Standard Features" status="active" />
+              <OfferList text="Advanced SEO + Ranking" status="active" />
+              <OfferList
+                text={withDigitalMarketing ? "6 Months Marketing Campaign" : "1.5 Year Hosting/Domain"}
+                status="active"
+              />
+              <OfferList text="Tablet Responsive Design" status="active" />
+              <OfferList text="180 Days Support" status="active" />
+              <OfferList
+                text={withDigitalMarketing ? "PPC Advertising" : "Multi-Language Support"}
+                status="active"
+              />
+              <OfferList text="Payment Gateway Integration" status="active" />
+            </PricingBox>
+          </div>
 
-              <PricingBox packageName="Premium">
-                <OfferList text="All Professional Features" status="active" />
-                <OfferList text="Dedicated Manager" status="active" />
-                <OfferList text="Social Media Growth" status="active" />
-                <OfferList text="Ad Campaign Management" status="active" />
-              </PricingBox>
-            </>
-          ) : (
-            // With Digital Marketing
-            <>
-              <PricingBox packageName="Standard Digital">
-                <OfferList text="Website Development" status="active" />
-                <OfferList text="SEO Optimization" status="active" />
-                <OfferList text="Multi-Language Support" status="active" />
-                <OfferList text="90 Days Technical Support" status="active" />
-                <OfferList text="Social Media Management" status="active" />
-                <OfferList text="Product Selling Management" status="active" />
-                <OfferList text="Digital Marketing" status="active" />
-              </PricingBox>
-
-              <PricingBox packageName="Professional Digital">
-                <OfferList text="All Standard Features" status="active" />
-                <OfferList text="Advanced SEO Strategies" status="active" />
-                <OfferList text="24/7 Support" status="active" />
-                <OfferList text="Custom Branding" status="active" />
-                <OfferList text="Content Marketing" status="active" />
-              </PricingBox>
-
-              <PricingBox packageName="Premium Digital">
-                <OfferList text="All Professional Features" status="active" />
-                <OfferList text="Dedicated Manager" status="active" />
-                <OfferList text="Social Media Growth" status="active" />
-                <OfferList text="Ad Campaign Management" status="active" />
-                <OfferList text="Conversion Rate Optimization" status="active" />
-              </PricingBox>
-            </>
-          )}
+          {/* Elite Plan */}
+          <div className="h-full">
+            <PricingBox
+              packageName="Elite"
+              price={withDigitalMarketing ? "" : ""}
+              duration=""
+            >
+              <OfferList text="All Premium Features" status="active" />
+              <OfferList text="Full SEO + Content Strategy" status="active" />
+              <OfferList
+                text={withDigitalMarketing ? "1 Year Marketing Strategy" : "2 Years Hosting/Domain"}
+                status="active"
+              />
+              <OfferList text="All Device Responsiveness" status="active" />
+              <OfferList text="365 Days Priority Support" status="active" />
+              <OfferList
+                text={withDigitalMarketing ? "Influencer Marketing" : "AI Chatbot Integration"}
+                status="active"
+              />
+              <OfferList text="Dedicated Account Manager" status="active" />
+            </PricingBox>
+          </div>
         </div>
       </div>
     </section>

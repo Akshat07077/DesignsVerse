@@ -17,7 +17,7 @@
     "cn": "^0.1.1",
     "eslint": "^8.56.0",
     "eslint-config-next": "15.1.6",
-    "framer-motion": "^12.5.0",
+    "framer-motion": "^12.6.2",
     "gsap": "^3.12.7",
     "heroicons": "^2.2.0",
     "lucide-react": "^0.474.0",
