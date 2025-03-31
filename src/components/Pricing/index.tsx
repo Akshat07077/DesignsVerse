@@ -14,7 +14,7 @@ const Pricing = () => {
   };
 
   return (
-    <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28 bg-gray-50 dark:bg-dark">
+    <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28 bg-gray-50 dark:bg-gray-900">
       <div className="container">
         <SectionTitle
           title="Tailored Web & Marketing Plans"
@@ -26,7 +26,7 @@ const Pricing = () => {
         {/* Toggle Switch */}
         <div className="mb-16 flex justify-center">
           <motion.div
-            className="bg-gray-200 dark:bg-gray-800 p-1 rounded-full flex"
+            className="bg-gray-200 dark:bg-gray-700 p-1 rounded-full flex"
             whileHover={{ scale: 1.05 }}
           >
             <button
@@ -34,7 +34,7 @@ const Pricing = () => {
               className={`px-6 py-2 rounded-full transition-colors ${
                 !withDigitalMarketing
                   ? "bg-primary text-white"
-                  : "bg-transparent text-gray-600 dark:text-gray-300"
+                  : "bg-transparent text-gray-600 dark:text-gray-400"
               }`}
             >
               Standard Packages
@@ -44,7 +44,7 @@ const Pricing = () => {
               className={`px-6 py-2 rounded-full transition-colors ${
                 withDigitalMarketing
                   ? "bg-primary text-white"
-                  : "bg-transparent text-gray-600 dark:text-gray-300"
+                  : "bg-transparent text-gray-600 dark:text-gray-400"
               }`}
             >
               With Marketing
