@@ -32,3 +32,9 @@
   }
 }
  
+
+.prose-invert {
+  --tw-prose-body: #e5e7eb;
+  --tw-prose-headings: #ffffff;
+  --tw-prose-links: #60a5fa;
+}

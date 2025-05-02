@@ -9,10 +9,14 @@ import Features from "@/components/Features";
 import Hero from "@/components/Hero";
 import Pricing from "@/components/Pricing";
 import Testimonials from "@/components/Testimonials";
-import Video from "@/components/Video";
+import Video from "@/components/RecentProjects";
 import { Metadata } from "next";
 import Service from "./services/page";
 import FAQ from "@/components/FAQ";
+import IndexServices from '@/components/Services';
+import MobileServices from '@/components/Services';
+import RecentProjects from '@/components/RecentProjects';
+import RelatedPost from '@/components/Blog/RelatedPost';
 
 // Define Metadata for basic SEO
 export const metadata: Metadata = {
@@ -93,12 +97,13 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" /> {/* Replace with actual favicon */}
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" /> {/* Replace with actual icon */}
       </Head>
-
       <ScrollUp />
       <Hero />
-      <Features />
-      <Video />
+      <MobileServices/>
       <Brands />
+      {/* <Features /> */}
+      <RecentProjects/>
+   
       <AboutSectionOne />
       <AboutSectionTwo />
       <Testimonials />

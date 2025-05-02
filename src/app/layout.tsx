@@ -100,6 +100,7 @@ export default function RootLayout({
           <Footer />
           <ScrollToTop />
           <Popup/>
+          <WhatsAppButton/>
         </Providers>
       </body>
     </html>
@@ -107,4 +108,5 @@ export default function RootLayout({
 }
 
 import { Providers } from "./providers";
-import Popup from "@/components/Popup/Popup";
+import Popup from "@/components/Popup/Popup";import WhatsAppButton from "@/components/whatsapp/page";
+

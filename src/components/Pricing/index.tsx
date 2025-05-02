@@ -14,10 +14,10 @@ const Pricing = () => {
   };
 
   return (
-    <section id="pricing" className="relative z-10 py-16 md:py-20 lg:py-28 bg-gray-50 dark:bg-gray-900">
+    <section id="pricing" className="relative z-10 py-7 md:py-10 lg:py-10  bg-white dark:bg-[#121723]">
       <div className="container">
         <SectionTitle
-          title="Tailored Web & Marketing Plans"
+          title="Custom Plans for Your Business"
           paragraph="Choose the perfect package for your digital journey with all-inclusive features and dedicated support."
           center
           width="665px"

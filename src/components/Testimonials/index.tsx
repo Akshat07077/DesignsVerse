@@ -1,6 +1,6 @@
 "use client";
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
+
+import Marquee from "react-fast-marquee";
 import { Testimonial } from "@/types/testimonial";
 import SectionTitle from "../Common/SectionTitle";
 import SingleTestimonial from "./SingleTestimonial";
@@ -8,155 +8,155 @@ import SingleTestimonial from "./SingleTestimonial";
 const testimonialData: Testimonial[] = [
   {
     id: 1,
-    name: "Musharof Chy",
-    designation: "Founder @TailGrids",
+    name: "Anvi",
+    designation: "",
     content:
-      "Outstanding service! DesignsVerse built a sleek, user-friendly website for us and boosted our online presence exponentially.",
+      "Efficient, reliable, and professional web development service! DesignsVerse delivers top-notch websites with a seamless experience. Their dedication to quality and attention to detail is commendable.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
   {
     id: 2,
-    name: "Priya Mehta",
-    designation: "Founder @UIdeck",
+    name: "Suryabhan Singh",
+    designation: "",
     content:
-      "DesignsVerse streamlined our operations with ERP solutions. We're now more efficient and productive than ever. Highly recommended!",
+      "The team is creative, responsive, and truly attentive to details! Their stunning visuals and effective designs highly recommend DesignsVerse for top-quality graphic design services!",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
   {
     id: 3,
-    name: "Rahul Desai",
-    designation: "Founder @Lineicons",
+    name: "Kapil Dave",
+    designation: "",
     content:
-      "A game-changer for our brand! DesignsVerse's digital marketing strategies skyrocketed our engagement and sales within weeks.",
+      "Outstanding service! They created a beautiful graphics project for us, tailored to our needs—professional, timely, and attentive to detail. Highly impressed with their creative and technical expertise!",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
   {
     id: 4,
-    name: "Ananya Roy",
-    designation: "CEO @CreativeHub",
+    name: "Manav Tandon",
+    designation: "",
     content:
-      "They crafted an incredible website! DesignsVerse delivered an elegant, user-friendly design that perfectly matches our brand identity.",
+      "Exceptional graphic design services! The team is incredibly talented and responsive, producing visually striking and impactful designs. Their creativity and attention to detail exceeded our expectations!",
     image: "/images/testimonials/girl-2.png",
     star: 5,
   },
   {
     id: 5,
-    name: "Kunal Sharma",
-    designation: "Manager @TechFlow",
+    name: "Priyanshu Nagar",
+    designation: "",
     content:
-      "DesignsVerse optimized our website for speed and SEO, and our organic traffic has significantly increased in just a few months!",
+      "DesignsVerse transformed my startup’s online presence with their exceptional web development skills. The team was responsive, creative, and professional. Highly recommend their services to any growing business!",
     image: "/images/testimonials/boy-2.png",
     star: 5,
   },
   {
     id: 6,
-    name: "Neha Kapoor",
-    designation: "Founder @BrandBoost",
+    name: "Yash Rajwanya",
+    designation: "",
     content:
-      "The branding strategy by DesignsVerse was outstanding! Our brand visibility improved, and engagement levels soared instantly.",
+      "Fantastic experience working with this team! Their natural-themed designs are breathtaking, and they excel in client communication. They are responsive, attentive, and committed to delivering exceptional results!",
     image: "/images/testimonials/girl-1.png",
     star: 5,
   },
   {
     id: 7,
-    name: "Vikram Singh",
-    designation: "CTO @InnoTech",
+    name: "Varun Singh",
+    designation: "",
     content:
-      "We trusted DesignsVerse for our web app, and they exceeded expectations! Robust, secure, and beautifully designed!",
+      "DesignsVerse’s creativity and execution are unparalleled! They brought our vision to life with flawless websites and innovative approaches. Their dedication to detail and client satisfaction are superb!",
     image: "/images/testimonials/boy-3.png",
     star: 5,
   },
   {
     id: 8,
-    name: "Sanya Verma",
-    designation: "Co-Founder @PixelCraft",
+    name: "Sanjay Kumar",
+    designation: "",
     content:
-      "Their UX/UI design expertise is unmatched. DesignsVerse transformed our website into an engaging experience for users.",
+      "Efficient, reliable, and professional web development service! DesignsVerse delivers top-notch websites with a seamless experience. Their dedication to quality and attention to detail is commendable.",
     image: "/images/testimonials/auth-08.png",
     star: 5,
   },
   {
     id: 9,
-    name: "Amit Patel",
-    designation: "Marketing Head @BizGrow",
+    name: "Priyanshu Nagar",
+    designation: "",
     content:
-      "Our leads and conversions doubled after partnering with DesignsVerse. Their marketing strategies are next level!",
+      "DesignsVerse transformed my startup’s online presence with their exceptional web development skills. The team was responsive, creative, and professional. Highly recommend their services to any growing business!",
     image: "/images/testimonials/auth-09.png",
     star: 5,
   },
   {
     id: 10,
-    name: "Riya Malhotra",
-    designation: "CEO @WebNest",
+    name: "Yash Rajwanya",
+    designation: "",
     content:
-      "DesignsVerse helped us scale our business with a top-notch eCommerce site. Performance and user experience are outstanding!",
+      "Fantastic experience working with this team! Their natural-themed designs are breathtaking, and they excel in client communication. They are responsive, attentive, and committed to delivering exceptional results!",
     image: "/images/testimonials/auth-10.png",
+    star: 5,
+  },
+  {
+    id: 11,
+    name: "Anvi",
+    designation: "",
+    content:
+      "Excellent client service and impressive natural-themed designs! The team is attentive, responsive, and truly captures the beauty of nature in their work. Their dedication to client satisfaction is commendable!",
+    image: "/images/testimonials/auth-01.png",
+    star: 5,
+  },
+  {
+    id: 12,
+    name: "Varun Singh",
+    designation: "",
+    content:
+      "Outstanding work! They created a beautiful website tailored to our vision. The team’s creativity, technical expertise, and dedication to detail are impressive. Definitely recommend!",
+    image: "/images/testimonials/boy-3.png",
     star: 5,
   },
 ];
 
 const Testimonials = () => {
-  const sliderRef = useRef<HTMLDivElement>(null);
-  const timelineRef = useRef<gsap.core.Tween | null>(null);
-
-  useEffect(() => {
-    const ctx = gsap.context(() => {
-      const tl = gsap.to(sliderRef.current, {
-        x: "-40%", // Move left slowly
-        duration: 15, // Default duration for desktop
-        repeat: -1,
-        ease: "linear",
-      });
-
-      timelineRef.current = tl; // Store timeline reference
-
-      // Mobile-specific adjustments
-      gsap.matchMedia().add("(max-width: 768px)", () => {
-        tl.duration(); // Faster scrolling on mobile
-      });
-
-      // Pause animation on hover
-      const slider = sliderRef.current;
-      if (slider) {
-        slider.addEventListener("mouseenter", () => tl.pause());
-        slider.addEventListener("mouseleave", () => tl.play());
-      }
-
-      return () => {
-        if (slider) {
-          slider.removeEventListener("mouseenter", () => tl.pause());
-          slider.removeEventListener("mouseleave", () => tl.play());
-        }
-      };
-    });
-
-    return () => ctx.revert(); // Cleanup on unmount
-  }, []);
-
-
   return (
-    <section className="relative z-10 overflow-hidden bg-[#F0F2F9] py-16 dark:bg-[black] md:py-20 lg:py-28">
-      <div className="container relative z-10">
+    <section className="relative z-10 py-10 bg-white dark:bg-[#121723]">
+      <div className="container mx-auto px-4">
         <SectionTitle
-          title="What Our Users Say"
-          paragraph="Our clients trust DesignVerse for delivering exceptional websites, strategic marketing, and impactful branding. Hear what they have to say about their experience with us!"
+          title="Hear From Our Clients"
+          paragraph="Discover what our satisfied clients have to say about their experiences with us."
           center
+          mb="50px"
         />
 
-        <div className="relative overflow-hidden">
-          <div className="flex w-[200%] space-x-8" ref={sliderRef}>
-            {[...testimonialData, ...testimonialData].map((testimonial) => (
-              <div
-                key={testimonial.id}
-                className="testimonial-item w-[calc(100%/3)] min-w-[300px] h-[350px]" // Added fixed height
-              >
+        <div className="space-y-4">
+          {/* First Row: Left to Right */}
+          <Marquee
+            gradient={false}
+            speed={40}
+            pauseOnHover
+            direction="left"
+            className="space-x-4"
+          >
+            {testimonialData.map((testimonial) => (
+              <div key={testimonial.id} className="w-[300px] h-[250px] mx-2">
                 <SingleTestimonial testimonial={testimonial} />
               </div>
             ))}
-          </div>
+          </Marquee>
+
+          {/* Second Row: Right to Left */}
+          <Marquee
+            gradient={false}
+            speed={40}
+            pauseOnHover
+            direction="right"
+            className="space-x-4"
+          >
+            {testimonialData.map((testimonial) => (
+              <div key={testimonial.id} className="w-[300px] h-[250px] mx-2">
+                <SingleTestimonial testimonial={testimonial} />
+              </div>
+            ))}
+          </Marquee>
         </div>
       </div>
     </section>

@@ -2,29 +2,29 @@ import SectionTitle from "../Common/SectionTitle";
 import SingleServices from "./SingleServices";
 import servicesData from "./ServicesData";
 
-const Services = () => {
-  return (
-    <section
-      id="services"
-      className="bg-gray-light dark:bg-bg-color-dark py-16 md:py-20 lg:py-28"
-    >
-      <div className="container">
-        <SectionTitle
-          title="Our Latest Services"
-          paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
-          center
-        />
-
-        <div className="grid grid-cols-1 gap-x-8 gap-y-10 md:grid-cols-2 md:gap-x-6 lg:gap-x-8 xl:grid-cols-3">
-          {servicesData.map((service) => (
-            <div key={service.id} className="w-full">
-              <SingleServices services={service} />
+const MobileServices = () => {
+    return (
+        <section
+          id="services"
+          className="bg-[#FCFCFC] dark:bg-[#121723] py-16  "
+        >
+          <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <SectionTitle
+              title="Our Services"
+              paragraph="There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form."
+              center
+            />
+    
+    <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 w-full justify-items-center">
+    {servicesData.map((service) => (
+                <div key={service.id} className="mb-10">
+                  <SingleServices services={service} />
+                </div>
+              ))}
             </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default Services;
+          </div>
+        </section>
+      );
+    };
+    
+export default MobileServices;
