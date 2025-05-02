@@ -160,7 +160,7 @@ const Popup = () => {
                 className="text-center mb-6 leading-relaxed text-base sm:text-lg"
                 style={{ color: colors.text }}
               >
-                Click the <span className="font-semibold">"Call Now"</span> button to connect with us instantly.
+                Click the <span className="font-semibold">&quot;Call Now&quot;</span> button to connect with us instantly.
               </p>
 
               {/* Call Button */}
@@ -199,7 +199,7 @@ const Popup = () => {
                 className="text-center text-sm mt-6 opacity-80 italic"
                 style={{ color: colors.text }}
               >
-                We're here to assist you!
+                We&apos;re here to assist you!
               </p>
             </div>
           </motion.div>
