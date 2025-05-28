@@ -31,13 +31,15 @@ const Header: React.FC = () => {
   const [sticky, setSticky] = useState<boolean>(false);
   const handleStickyNavbar = () => {
     setSticky(window.scrollY >= 80);
-    closeNavbar(); // Close navbar on scroll
+    if (navbarOpen) {
+      closeNavbar(); // Close navbar on scroll
+    }
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
     return () => window.removeEventListener("scroll", handleStickyNavbar);
-  }, []);
+  }, [navbarOpen]);
 
   // Submenu state
   const [openIndex, setOpenIndex] = useState<number>(-1);
@@ -84,30 +86,76 @@ const Header: React.FC = () => {
               aria-label="Toggle Mobile Menu"
               className="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
             >
-              <span
-                className={`block h-0.5 w-6 bg-gray-800 dark:bg-white transition-all duration-300 ${
-                  navbarOpen ? "rotate-45 translate-y-2" : ""
-                }`}
-              />
-              <span
-                className={`block h-0.5 w-6 bg-gray-800 dark:bg-white my-1.5 transition-all duration-300 ${
-                  navbarOpen ? "opacity-0" : ""
-                }`}
-              />
-              <span
-                className={`block h-0.5 w-6 bg-gray-800 dark:bg-white transition-all duration-300 ${
-                  navbarOpen ? "-rotate-45 -translate-y-2" : ""
-                }`}
-              />
+              <div className="relative w-6 h-6">
+                <span
+                  className={`absolute block h-0.5 w-6 bg-gray-800 dark:bg-white transition-all duration-300 ${
+                    navbarOpen ? "rotate-45 top-1/2 -translate-y-1/2" : "top-1"
+                  }`}
+                />
+                <span
+                  className={`absolute block h-0.5 w-6 bg-gray-800 dark:bg-white transition-all duration-300 top-1/2 -translate-y-1/2 ${
+                    navbarOpen ? "opacity-0" : "opacity-100"
+                  }`}
+                />
+                <span
+                  className={`absolute block h-0.5 w-6 bg-gray-800 dark:bg-white transition-all duration-300 ${
+                    navbarOpen ? "-rotate-45 top-1/2 -translate-y-1/2" : "bottom-1"
+                  }`}
+                />
+              </div>
             </button>
 
             {/* Navigation Menu */}
+            <div
+              className={`lg:hidden fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 ${
+                navbarOpen ? "opacity-100 visible" : "opacity-0 invisible"
+              }`}
+              onClick={closeNavbar}
+            />
+
             <nav
-              className={`lg:flex lg:items-center lg:space-x-8 fixed lg:static top-0 left-0 h-full lg:h-auto w-64 lg:w-auto bg-white dark:bg-gray-900 lg:bg-transparent lg:dark:bg-transparent shadow-lg lg:shadow-none ${
+              className={`lg:flex lg:items-center lg:space-x-8 fixed lg:static top-0 left-0 h-screen lg:h-auto w-4/5 max-w-sm lg:w-auto bg-white dark:bg-gray-900 lg:bg-transparent lg:dark:bg-transparent shadow-lg lg:shadow-none z-50 transition-transform duration-300 ease-in-out ${
                 navbarOpen ? "translate-x-0" : "-translate-x-full"
-              } lg:translate-x-0 transition-transform duration-300 ease-in-out lg:transition-none`}
+              } lg:translate-x-0`}
             >
-              <ul className="flex flex-col lg:flex-row lg:space-x-6 p-6 lg:p-0 h-full lg:h-auto">
+              <div className="flex justify-between items-center p-4 border-b lg:hidden">
+                <Link href="/" onClick={closeNavbar}>
+                  <Image
+                    src="/images/logo/LOGO-1.png"
+                    alt="Logo"
+                    width={180}
+                    height={40}
+                    className="w-40 dark:hidden"
+                  />
+                  <Image
+                    src="/images/logo/LOGO-2.png"
+                    alt="Logo"
+                    width={180}
+                    height={40}
+                    className="hidden w-40 dark:block"
+                  />
+                </Link>
+                <button
+                  onClick={closeNavbar}
+                  className="p-2 rounded-md focus:outline-none"
+                >
+                  <svg
+                    className="w-6 h-6 text-gray-800 dark:text-white"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth="2"
+                      d="M6 18L18 6M6 6l12 12"
+                    />
+                  </svg>
+                </button>
+              </div>
+
+              <ul className="flex flex-col lg:flex-row lg:space-x-6 p-6 lg:p-0 h-[calc(100%-180px)] lg:h-full overflow-y-auto">
                 {menuData.map((menuItem: MenuItem, index: number) => (
                   <li key={index} className="relative group">
                     {menuItem.path ? (
@@ -130,7 +178,9 @@ const Header: React.FC = () => {
                         >
                           {menuItem.title}
                           <svg
-                            className="ml-2 w-5 h-5 lg:w-4 lg:h-4"
+                            className={`ml-2 w-5 h-5 lg:w-4 lg:h-4 transition-transform duration-200 ${
+                              openIndex === index ? "rotate-180" : ""
+                            }`}
                             fill="none"
                             stroke="currentColor"
                             viewBox="0 0 24 24"
@@ -144,10 +194,10 @@ const Header: React.FC = () => {
                           </svg>
                         </button>
                         <div
-                          className={`lg:absolute lg:top-full lg:left-0 lg:w-48 lg:bg-transparent lg:dark:bg-transparent lg:shadow-lg lg:rounded-md lg:p-2 transition-all duration-300 lg:transition-none ${
+                          className={`lg:absolute lg:top-full lg:left-0 lg:w-48 lg:bg-white lg:dark:bg-gray-900 lg:shadow-lg lg:rounded-md lg:p-2 transition-all duration-300 ${
                             openIndex === index
-                              ? "block"
-                              : "hidden lg:group-hover:block"
+                              ? "max-h-screen opacity-100"
+                              : "max-h-0 opacity-0 lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:max-h-screen overflow-hidden"
                           } pl-4 lg:pl-0`}
                         >
                           {menuItem.submenu?.map(
@@ -168,6 +218,33 @@ const Header: React.FC = () => {
                   </li>
                 ))}
               </ul>
+
+              {/* Mobile Footer Section */}
+              <div className="lg:hidden p-6 border-t absolute bottom-0 left-0 right-0 bg-white dark:bg-gray-900">
+                <div className="flex items-center justify-between mb-4">
+                  {/* Theme Toggler */}
+                  <div className="flex items-center">
+                    <span className="mr-2 text-gray-700 dark:text-gray-300">Theme:</span>
+                    <ThemeToggler />
+                  </div>
+                  
+                  {/* Call Us Button */}
+                  <Link
+                    href="tel:+919413466075"
+                    className="flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
+                    onClick={closeNavbar}
+                  >
+                    <Image
+                      src="/images/call.png"
+                      alt="Call Icon"
+                      width={20}
+                      height={20}
+                      className="mr-2"
+                    />
+                    Call Us
+                  </Link>
+                </div>
+              </div>
             </nav>
 
             {/* Right Section (Call Us & Theme Toggler) */}
@@ -190,18 +267,6 @@ const Header: React.FC = () => {
           </div>
         </div>
       </header>
-
-      {/* Custom CSS for mobile menu animation */}
-      <style jsx>{`
-        @media (max-width: 1023px) {
-          nav {
-            transform: translateX(-100%);
-          }
-          nav.translate-x-0 {
-            transform: translateX(0);
-          }
-        }
-      `}</style>
     </>
   );
 };
