@@ -102,7 +102,7 @@ export default function Home() {
       <MobileServices/>
       <Brands />
       {/* <Features /> */}
-      <RecentProjects/>
+      {/* <RecentProjects/> */}
    
       <AboutSectionOne />
       <AboutSectionTwo />
