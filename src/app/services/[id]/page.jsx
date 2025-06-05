@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import data from "@/data/servicedata.json";
 import Link from "next/link";
 import Head from "next/head"; // For structured data and additional meta tags
-
+import Image from "next/image";
 // Fetch metadata for SEO (dynamic based on service ID)
 export async function generateMetadata({ params }) {
   const post = data.find((post) => post.id === params.id);
@@ -164,17 +164,32 @@ export default async function ServicePost({ params }) {
           </section>
 
           {/* Sidebar */}
-          <aside className="w-full lg:w-1/3 p-5 pt-24 rounded-lg shadow-md order-2 lg:order-none">
-            {/* Download Brochure - Mobile me Top, Desktop me Niche */}
-            <div className="p-4 bg-blue-500 text-white rounded-lg order-1 md:order-none">
-              <h3 className="text-lg font-semibold">Download Brochure</h3>
-              <button className="mt-3 w-full bg-white text-blue-500 px-4 py-2 rounded hover:bg-blue-100">
-                📄 DOWNLOAD PDF
-              </button>
-              <button className="mt-2 w-full bg-white text-blue-500 px-4 py-2 rounded hover:bg-blue-100">
-                📄 DOWNLOAD DOC
-              </button>
-            </div>
+          <aside className="w-full lg:w-1/3 p-5 pt- rounded-lg shadow-md order-2 lg:order-none">
+            {/* Contact Us Now Section */}
+            <div className="p-6 bg-[#4A6CF7] text-white rounded-xl shadow-lg order-1 md:order-none transform hover:scale-105 transition-transform duration-300">
+  <h3 className="text-2xl font-bold mb-4 text-center tracking-tight">Get in Touch</h3>
+  <div className="space-y-4">
+    <div className="bg-white/20 backdrop-blur-sm p-4 rounded-lg text-center hover:bg-white/30 transition-colors duration-200">
+      <a
+        href="tel:+919876543210"
+        className="inline-flex items-center gap-2 text-xl font-semibold py-2 px-4 bg-black rounded-full hover:bg-blue-500 transition-all duration-300 transform hover:-translate-y-1"
+      >
+       <Image
+                      src="/images/call.png"
+                      alt="Call Icon"
+                      width={20}
+                      height={20}
+                      className="mr-2"
+                    />Call Now
+      </a>
+      <p className="text-sm mt-2 opacity-90">Available 24/7 for your queries</p>
+    </div>
+    <div className="bg-white/20 backdrop-blur-sm p-4 rounded-lg text-center hover:bg-white/30 transition-colors duration-200">
+      <h4 className="font-semibold text-lg">Instant Support</h4>
+      <p className="text-sm mt-1 opacity-90">Connect with our experts instantly</p>
+    </div>
+  </div>
+</div>
 
             {/* Services List */}
             <h2 className="text-xl font-semibold mb-4 mt-6">All Services</h2>

@@ -54,13 +54,13 @@ const Header: React.FC = () => {
       <header
         className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${
           sticky
-            ? "bg-white/90 dark:bg-gray-900/90 shadow-lg backdrop-blur-sm"
-            : "bg-transparent"
+            ? "bg-white/90 dark:bg-gray-900/90 shadow-lg backdrop-blur-sm py-2"
+            : "bg-transparent py-4"
         }`}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between py-4">
-            {/* Logo */}
+          <div className="flex items-center justify-between">
+            {/* Left Section (Logo) */}
             <div className="flex-shrink-0">
               <Link href="/" onClick={closeNavbar}>
                 <Image
@@ -80,30 +80,35 @@ const Header: React.FC = () => {
               </Link>
             </div>
 
-            {/* Mobile Menu Toggle */}
-            <button
-              onClick={navbarToggleHandler}
-              aria-label="Toggle Mobile Menu"
-              className="lg:hidden p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
-            >
-              <div className="relative w-6 h-6">
-                <span
-                  className={`absolute block h-0.5 w-6 bg-gray-800 dark:bg-white transition-all duration-300 ${
-                    navbarOpen ? "rotate-45 top-1/2 -translate-y-1/2" : "top-1"
-                  }`}
-                />
-                <span
-                  className={`absolute block h-0.5 w-6 bg-gray-800 dark:bg-white transition-all duration-300 top-1/2 -translate-y-1/2 ${
-                    navbarOpen ? "opacity-0" : "opacity-100"
-                  }`}
-                />
-                <span
-                  className={`absolute block h-0.5 w-6 bg-gray-800 dark:bg-white transition-all duration-300 ${
-                    navbarOpen ? "-rotate-45 top-1/2 -translate-y-1/2" : "bottom-1"
-                  }`}
-                />
-              </div>
-            </button>
+            {/* Mobile Right Section (Call Us & Theme Toggler) & Toggle Button */}
+            <div className="flex items-center space-x-3 lg:hidden">
+              
+              <ThemeToggler />
+              <button
+                onClick={navbarToggleHandler}
+                aria-label="Toggle Mobile Menu"
+                className="p-2 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              >
+                <div className="relative w-6 h-6">
+                  <span
+                    className={`absolute block h-0.5 w-6 bg-gray-800 dark:bg-white transition-all duration-300 ${
+                      navbarOpen ? "rotate-45 top-1/2 -translate-y-1/2" : "top-1"
+                    }`}
+                  />
+                  
+                  <span
+                    className={`absolute block h-0.5 w-6 bg-gray-800 dark:bg-white transition-all duration-300 top-1/2 -translate-y-1/2 ${
+                      navbarOpen ? "opacity-0" : "opacity-100"
+                    }`}
+                  />
+                  <span
+                    className={`absolute block h-0.5 w-6 bg-gray-800 dark:bg-white transition-all duration-300 ${
+                      navbarOpen ? "-rotate-45 top-1/2 -translate-y-1/2" : "bottom-1"
+                    }`}
+                  />
+                </div>
+              </button>
+            </div>
 
             {/* Navigation Menu */}
             <div
@@ -220,15 +225,8 @@ const Header: React.FC = () => {
               </ul>
 
               {/* Mobile Footer Section */}
-              <div className="lg:hidden p-6 border-t absolute bottom-0 left-0 right-0 bg-white dark:bg-gray-900">
+              {/* <div className="lg:hidden p-6 border-t absolute bottom-0 left-0 right-0 bg-white dark:bg-gray-900">
                 <div className="flex items-center justify-between mb-4">
-                  {/* Theme Toggler */}
-                  <div className="flex items-center">
-                    <span className="mr-2 text-gray-700 dark:text-gray-300">Theme:</span>
-                    <ThemeToggler />
-                  </div>
-                  
-                  {/* Call Us Button */}
                   <Link
                     href="tel:+919413466075"
                     className="flex items-center px-4 py-2 bg-primary text-white rounded-lg hover:bg-primary/90 transition-colors"
@@ -243,11 +241,12 @@ const Header: React.FC = () => {
                     />
                     Call Us
                   </Link>
+                  <ThemeToggler />
                 </div>
-              </div>
+              </div> */}
             </nav>
 
-            {/* Right Section (Call Us & Theme Toggler) */}
+            {/* Desktop Right Section (Call Us & Theme Toggler) */}
             <div className="hidden lg:flex items-center space-x-4">
               <Link
                 href="tel:+919413466075"
