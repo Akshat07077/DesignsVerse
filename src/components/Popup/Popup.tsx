@@ -18,21 +18,12 @@ const Popup = () => {
     gradient: "linear-gradient(135deg, #4A6CF7, #3B5BDB)",
   };
 
-  // Show popup after 5 seconds (reduced for testing) or if not previously shown
+  // Show popup after 10 seconds
   useEffect(() => {
-    // For testing: Remove this line in production to respect localStorage
-    // localStorage.removeItem("popupShown");
-
-    const hasPopupBeenShown = localStorage.getItem("popupShown");
-    if (!hasPopupBeenShown) {
-      const timer = setTimeout(() => {
-        setIsOpen(true);
-      }, 10000); // Reduced to 5 seconds for faster testing
-      return () => clearTimeout(timer);
-    } else {
-      // Force show for debugging (remove in production)
+    const timer = setTimeout(() => {
       setIsOpen(true);
-    }
+    }, 10000); // 10 seconds delay
+    return () => clearTimeout(timer);
   }, []);
 
   // Handle close button and store state in localStorage

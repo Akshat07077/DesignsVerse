@@ -8,35 +8,36 @@ const starIcon = (
 );
 
 const SingleTestimonial = ({ testimonial }: { testimonial: Testimonial }) => {
-  const { star, name, image, content } = testimonial;
-
-  let ratingIcons = [];
-  for (let index = 0; index < star; index++) {
-    ratingIcons.push(
-      <span key={index} className="text-yellow">
-        {starIcon}
-      </span>
-    );
-  }
+  const { star, name, image, content, designation } = testimonial;
 
   return (
-    <div className="w-full h-full pb-4 ">
-      <div className="h-full rounded-lg bg-white p-4 shadow-md dark:bg-gray-800 flex flex-col">
-        <div className="mb-3 flex items-center space-x-1">
-          {ratingIcons}
+    <div className="p-5 h-[300px] flex flex-col bg-white dark:bg-gray-800 rounded-lg">
+      {/* Stars */}
+      <div className="flex mb-3">
+        {[...Array(star)].map((_, i) => (
+          <span key={i} className="text-yellow">{starIcon}</span>
+        ))}
+      </div>
+
+      {/* Content - Scrollable if too long */}
+      <div className="flex-grow overflow-y-auto mb-4 text-sm text-gray-600 dark:text-gray-300">
+        <p>{content}</p>
+      </div>
+
+      {/* Author - Sticks to bottom */}
+      <div className="flex items-center pt-3 border-t border-gray-100 dark:border-gray-700">
+        <div className="relative h-10 w-10 rounded-full overflow-hidden mr-3">
+          <Image 
+            src={image} 
+            alt={name}
+            fill
+            className="object-cover"
+            sizes="40px"
+          />
         </div>
-        <p className="flex-grow mb-4 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
-          {content}
-        </p>
-        <div className="flex items-center mt-auto">
-          <div className="relative mr-3 h-[40px] w-[40px] overflow-hidden rounded-full">
-            <Image src={image} alt={name} fill className="object-cover" />
-          </div>
-          <div className="w-full">
-            <h3 className="text-base font-semibold text-black dark:text-white">
-              {name}
-            </h3>
-          </div>
+        <div>
+          <h4 className="text-sm font-medium text-black dark:text-white">{name}</h4>
+          <p className="text-xs text-gray-500 dark:text-gray-400">{designation}</p>
         </div>
       </div>
     </div>

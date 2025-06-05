@@ -9,111 +9,201 @@ const testimonialData: Testimonial[] = [
   {
     id: 1,
     name: "Anvi",
-    designation: "",
+    designation: "AI Research Lead",
     content:
-      "Efficient, reliable, and professional web development service! DesignsVerse delivers top-notch websites with a seamless experience. Their dedication to quality and attention to detail is commendable.",
+      "We switched from traditional ML tools to DesignsVerse's AI platform and the difference is remarkable! Their alternative approach to model training and deployment has significantly improved our development speed and accuracy.",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
   {
     id: 2,
     name: "Suryabhan Singh",
-    designation: "",
+    designation: "Tech Director",
     content:
-      "The team is creative, responsive, and truly attentive to details! Their stunning visuals and effective designs highly recommend DesignsVerse for top-quality graphic design services!",
+      "After trying multiple AI platforms, DesignsVerse's solution stands out! Their unique approach to natural language processing and model optimization has helped us achieve better results than other popular AI tools in the market.",
     image: "/images/testimonials/auth-02.png",
     star: 5,
   },
   {
     id: 3,
     name: "Kapil Dave",
-    designation: "",
+    designation: "AI Solutions Architect",
     content:
-      "Outstanding service! They created a beautiful graphics project for us, tailored to our needs—professional, timely, and attentive to detail. Highly impressed with their creative and technical expertise!",
+      "We were using standard AI analytics tools until we discovered DesignsVerse. Their alternative approach to data processing and visualization has given us insights we never thought possible. A game-changer in the AI space!",
     image: "/images/testimonials/auth-03.png",
     star: 5,
   },
   {
     id: 4,
     name: "Manav Tandon",
-    designation: "",
+    designation: "Data Science Lead",
     content:
-      "Exceptional graphic design services! The team is incredibly talented and responsive, producing visually striking and impactful designs. Their creativity and attention to detail exceeded our expectations!",
+      "DesignsVerse's AI platform offers a refreshing alternative to mainstream ML frameworks. Their innovative approach to model development and deployment has streamlined our entire AI workflow. Highly recommended!",
     image: "/images/testimonials/girl-2.png",
     star: 5,
   },
   {
     id: 5,
     name: "Priyanshu Nagar",
-    designation: "",
+    designation: "AI Product Manager",
     content:
-      "DesignsVerse transformed my startup’s online presence with their exceptional web development skills. The team was responsive, creative, and professional. Highly recommend their services to any growing business!",
+      "We evaluated several AI platforms before choosing DesignsVerse to implement machine learning algorithms!",
     image: "/images/testimonials/boy-2.png",
     star: 5,
   },
   {
     id: 6,
     name: "Yash Rajwanya",
-    designation: "",
+    designation: "Tech Innovation Lead",
     content:
-      "Fantastic experience working with this team! Their natural-themed designs are breathtaking, and they excel in client communication. They are responsive, attentive, and committed to delivering exceptional results!",
+      "DesignsVerse's computer vision solution is a breath of fresh air compared to traditional AI tools. Their alternative approach to image processing and neural networks has revolutionized our automation projects.",
     image: "/images/testimonials/girl-1.png",
     star: 5,
   },
   {
     id: 7,
     name: "Varun Singh",
-    designation: "",
+    designation: "AI Solutions Expert",
     content:
-      "DesignsVerse’s creativity and execution are unparalleled! They brought our vision to life with flawless websites and innovative approaches. Their dedication to detail and client satisfaction are superb!",
+      "After using various AI platforms, DesignsVerse's recommendation system stands out! Their innovative approach to user behavior analysis and prediction has outperformed other popular AI tools we've tried.",
     image: "/images/testimonials/boy-3.png",
     star: 5,
   },
   {
     id: 8,
     name: "Sanjay Kumar",
-    designation: "",
+    designation: "AI Project Lead",
     content:
-      "Efficient, reliable, and professional web development service! DesignsVerse delivers top-notch websites with a seamless experience. Their dedication to quality and attention to detail is commendable.",
+      "DesignsVerse offers a compelling alternative to mainstream AI platforms. Their unique approach to algorithm implementation and model optimization has significantly improved our operational efficiency.",
     image: "/images/testimonials/auth-08.png",
     star: 5,
   },
   {
     id: 9,
     name: "Priyanshu Nagar",
-    designation: "",
+    designation: "AI Development Manager",
     content:
-      "DesignsVerse transformed my startup’s online presence with their exceptional web development skills. The team was responsive, creative, and professional. Highly recommend their services to any growing business!",
+      "We switched from traditional AI frameworks to DesignsVerse's platform and couldn't be happier! Their alternative approach to neural network implementation has transformed our development process.",
     image: "/images/testimonials/auth-09.png",
     star: 5,
   },
   {
     id: 10,
     name: "Yash Rajwanya",
-    designation: "",
+    designation: "AI Research Director",
     content:
-      "Fantastic experience working with this team! Their natural-themed designs are breathtaking, and they excel in client communication. They are responsive, attentive, and committed to delivering exceptional results!",
+      "DesignsVerse's NLP solution offers a fresh perspective compared to standard AI tools. Their innovative approach to language processing has helped us achieve breakthrough results in our research projects.",
     image: "/images/testimonials/auth-10.png",
     star: 5,
   },
   {
     id: 11,
     name: "Anvi",
-    designation: "",
+    designation: "AI Solutions Architect",
     content:
-      "Excellent client service and impressive natural-themed designs! The team is attentive, responsive, and truly captures the beauty of nature in their work. Their dedication to client satisfaction is commendable!",
+      "DesignsVerse's AI development team delivered exceptional results! Their implementation of advanced machine learning algorithms and neural networks has transformed our business operations. Their technical expertise is remarkable!",
     image: "/images/testimonials/auth-01.png",
     star: 5,
   },
   {
     id: 12,
     name: "Varun Singh",
-    designation: "",
+    designation: "AI Project Manager",
     content:
-      "Outstanding work! They created a beautiful website tailored to our vision. The team’s creativity, technical expertise, and dedication to detail are impressive. Definitely recommend!",
+      "The AI solutions provided by DesignsVerse are cutting-edge! Their expertise in implementing complex machine learning models and deep learning algorithms has significantly improved our product's performance. Highly recommended!",
     image: "/images/testimonials/boy-3.png",
     star: 5,
   },
+  {
+    id: 13,
+    name: "Rahul Sharma",
+    designation: "AI Development Lead",
+    content:
+      "DesignsVerse's AI implementation services are outstanding! They helped us develop sophisticated machine learning models that revolutionized our data analysis capabilities. Their technical expertise is truly impressive!",
+    image: "/images/testimonials/auth-01.png",
+    star: 5,
+  },
+  {
+    id: 14,
+    name: "Neha Patel",
+    designation: "AI Research Scientist",
+    content:
+      "Working with DesignsVerse on our AI research project was exceptional! Their expertise in deep learning and neural networks helped us achieve breakthrough results. Their technical knowledge and execution are remarkable!",
+    image: "/images/testimonials/girl-2.png",
+    star: 5,
+  },
+  {
+    id: 15,
+    name: "Amit Kumar",
+    designation: "AI Solutions Expert",
+    content:
+      "DesignsVerse's AI development capabilities are impressive! They implemented advanced machine learning algorithms that transformed our business processes. Their technical expertise and innovative approach are outstanding!",
+    image: "/images/testimonials/boy-2.png",
+    star: 5,
+  },
+  {
+    id: 16,
+    name: "Priya Singh",
+    designation: "AI Project Lead",
+    content:
+      "The AI solutions provided by DesignsVerse are revolutionary! Their implementation of sophisticated neural networks and deep learning models has significantly improved our operational efficiency. Highly recommended!",
+    image: "/images/testimonials/girl-1.png",
+    star: 5,
+  },
+  {
+    id: 17,
+    name: "Rajesh Verma",
+    designation: "AI Development Manager",
+    content:
+      "DesignsVerse's AI integration services are top-notch! They helped us implement complex machine learning models that transformed our product's performance. Their technical expertise is truly remarkable!",
+    image: "/images/testimonials/boy-3.png",
+    star: 5,
+  },
+  {
+    id: 18,
+    name: "Sneha Gupta",
+    designation: "AI Research Lead",
+    content:
+      "Working with DesignsVerse on our AI automation project was fantastic! Their computer vision solutions and neural network implementations are cutting-edge. Their team's technical expertise is outstanding!",
+    image: "/images/testimonials/girl-2.png",
+    star: 5,
+  },
+  {
+    id: 19,
+    name: "Vikram Singh",
+    designation: "AI Solutions Architect",
+    content:
+      "DesignsVerse's AI development team is exceptional! They created sophisticated machine learning models that transformed our business operations. Their expertise in AI technologies is truly impressive!",
+    image: "/images/testimonials/boy-2.png",
+    star: 5,
+  },
+  {
+    id: 20,
+    name: "Meera Patel",
+    designation: "AI Project Director",
+    content:
+      "The AI solutions provided by DesignsVerse are revolutionary! Their implementation of advanced algorithms and deep learning models has significantly improved our product's performance. Their technical capabilities are outstanding!",
+    image: "/images/testimonials/girl-1.png",
+    star: 5,
+  },
+  {
+    id: 21,
+    name: "Arjun Kumar",
+    designation: "AI Development Lead",
+    content:
+      "DesignsVerse's AI integration capabilities are impressive! They helped us implement complex neural networks that transformed our data analysis processes. Their technical expertise and execution are exceptional!",
+    image: "/images/testimonials/boy-3.png",
+    star: 5,
+  },
+  {
+    id: 22,
+    name: "Ananya Sharma",
+    designation: "AI Research Scientist",
+    content:
+      "Working with DesignsVerse on our AI research project was outstanding! Their expertise in machine learning and natural language processing helped us achieve breakthrough results. Their technical knowledge is remarkable!",
+    image: "/images/testimonials/girl-2.png",
+    star: 5,
+  }
 ];
 
 const Testimonials = () => {
@@ -127,37 +217,31 @@ const Testimonials = () => {
           mb="50px"
         />
 
-        <div className="space-y-4">
-          {/* First Row: Left to Right */}
-          <Marquee
-            gradient={false}
-            speed={40}
-            pauseOnHover
-            direction="left"
-            className="space-x-4"
-          >
-            {testimonialData.map((testimonial) => (
-              <div key={testimonial.id} className="w-[300px] h-[250px] mx-2">
-                <SingleTestimonial testimonial={testimonial} />
-              </div>
-            ))}
-          </Marquee>
-
-          {/* Second Row: Right to Left */}
-          <Marquee
-            gradient={false}
-            speed={40}
-            pauseOnHover
-            direction="right"
-            className="space-x-4"
-          >
-            {testimonialData.map((testimonial) => (
-              <div key={testimonial.id} className="w-[300px] h-[250px] mx-2">
-                <SingleTestimonial testimonial={testimonial} />
-              </div>
-            ))}
-          </Marquee>
-        </div>
+<div className="space-y-4">
+  {/* First Row */}
+  <Marquee direction="left" speed={40} pauseOnHover className="space-x-4">
+    {testimonialData.map((testimonial) => (
+      <div 
+        key={testimonial.id}
+        className="w-[300px] mx-2 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0"
+      >
+        <SingleTestimonial testimonial={testimonial} />
+      </div>
+    ))}
+  </Marquee>
+  
+  {/* Second Row */}
+  <Marquee direction="right" speed={40} pauseOnHover className="space-x-4">
+    {testimonialData.map((testimonial) => (
+      <div 
+        key={testimonial.id}
+        className="w-[300px] mx-2 border border-gray-200 dark:border-gray-700 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 flex-shrink-0"
+      >
+        <SingleTestimonial testimonial={testimonial} />
+      </div>
+    ))}
+  </Marquee>
+</div>
       </div>
     </section>
   );

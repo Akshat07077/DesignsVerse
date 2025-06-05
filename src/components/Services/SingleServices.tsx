@@ -7,7 +7,7 @@ const SingleServices = ({ services }: { services: Services }) => {
 
   return (
     <div
-      className="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-xl dark:bg-gray-800  transition-all duration-300 flex flex-col max-w-sm w-full transform hover:-translate-y-1"
+      className="group relative overflow-hidden rounded-xl bg-white shadow-lg hover:shadow-xl dark:bg-gray-800  transition-all duration-300 flex flex-col max-w-sm w-full transform hover:-translate-y-1 mb-14"
     >
       {/* Image Section */}
       <Link href={`/services/${id}`} className="block w-full relative">

@@ -53,10 +53,11 @@ const Footer = () => {
     {
       title: "Solutions",
       links: [
-        { name: "Web Development", href: "/services/1 " },
-        { name: "ERP Solutions", href: "/services/2" },
-        { name: "Digital Marketing", href: "/services/3" },
-        { name: "UI/UX Design", href: "/services/4" }
+        { name: "AI Solutions", href: "/services/1 " },
+        { name: "Web Development", href: "/services/2" },
+        { name: "ERP Solutions", href: "/services/3" },
+        { name: "Digital Marketing", href: "/services/4" },
+        { name: "UI/UX Design", href: "/services/5" }
       ]
     },
     {

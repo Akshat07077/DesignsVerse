@@ -16,7 +16,7 @@ const MobileServices = () => {
             />
     
     <div className="grid grid-cols-1  md:grid-cols-2 lg:grid-cols-3 w-full justify-items-center">
-    {servicesData.map((service) => (
+    {servicesData.slice(0, 6).map((service) => (
                 <div key={service.id} className="mb-10">
                   <SingleServices services={service} />
                 </div>
