@@ -95,6 +95,7 @@ const Header: React.FC = () => {
                       navbarOpen ? "rotate-45 top-1/2 -translate-y-1/2" : "top-1"
                     }`}
                   />
+                  
                   <span
                     className={`absolute block h-0.5 w-6 bg-gray-800 dark:bg-white transition-all duration-300 top-1/2 -translate-y-1/2 ${
                       navbarOpen ? "opacity-0" : "opacity-100"
