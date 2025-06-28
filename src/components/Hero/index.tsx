@@ -32,7 +32,7 @@ const Hero = () => {
   return (
     <section
       id="home"
-      className="relative z-10 overflow-hidden bg-gradient-to-br from-white via-blue-50 to-gray-50 pb-16 pt-[120px] dark:from-gray-900 dark:via-gray-800 dark:to-gray-800 md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 2xl:pb-[200px] 2xl:pt-[210px]"
+      className="relative z-10 overflow-hidden bg-gradient-to-br from-white via-blue-50 to-gray-50 pb-16 pt-[180px] dark:from-gray-900 dark:via-gray-800 dark:to-gray-800 md:pb-[120px] md:pt-[120px] xl:pb-[180px] xl:pt-[140px] 2xl:pb-[200px] 2xl:pt-[150px]"
     >
       {/* Grid Background */}
       <div className="absolute inset-0 z-0 opacity-10 dark:opacity-20">
@@ -55,10 +55,10 @@ const Hero = () => {
               {/* Badge */}
               <motion.div
                 variants={itemVariants}
-                className="mb-6 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800 dark:bg-blue-900/30 dark:text-blue-300"
+                className="mb-4 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800 dark:bg-blue-900/30 dark:text-blue-300"
               >
                 <span className="mr-2 h-2 w-2 rounded-full bg-blue-600"></span>
-                Digital Transformation Experts
+                AI-Powered Digital Solutions
               </motion.div>
 
               <motion.h1
@@ -66,11 +66,11 @@ const Hero = () => {
                 className="mb-6 text-4xl font-bold leading-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl md:leading-[1.2]"
               >
                 <span className="relative inline-block">
-                  <span className="relative z-10">Elevate Your</span>
+                  <span className="relative z-10">Transform Your Business</span>
                   <span className="absolute -bottom-1 left-0 z-0 h-3 w-full bg-blue-200/70 dark:bg-blue-900/50"></span>
                 </span>{" "}
                 <span className="bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-                  Digital Presence
+                  with AI Innovation
                 </span>
               </motion.h1>
 
@@ -78,8 +78,8 @@ const Hero = () => {
                 variants={itemVariants}
                 className="mx-auto mb-10 max-w-[700px] text-xl leading-relaxed text-gray-600 dark:text-gray-300 sm:text-2xl"
               >
-                We craft bespoke digital solutions that drive growth, enhance
-                efficiency, and position your brand as an industry leader.
+                We leverage cutting-edge AI technology to create intelligent digital solutions that automate processes, 
+                enhance customer experiences, and drive unprecedented growth for your business.
               </motion.p>
 
               <motion.div
@@ -92,8 +92,8 @@ const Hero = () => {
                   className="group relative flex items-center overflow-hidden rounded-xl bg-gradient-to-r from-blue-600 to-blue-500 px-8 py-4 text-lg font-medium text-white shadow-lg shadow-blue-500/20 transition-all duration-300 hover:from-blue-700 hover:to-blue-600 hover:shadow-xl"
                 >
                   <span className="relative z-10 flex items-center">
-                    {/* <FiPhone className="mr-3 h-5 w-5" /> */}
-                    Book Free Consutancy
+                    <FiPhone className="mr-3 h-5 w-5" />
+                    Get Free Consultation
                   </span>
                   <span className="absolute -right-5 -top-5 h-10 w-10 rounded-full bg-white/20 transition-all duration-500 group-hover:scale-[15]"></span>
                 </Link>
@@ -119,7 +119,7 @@ const Hero = () => {
                   </div>
                   <div className="ml-3">
                     <div className="text-sm font-medium text-gray-900 dark:text-white">
-                      100+ Happy Clients
+                      100+ AI Projects Delivered
                     </div>
                     <div className="flex items-center">
                       {[1, 2, 3, 4, 5].map((star) => (
@@ -133,7 +133,7 @@ const Hero = () => {
                         </svg>
                       ))}
                       <span className="ml-1 text-xs text-gray-500 dark:text-gray-400">
-                        5.0
+                        4.9
                       </span>
                     </div>
                   </div>
@@ -154,16 +154,16 @@ const Hero = () => {
                       <path
                         strokeLinecap="round"
                         strokeLinejoin="round"
-                        d="M6.633 10.5c.806 0 1.533-.446 2.031-1.08a9.041 9.041 0 012.861-2.4c.723-.384 1.35-.956 1.653-1.715a4.498 4.498 0 00.322-1.672V3a.75.75 0 01.75-.75A2.25 2.25 0 0116.5 4.5c0 1.152-.26 2.243-.723 3.218-.266.558.107 1.282.725 1.282h3.126c1.026 0 1.945.694 2.054 1.715.045.422.068.85.068 1.285a11.95 11.95 0 01-2.649 7.521c-.388.482-.987.729-1.605.729H13.48c-.483 0-.964-.078-1.423-.23l-3.114-1.04a4.501 4.501 0 00-1.423-.23H5.904M14.25 9h2.25M5.904 18.75c.083.205.173.405.27.602.197.4-.078.898-.523.898h-.908c-.889 0-1.713-.518-1.972-1.368a12 12 0 01-.521-3.507c0-1.553.295-3.036.831-4.398C3.387 10.203 4.167 9.75 5 9.75h1.053c.472 0 .745.556.5.96a8.958 8.958 0 00-1.302 4.665c0 1.194.232 2.333.654 3.375z"
+                        d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.456 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423L16.5 15.75l.394 1.183a2.25 2.25 0 001.423 1.423L19.5 18.75l-1.183.394a2.25 2.25 0 00-1.423 1.423z"
                       />
                     </svg>
                   </div>
                   <div className="ml-3">
                     <div className="text-sm font-medium text-gray-900 dark:text-white">
-                      Trusted by
+                      Powered by
                     </div>
                     <div className="text-sm text-gray-500 dark:text-gray-400">
-                      Global Brands
+                      Advanced AI
                     </div>
                   </div>
                 </div>
