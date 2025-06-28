@@ -343,7 +343,7 @@ export default function ProjectPage({ params }: { params: { id: string } }) {
           <div className="bg-white dark:bg-gray-800 rounded-2xl p-8 md:p-12 text-center">
             <h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-800 dark:text-white">Interested in this project?</h2>
             <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 max-w-2xl mx-auto">
-              Let's discuss how we can bring your vision to life with similar innovative solutions.
+              Let&apos;s discuss how we can bring your vision to life with similar innovative solutions.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <motion.a
