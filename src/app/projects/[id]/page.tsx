@@ -3,15 +3,17 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { notFound } from 'next/navigation';
+import { notFound, useParams } from 'next/navigation';
 import projectsData from '@/data/projects.json';
 
-export default function ProjectPage({ params }: { params: { id: string } }) {
+export default function ProjectPage() {
+  const params = useParams();
+  const id = params.id as string;
   const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'tech'>('overview');
   const [isMounted, setIsMounted] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-  const project = projectsData.projects.find(p => p.slug === params.id);
+  const project = projectsData.projects.find(p => p.slug === id);
   
   if (!project) {
     notFound();
