@@ -3,7 +3,7 @@ import { Services } from "@/types/services";
 const servicesData: Services[] = [
   {
     id: 1,
-    title: "AI Integration & AI Agents",
+    title: "SmartAI Solutions",
     paragraph:
       "Transform your business with our advanced AI solutions. We implement cutting-edge artificial intelligence systems including custom AI agents, machine learning models, and natural language processing to automate processes, enhance decision-making, and create intelligent customer interactions.",
     image: "/images/services/ai.png",
