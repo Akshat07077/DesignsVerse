@@ -5,11 +5,45 @@ import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
 import { notFound, useParams } from 'next/navigation';
 import projectsData from '@/data/projects.json';
+import { 
+  FaReact, 
+  FaNodeJs, 
+  FaBrain, 
+  FaSearch, 
+  FaLink 
+} from 'react-icons/fa';
+import { 
+  SiTensorflow, 
+  SiMongodb, 
+  SiAmazon, 
+  SiDocker, 
+  SiNextdotjs, 
+  SiPostgresql, 
+  SiStripe, 
+  SiRedis 
+} from 'react-icons/si';
+
+// Icon mapping object
+const iconMap: { [key: string]: any } = {
+  FaReact,
+  FaNodeJs,
+  FaBrain,
+  FaSearch,
+  FaLink,
+  SiTensorflow,
+  SiMongodb,
+  SiAmazonaws: SiAmazon,
+  SiDocker,
+  SiNextdotjs,
+  SiPostgresql,
+  SiStripe,
+  SiRedis
+};
 
 export default function ProjectPage() {
   const params = useParams();
   const id = params.id as string;
-  const [activeTab, setActiveTab] = useState<'overview' | 'features' | 'tech'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'tech'>('overview');
   const [isMounted, setIsMounted] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
@@ -195,19 +229,6 @@ export default function ProjectPage() {
                 )}
               </button>
               <button
-                onClick={() => setActiveTab('features')}
-                className={`pb-4 px-4 font-medium text-sm md:text-base relative ${activeTab === 'features' ? 'text-primary dark:text-primary' : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'}`}
-              >
-                Features
-                {activeTab === 'features' && (
-                  <motion.div 
-                    layoutId="underline"
-                    className="absolute bottom-0 left-0 w-full h-0.5 bg-primary dark:bg-primary"
-                    transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-                  />
-                )}
-              </button>
-              <button
                 onClick={() => setActiveTab('tech')}
                 className={`pb-4 px-4 font-medium text-sm md:text-base relative ${activeTab === 'tech' ? 'text-primary dark:text-primary' : 'text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-300'}`}
               >
@@ -279,53 +300,28 @@ export default function ProjectPage() {
                   </div>
                 )}
 
-                {activeTab === 'features' && (
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {project.features.map((feature, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ delay: index * 0.1 }}
-                        whileHover={{ y: -5 }}
-                        className="p-6 bg-gray-50 dark:bg-gray-700 rounded-xl border border-gray-200 dark:border-gray-600 transition-all duration-300"
-                      >
-                        <div className="w-12 h-12 rounded-lg bg-primary/10 text-primary flex items-center justify-center mb-4">
-                          <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={feature.icon} />
-                          </svg>
-                        </div>
-                        <h3 className="text-xl font-semibold mb-2 text-gray-800 dark:text-white">{feature.title}</h3>
-                        <p className="text-gray-600 dark:text-gray-300">{feature.description}</p>
-                      </motion.div>
-                    ))}
-                  </div>
-                )}
-
                 {activeTab === 'tech' && (
                   <div>
                     <h3 className="text-xl font-semibold mb-6 text-gray-800 dark:text-white">Technologies Used</h3>
                     <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-4">
-                      {project.techStack.map((tech, index) => (
-                        <motion.div
-                          key={tech.name}
-                          initial={{ opacity: 0, scale: 0.8 }}
-                          animate={{ opacity: 1, scale: 1 }}
-                          transition={{ delay: index * 0.05 }}
-                          whileHover={{ scale: 1.1 }}
-                          className="flex flex-col items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600"
-                        >
-                          <div className="w-10 h-10 mb-2 relative">
-                            <Image 
-                              src={tech.logo} 
-                              alt={tech.name}
-                              fill
-                              className="object-contain"
-                            />
-                          </div>
-                          <span className="text-sm text-center text-gray-700 dark:text-gray-300">{tech.name}</span>
-                        </motion.div>
-                      ))}
+                      {project.techStack.map((tech, index) => {
+                        const IconComponent = iconMap[tech.icon];
+                        return (
+                          <motion.div
+                            key={tech.name}
+                            initial={{ opacity: 0, scale: 0.8 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ delay: index * 0.05 }}
+                            whileHover={{ scale: 1.1 }}
+                            className="flex flex-col items-center p-4 bg-gray-50 dark:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600"
+                          >
+                            <div className="w-10 h-10 mb-2 flex items-center justify-center text-2xl text-gray-700 dark:text-gray-300">
+                              {IconComponent ? <IconComponent /> : <span>🔧</span>}
+                            </div>
+                            <span className="text-sm text-center text-gray-700 dark:text-gray-300">{tech.name}</span>
+                          </motion.div>
+                        );
+                      })}
                     </div>
                   </div>
                 )}
