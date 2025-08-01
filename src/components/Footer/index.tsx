@@ -25,7 +25,7 @@ const Footer = () => {
     },
     {
       name: "Twitter",
-      href: "https://x.com/designs_verse",
+      href: "https://x.com/DesignsVerse_in",
       icon: <FaTwitter />,
       color: "hover:text-[#1DA1F2]"
     },
@@ -43,7 +43,7 @@ const Footer = () => {
     },
     {
       name: "WhatsApp",
-      href: "https://wa.me/919413466075",
+      href: "https://wa.me/919413466075?text=Hi%2C%20I%20want%20to%20know%20more%20about%20your%20IT%20services%20at%20Solution.%20",
       icon: <FaWhatsapp />,
       color: "hover:text-[#25D366]"
     }

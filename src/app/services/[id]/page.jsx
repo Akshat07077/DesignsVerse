@@ -258,7 +258,7 @@ export default async function ServicePost({ params }) {
   <div className="space-y-4">
     <div className="bg-white/20 backdrop-blur-sm p-4 rounded-lg text-center hover:bg-white/30 transition-colors duration-200">
       <a
-        href="tel:+919876543210"
+        href="tel:+919413466075"
         className="inline-flex items-center gap-2 text-xl font-semibold py-2 px-4 bg-black rounded-full hover:bg-blue-500 transition-all duration-300 transform hover:-translate-y-1"
       >
        <Image
