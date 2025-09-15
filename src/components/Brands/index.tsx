@@ -34,7 +34,6 @@ const Brands = () => {
                     custom={index}
                     initial="hidden"
                     animate="visible"
-                    variants={cardVariants}
                   >
                     <SingleBrand brand={brand} />
                   </motion.div>
