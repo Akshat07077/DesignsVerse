@@ -20,7 +20,6 @@ const SingleBlog = ({ blog }: { blog: Blog }) => {
     <motion.div
       initial="hidden"
       animate="visible"
-      variants={cardVariants}
       className="group relative overflow-hidden rounded-lg bg-white dark:bg-gray-800 shadow-lg transition-all duration-300 hover:shadow-xl"
     >
       {/* Blog Thumbnail */}
