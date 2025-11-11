@@ -1,6 +1,7 @@
 "use client";
 import { motion } from "framer-motion";
 import SectionTitle from "../Common/SectionTitle";
+import type { Variants } from "framer-motion";
 
 const checkIcon = (
   <svg width="16" height="13" viewBox="0 0 16 13" className="fill-current">

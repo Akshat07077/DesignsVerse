@@ -47,6 +47,7 @@ export const metadata: Metadata = {
         alt: "DesignsVerse - Digital Solutions Agency",
       },
     ],
+    
     locale: "en_IN",
     type: "website",
   },

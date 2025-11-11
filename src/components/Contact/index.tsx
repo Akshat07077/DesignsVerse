@@ -1,6 +1,6 @@
 'use client'
 import { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, easeOut } from "framer-motion";
 import Image from "next/image";
 
 const Contact = () => {
@@ -15,6 +15,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+    
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -51,29 +52,9 @@ const Contact = () => {
     });
   };
 
-  // Animation variants for Framer Motion
-  const containerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
+  
 
-  const inputVariants = {
-    hidden: { opacity: 0, x: -20 },
-    visible: {
-      opacity: 1,
-      x: 0,
-      transition: { duration: 0.5, ease: "easeOut" },
-    },
-  };
-
-  const buttonVariants = {
-    hover: { scale: 1.05, transition: { duration: 0.3 } },
-    tap: { scale: 0.95 },
-  };
+  
 
   return (
     <section
@@ -83,7 +64,6 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <motion.div
           className="flex flex-wrap -mx-4"
-          variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -92,8 +72,7 @@ const Contact = () => {
           <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
             <motion.div
               className="bg-white dark:bg-gray-800 rounded-lg shadow-2xl p-8 md:p-12"
-              variants={containerVariants}
-            >
+                >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 Get in Touch
               </h2>
@@ -102,7 +81,7 @@ const Contact = () => {
               </p>
               <form onSubmit={handleSubmit}>
                 <div className="space-y-6">
-                  <motion.div variants={inputVariants}>
+                  <motion.div >
                     <label
                       htmlFor="name"
                       className="block text-sm font-medium text-gray-700 dark:text-gray-200"
@@ -119,7 +98,7 @@ const Contact = () => {
                       required
                     />
                   </motion.div>
-                  <motion.div variants={inputVariants}>
+                  <motion.div >
                     <label
                       htmlFor="email"
                       className="block text-sm font-medium text-gray-700 dark:text-gray-200"
@@ -136,7 +115,7 @@ const Contact = () => {
                       required
                     />
                   </motion.div>
-                  <motion.div variants={inputVariants}>
+                  <motion.div >
                     <label
                       htmlFor="message"
                       className="block text-sm font-medium text-gray-700 dark:text-gray-200"
@@ -153,7 +132,7 @@ const Contact = () => {
                       required
                     ></textarea>
                   </motion.div>
-                  <motion.div variants={inputVariants}>
+                  <motion.div >
                     <motion.button
                       type="submit"
                       className={`w-full rounded-md px-6 py-3 text-white font-medium ${
@@ -161,7 +140,6 @@ const Contact = () => {
                           ? "bg-green-600 hover:bg-green-700"
                           : "bg-blue-600 hover:bg-blue-700"
                       } flex items-center justify-center transition duration-300`}
-                      variants={buttonVariants}
                       whileHover="hover"
                       whileTap="tap"
                       disabled={isLoading}
@@ -200,8 +178,7 @@ const Contact = () => {
           <div className="w-full lg:w-1/2 px-4">
             <motion.div
               className="relative h-[400px] md:h-[500px] lg:h-full rounded-lg overflow-hidden shadow-2xl"
-              variants={containerVariants}
-            >
+                >
               <Image
                 src="/images/contact/1.png"
                 alt="Contact Us"

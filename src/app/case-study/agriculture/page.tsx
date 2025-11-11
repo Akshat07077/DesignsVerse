@@ -1,0 +1,21 @@
+import AboutPage from '@/components/agriculure/about'
+import HeroSection from '@/components/agriculure/hero'
+import SocialMediaPage from '@/components/agriculure/socialmedial'
+import TechStackPage from '@/components/agriculure/tech'
+import BusinessTransformationPage from '@/components/agriculure/transforam'
+import React from 'react'
+import FloatingBookCTA from '@/components/agriculure/footercta'
+const Agriculture = () => {
+  return (
+    <div>
+      <HeroSection/>
+      <AboutPage/>
+      <SocialMediaPage/>
+      <BusinessTransformationPage/>
+      <TechStackPage/>
+      <FloatingBookCTA/>
+    </div>
+  )
+}
+
+export default Agriculture
