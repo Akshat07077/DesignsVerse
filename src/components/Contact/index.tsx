@@ -83,6 +83,7 @@ const Contact = () => {
       <div className="container mx-auto px-4">
         <motion.div
           className="flex flex-wrap -mx-4"
+          variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -91,6 +92,7 @@ const Contact = () => {
           <div className="w-full lg:w-1/2 px-4 mb-12 lg:mb-0">
             <motion.div
               className="bg-white dark:bg-gray-800 rounded-lg shadow-2xl p-8 md:p-12"
+              variants={containerVariants}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
                 Get in Touch

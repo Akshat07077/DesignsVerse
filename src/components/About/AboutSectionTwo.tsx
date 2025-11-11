@@ -1,4 +1,5 @@
 import React from "react";
+import type { Variants } from "framer-motion";
 
 const AboutSectionTwo = () => {
   return (
