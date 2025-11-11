@@ -16,6 +16,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setIsLoading(true);
+    
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
