@@ -87,7 +87,6 @@ const RecentProjects = () => {
               initial="hidden"
               animate="visible"
               whileHover="hover"
-              variants={cardVariants}
               className="group relative overflow-hidden rounded-xl bg-white dark:bg-[#161b22] border border-gray-100 dark:border-gray-800 shadow-sm hover:shadow-lg transition-all duration-500"
             >
               <div className={`absolute top-0 left-0 w-full h-1 ${project.lightAccent} dark:${project.darkAccent}`}></div>
