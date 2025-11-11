@@ -18,45 +18,7 @@ const RecentProjects = () => {
     },
   };
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: (i: number) => ({
-      opacity: 1,
-      y: 0,
-      transition: {
-        delay: i * 0.15,
-        duration: 0.8,
-        ease: [0.16, 1, 0.3, 1],
-      },
-    }),
-    hover: {
-      y: -10,
-      transition: {
-        duration: 0.4,
-        ease: [0.16, 1, 0.3, 1],
-      },
-    },
-  };
 
-  const imageVariants = {
-    initial: { scale: 1 },
-    hover: {
-      scale: 1,
-      transition: {
-        duration: 0.6,
-        ease: [0.16, 1, 0.3, 1],
-      },
-    },
-  };
-
-  const contentVariants = {
-    hover: {
-      y: -5,
-      transition: {
-        duration: 0.4,
-      },
-    },
-  };
 
   return (
     <section className="relative z-10 py-16 md:py-20 lg:py-24 bg-white dark:bg-[#121723] overflow-hidden">
@@ -76,7 +38,6 @@ const RecentProjects = () => {
 
         <motion.div
           className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8"
-          variants={container}
           initial="hidden"
           animate="visible"
         >
@@ -93,7 +54,6 @@ const RecentProjects = () => {
               <div className="absolute inset-0 bg-white/30 dark:bg-black/20 opacity-0 group-hover:opacity-100 z-10 transition-opacity duration-500 rounded-xl" />
               <motion.div
                 className="relative w-full h-[180px] overflow-hidden bg-gray-50 dark:bg-gray-900"
-                variants={imageVariants}
                 initial="initial"
               >
                 <Image
@@ -106,7 +66,7 @@ const RecentProjects = () => {
                   quality={100}
                 />
               </motion.div>
-              <motion.div className="p-5 relative z-20" variants={contentVariants}>
+              <motion.div className="p-5 relative z-20" >
                 <div className="mb-4">
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 group-hover:text-primary dark:group-hover:text-primary-light transition-colors">
