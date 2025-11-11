@@ -86,36 +86,7 @@ const BusinessTransformationPage = () => {
     }
   ];
 
-  const successMetrics = [
-    {
-      value: '156%',
-      label: 'Revenue Growth',
-      description: 'Average revenue increase',
-      icon: TrendingUp,
-      color: 'text-[#A2E535]'
-    },
-    {
-      value: '65%',
-      label: 'Efficiency Gain',
-      description: 'Operational efficiency improvement',
-      icon: Zap,
-      color: 'text-[#16A34A]'
-    },
-    {
-      value: '89%',
-      label: 'Customer Satisfaction',
-      description: 'Client satisfaction score',
-      icon: Users,
-      color: 'text-[#15803D]'
-    },
-    {
-      value: '3.2x',
-      label: 'ROI Multiplier',
-      description: 'Return on investment',
-      icon: DollarSign,
-      color: 'text-[#A2E535]'
-    }
-  ];
+
 
   const transformationSteps = [
     {
@@ -213,45 +184,10 @@ const BusinessTransformationPage = () => {
           </p>
         </div>
 
-        {/* Success Metrics */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-20">
-          {successMetrics.map((metric, index) => {
-            const IconComponent = metric.icon;
-            return (
-              <div
-                key={index}
-                className="bg-white rounded-2xl shadow-xl border border-[#A2E535]/10 p-6 text-center group hover:shadow-2xl transition-all duration-500 hover:-translate-y-2"
-              >
-                <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br from-[#A2E535] to-[#16A34A] flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <IconComponent className="w-8 h-8 text-white" />
-                </div>
-                <div className={`text-3xl font-black ${metric.color} mb-2`}>
-                  {metric.value}
-                </div>
-                <div className="font-bold text-gray-900 mb-1">
-                  {metric.label}
-                </div>
-                <div className="text-sm text-gray-600">
-                  {metric.description}
-                </div>
-              </div>
-            );
-          })}
-        </div>
 
         {/* Transformation Areas */}
         <div className="mb-20">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-              Areas of{' '}
-              <span className="bg-gradient-to-r from-[#A2E535] to-[#16A34A] bg-clip-text text-transparent">
-                Transformation
-              </span>
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Comprehensive solutions covering every aspect of your business evolution
-            </p>
-          </div>
+          
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {/* Tabs Navigation */}
