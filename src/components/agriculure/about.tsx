@@ -1,6 +1,7 @@
 // components/AboutPage.jsx
 'use client';
 import { useState, useEffect } from 'react';
+import Image from 'next/image';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ExternalLink, TrendingUp, Users, Target, Zap, Award, CheckCircle, ArrowRight, Rocket, Globe, Cpu, Sparkles } from 'lucide-react';
 
@@ -205,10 +206,13 @@ const AboutPage = () => {
               transition={{ type: "spring", stiffness: 300 }}
             >
               <div className="aspect-[4/3] bg-gradient-to-br from-[#A2E535]/10 to-[#16A34A]/10 relative overflow-hidden">
-                <img
-                  src="/images/blog/blog-1.jpg"      
-                              alt="Our Innovation Center"
-                  className="w-full h-full object-cover"
+                <Image
+                  src="/images/blog/blog-1.jpg"
+                  alt="Our Innovation Center"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
+                  priority={false}
                 />
                 
                 {/* Animated Overlay */}
@@ -250,10 +254,12 @@ const AboutPage = () => {
               transition={{ type: "spring", stiffness: 300, delay: 0.1 }}
             >
               <div className="aspect-[4/3] bg-gradient-to-br from-[#16A34A]/10 to-[#15803D]/10 relative overflow-hidden">
-                <img
+                <Image
                   src="/api/placeholder/600/450"
                   alt="Our Team Collaboration"
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
                 />
                 
                 {/* Animated Overlay */}

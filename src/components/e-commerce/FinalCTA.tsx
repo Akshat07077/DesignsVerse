@@ -27,7 +27,7 @@ export default function EcommerceFinalCTA() {
           </h2>
           
           <p className="text-xl md:text-2xl text-gray-700 max-w-3xl mx-auto leading-relaxed mb-12">
-            Let's create an e-commerce experience that not only sells products but builds 
+            Let&apos;s create an e-commerce experience that not only sells products but builds 
             lasting brand relationships with your customers.
           </p>
 

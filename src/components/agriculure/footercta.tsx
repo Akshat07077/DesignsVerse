@@ -125,7 +125,7 @@ const CTAFooter = () => {
                   Book Your Free Call
                 </h3>
                 <p className="text-gray-600">
-                  Let's discuss how we can help your business grow
+                  Let&apos;s discuss how we can help your business grow
                 </p>
               </div>
 

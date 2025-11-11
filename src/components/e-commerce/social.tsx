@@ -1,6 +1,7 @@
 // components/SocialMediaPage.jsx
 'use client';
 import { useState, useRef, useEffect } from 'react';
+import Image from 'next/image';
 import { 
   TrendingUp, 
   Users, 
@@ -298,10 +299,12 @@ const SocialMediaPage = () => {
               
               {/* Image Container */}
               <div className="relative aspect-[3/4] bg-gradient-to-br from-red-500/10 to-pink-500/10 overflow-hidden">
-                <img
+                <Image
                   src={image.src}
                   alt={image.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  fill
+                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  sizes="(max-width: 768px) 100vw, 400px"
                 />
                 
                 {/* Overlay */}
