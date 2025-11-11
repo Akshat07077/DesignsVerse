@@ -54,7 +54,6 @@ const Hero = () => {
             >
               {/* Badge */}
               <motion.div
-                variants={itemVariants}
                 className="mb-4 inline-flex items-center rounded-full bg-blue-100 px-4 py-2 text-sm font-medium text-blue-800 dark:bg-blue-900/30 dark:text-blue-300"
               >
                 <span className="mr-2 h-2 w-2 rounded-full bg-blue-600"></span>
@@ -62,7 +61,6 @@ const Hero = () => {
               </motion.div>
 
               <motion.h1
-                variants={itemVariants}
                 className="mb-6 text-4xl font-bold leading-tight text-gray-900 dark:text-white sm:text-5xl md:text-6xl md:leading-[1.2]"
               >
                 <span className="relative inline-block">
@@ -75,7 +73,6 @@ const Hero = () => {
               </motion.h1>
 
               <motion.p
-                variants={itemVariants}
                 className="mx-auto mb-10 max-w-[700px] text-xl leading-relaxed text-gray-600 dark:text-gray-300 sm:text-2xl"
               >
                 We leverage cutting-edge AI technology to create intelligent digital solutions that automate processes, 
@@ -83,7 +80,6 @@ const Hero = () => {
               </motion.p>
 
               <motion.div
-                variants={itemVariants}
                 className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0"
               >
                 <Link
@@ -101,7 +97,6 @@ const Hero = () => {
 
               {/* Trust indicators */}
               <motion.div
-                variants={itemVariants}
                 className="mt-12 flex flex-col items-center space-y-4 sm:flex-row sm:justify-center sm:space-x-8 sm:space-y-0"
               >
                 <div className="flex items-center">
