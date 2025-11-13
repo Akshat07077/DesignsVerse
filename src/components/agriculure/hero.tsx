@@ -39,7 +39,7 @@ const HeroSection = () => {
   };
 
   const growthOptions = [
-    { value: '15%', label: 'Revenue Growth', icon: TrendingUp, gradient: 'from-[#A2E535] to-[#16A34A]' },
+    { value: '15%', label: 'Revenue', icon: TrendingUp, gradient: 'from-[#A2E535] to-[#16A34A]' },
     { value: '45%', label: 'User Increase', icon: Target, gradient: 'from-[#16A34A] to-[#15803D]' },
     { value: '30%', label: 'Efficiency', icon: Zap, gradient: 'from-[#A2E535] to-[#15803D]' },
     { value: '25%', label: 'Market Share', icon: Sparkles, gradient: 'from-[#16A34A] to-[#15803D]' }

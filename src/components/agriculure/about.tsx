@@ -175,7 +175,7 @@ const AboutPage = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.7, duration: 0.8 }}
           >
-            We're revolutionizing industries with cutting-edge technology, 
+            We are revolutionizing industries with cutting-edge technology, 
             delivering exceptional value and driving digital transformation worldwide.
           </motion.p>
         </motion.div>
