@@ -230,51 +230,7 @@ const SocialMediaPage = () => {
               </div>
             </div>
 
-            {/* Key Metrics Grid */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-black text-gray-900 flex items-center gap-3">
-                <div className="w-2 h-8 bg-gradient-to-b from-[#16A34A] to-[#15803D] rounded-full"></div>
-                Performance Metrics
-              </h3>
-              
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                {socialStats.map((stat, index) => {
-                  const IconComponent = stat.icon;
-                  return (
-                    <div
-                      key={index}
-                      className="group relative p-1 rounded-2xl bg-gradient-to-br from-white to-gray-50 shadow-lg hover:shadow-2xl transition-all duration-500 hover:-translate-y-1"
-                    >
-                      <div className="relative p-6 rounded-xl bg-white backdrop-blur-sm">
-                        <div className="flex items-start justify-between mb-4">
-                          <div className={`w-14 h-14 rounded-2xl bg-gradient-to-br ${stat.color} flex items-center justify-center group-hover:scale-110 transition-transform duration-300`}>
-                            <IconComponent className="w-7 h-7 text-white" />
-                          </div>
-                          <div className="flex items-center gap-1 px-3 py-1 rounded-full bg-[#A2E535]/10">
-                            <ArrowUp className="w-3 h-3 text-[#16A34A]" />
-                            <span className="text-sm font-bold text-[#15803D]">
-                              {stat.improvement}
-                            </span>
-                          </div>
-                        </div>
-                        
-                        <div className="space-y-2">
-                          <div className="text-2xl font-black text-gray-900">
-                            {stat.percentage}
-                          </div>
-                          <div className="font-bold text-gray-900">
-                            {stat.label}
-                          </div>
-                          <div className="text-sm text-gray-500">
-                            {stat.description}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+           
 
             {/* Strategy Points */}
             <div className="bg-gradient-to-br from-[#A2E535] to-[#16A34A] rounded-3xl p-8 text-white">
