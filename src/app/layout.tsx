@@ -1,5 +1,4 @@
 import { Inter } from "next/font/google";
-import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
 import { Metadata } from "next";
 import Head from "next/head"; // For additional meta tags and structured data

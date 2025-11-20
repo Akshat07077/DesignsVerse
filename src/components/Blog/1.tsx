@@ -51,7 +51,10 @@ const Blog: React.FC = () => {
                 </Link>
               </div>
             ))}
-          </div>
+          </div>aks 
+          cost = va;ue
+
+          
 
           {/* Pagination */}
           <div className="flex justify-center items-center mt-10 space-x-2">
