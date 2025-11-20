@@ -40,9 +40,13 @@ export default function EcommerceHero() {
       opacity: 1,
       y: 0,
       scale: 1,
-      transition: { duration: 0.8, ease: [0.22, 1, 0.36, 1] },
+      transition: { 
+        duration: 0.8, 
+        ease: [0.22, 1, 0.36, 1] as any,
+      },
     },
   };
+  
 
   const floatingVariants = {
     animate: {
@@ -53,7 +57,7 @@ export default function EcommerceHero() {
       transition: {
         duration: 6 + Math.random() * 4,
         repeat: Infinity,
-        ease: 'easeInOut',
+        ease: [0.42, 0, 0.58, 1] as any,
         delay: Math.random() * 3,
       },
     },
@@ -95,8 +99,8 @@ export default function EcommerceHero() {
             x: [0, 20, 0],
             scale: [1, 1.2, 1]
           }}
-          transition={{ duration: 15, repeat: Infinity, ease: 'easeInOut' }}
-        />
+          transition={{ duration: 18, repeat: Infinity, ease: [0.42, 0, 0.58, 1] as any, delay: 2 }}
+          />
         <motion.div
           className="absolute -bottom-1/4 -right-1/4 w-1/2 h-1/2 bg-gradient-to-r from-purple-400/20 via-blue-500/15 to-indigo-500/20 rounded-full blur-3xl"
           animate={{ 
@@ -104,7 +108,7 @@ export default function EcommerceHero() {
             x: [0, -20, 0],
             scale: [1, 1.2, 1]
           }}
-          transition={{ duration: 18, repeat: Infinity, ease: 'easeInOut', delay: 2 }}
+          transition={{ duration: 18, repeat: Infinity, ease: [0.42, 0, 0.58, 1] as any, delay: 2 }}
         />
         <motion.div
           className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-amber-400/10 to-orange-500/10 rounded-full blur-3xl"
