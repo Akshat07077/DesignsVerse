@@ -12,7 +12,7 @@ const CTAFooter = ({ data, colors, domainName, domainSlug }) => {
 
   const handleNewsletterSubmit = (e) => {
     e.preventDefault();
-    
+
     console.log('Newsletter subscription:', email);
     setEmail('');
     alert(`Thank you for subscribing to our ${domainName} newsletter!`);

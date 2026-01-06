@@ -4,8 +4,9 @@ import { domainsData, getDomainIcons } from '@/utils/lib/domainsData';
 import { Metadata } from 'next';
 
 // Generate metadata dynamically
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
-  const domainConfig = domainsData.find(domain => domain.slug === params.slug);
+export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
+  const { slug } = await params;
+  const domainConfig = domainsData.find(domain => domain.slug === slug);
   
   if (!domainConfig) {
     return {
@@ -42,8 +43,8 @@ export async function generateStaticParams() {
   }));
 }
 
-export default function DomainPage({ params }: { params: { slug: string } }) {
-  const { slug } = params;
+export default async function DomainPage({ params }: { params: Promise<{ slug: string }> }) {
+  const { slug } = await params;
   const domainConfig = domainsData.find(domain => domain.slug === slug);
   
   if (!domainConfig) {
