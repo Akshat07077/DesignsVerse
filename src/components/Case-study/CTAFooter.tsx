@@ -72,7 +72,7 @@ const CTAFooter = ({ data, colors, domainName, domainSlug }) => {
                   Book Your Free {domainName} Call
                 </h3>
                 <p className="text-gray-600">
-                  Let's discuss how we can help your {domainName.toLowerCase()} business grow
+                  Let&apos;s discuss how we can help your {domainName.toLowerCase()} business grow
                 </p>
               </div>
 

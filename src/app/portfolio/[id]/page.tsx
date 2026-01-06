@@ -392,7 +392,7 @@ export default function ProjectPage() {
                   Like This Project?
                 </h3>
                 <p className="text-sm text-white/90 mb-6 leading-relaxed">
-                  Let's discuss how we can create something amazing for your business.
+                  Let&apos;s discuss how we can create something amazing for your business.
                 </p>
                 <a
                   href="/contact"
@@ -419,7 +419,7 @@ export default function ProjectPage() {
               Ready to Build Something Great?
             </h2>
             <p className="text-lg md:text-xl text-slate-300 mb-8 max-w-2xl mx-auto">
-              Let's bring your vision to life with innovative solutions and cutting-edge technology.
+              Let&apos;s bring your vision to life with innovative solutions and cutting-edge technology.
             </p>
             <div className="flex flex-wrap justify-center gap-4">
               <a
