@@ -84,10 +84,17 @@ import {
       hero: {
         title: 'Transform Agriculture',
         subtitle: 'Boost crop yields and optimize farm operations with AI-powered solutions',
+        description: 'Boost crop yields and optimize farm operations with AI-powered solutions',
         videoPoster: '/api/placeholder/600/400',
         videoSrc: '/videos/agriculture-demo.mp4',
         ctaPrimary: 'Get Free Consultation',
-        ctaSecondary: 'Watch Demo'
+        ctaSecondary: 'Watch Demo',
+        growthOptions: [
+          { key: 'revenue', value: '35%', label: 'Crop Yield', icon: TrendingUp },
+          { key: 'users', value: '67%', label: 'Farm Efficiency', icon: Target },
+          { key: 'efficiency', value: '52%', label: 'Resource Optimization', icon: Zap },
+          { key: 'market', value: '89%', label: 'Market Reach', icon: Sparkles }
+        ]
       },
       growthStats: {
         revenue: { value: '35%', description: 'Crop yield increase' },
@@ -194,10 +201,17 @@ import {
       hero: {
         title: 'Transform Your Fitness Business',
         subtitle: 'Engage clients, streamline operations, and grow revenue with digital fitness solutions',
+        description: 'Engage clients, streamline operations, and grow revenue with digital fitness solutions',
         videoPoster: '/api/placeholder/600/400',
         videoSrc: '/videos/gym-demo.mp4',
         ctaPrimary: 'Start Free Trial',
-        ctaSecondary: 'Book Demo'
+        ctaSecondary: 'Book Demo',
+        growthOptions: [
+          { key: 'revenue', value: '45%', label: 'Membership Growth', icon: TrendingUp },
+          { key: 'users', value: '78%', label: 'Client Retention', icon: Target },
+          { key: 'efficiency', value: '63%', label: 'Operational Efficiency', icon: Zap },
+          { key: 'market', value: '92%', label: 'Online Presence', icon: Sparkles }
+        ]
       },
       growthStats: {
         revenue: { value: '45%', description: 'Membership growth' },
@@ -304,6 +318,56 @@ import {
       },
       // ... default values
     }
+  };
+  
+  // Convert pagesConfig object to array format for domainsData
+  export const domainsData = Object.values(pagesConfig).filter(config => config.slug !== 'default');
+  
+  // Helper function to get domain icons
+  export const getDomainIcons = (slug) => {
+    const iconMap = {
+      agriculture: {
+        Cpu: '🌾',
+        Clock: '⏰',
+        Shield: '🛡️',
+        TrendingUp: '📈',
+        Zap: '⚡',
+        Infinity: '♾️',
+        MessageCircle: '💬',
+        Users: '👥',
+        Star: '⭐',
+        Smartphone: '📱',
+        BarChart3: '📊'
+      },
+      gym: {
+        Cpu: '🏋️',
+        Clock: '⏰',
+        Shield: '🛡️',
+        TrendingUp: '📈',
+        Zap: '⚡',
+        Infinity: '♾️',
+        MessageCircle: '💬',
+        Users: '👥',
+        Star: '⭐',
+        Smartphone: '📱',
+        BarChart3: '📊'
+      },
+      influencer: {
+        Cpu: '📱',
+        Clock: '⏰',
+        Shield: '🛡️',
+        TrendingUp: '📈',
+        Zap: '⚡',
+        Infinity: '♾️',
+        MessageCircle: '💬',
+        Users: '👥',
+        Star: '⭐',
+        Smartphone: '📱',
+        BarChart3: '📊'
+      }
+    };
+    
+    return iconMap[slug] || iconMap.agriculture; // Default to agriculture icons
   };
   
   export default pagesConfig;
