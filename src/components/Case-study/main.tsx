@@ -50,14 +50,22 @@ const Main = ({ domainSlug, domainConfig, domainIcons }: MainProps) => {
 
       <div className="min-h-screen bg-gradient-to-br from-white via-[var(--bg-light)] to-[#e8f5e8]">
         {/* Marquee CTA */}
-        <MarqueeCTA colors={colors} text={`Book Your ${name} Call Now`} />
+        <MarqueeCTA pageData={{
+          colors: colors,
+          cta: {
+            marquee: `Book Your ${name} Call Now`
+          }
+        }} />
         
         {/* Hero Section */}
         <HeroSection 
-          data={hero} 
-          colors={colors} 
-          domainSlug={domainSlug}
-          domainIcons={domainIcons || {}}
+          pageData={{
+            colors: colors,
+            hero: hero,
+            growthOptions: hero?.growthOptions || [],
+            growthStats: hero?.growthStats || {},
+            name: name
+          }}
         />
         
         {/* About Section */}

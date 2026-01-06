@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { Phone } from 'lucide-react';
-import { useDynamicColors } from '../hooks/useDynamicColors';
+import { useDynamicColors } from '@/utils/useDynamicColors';
 
 const DynamicMarqueeCTA = ({ pageData }) => {
   const colors = useDynamicColors(pageData.colors);
@@ -13,7 +13,7 @@ const DynamicMarqueeCTA = ({ pageData }) => {
       style={{ 
         '--primary-from': pageData.colors.primaryFrom,
         '--primary-to': pageData.colors.primaryTo 
-      }}
+      } as React.CSSProperties}
     >
       <div className="flex animate-marquee whitespace-nowrap">
         {/* First set of items */}

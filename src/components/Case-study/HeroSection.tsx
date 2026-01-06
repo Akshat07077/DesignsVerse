@@ -62,7 +62,7 @@ const DynamicHeroSection = ({ pageData }) => {
       style={{ 
         '--primary-from': pageData.colors.primaryFrom,
         '--primary-to': pageData.colors.primaryTo 
-      }}
+      } as React.CSSProperties}
     >
       {/* Background Image with Overlay */}
       <div 
@@ -131,8 +131,8 @@ const DynamicHeroSection = ({ pageData }) => {
         <div 
           className="absolute inset-0 bg-[linear-gradient(rgba(var(--primary-rgb),0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(var(--primary-rgb),0.03)_1px,transparent_1px)] bg-[size:40px_40px] lg:bg-[size:64px_64px] [mask-image:radial-gradient(ellipse_80%_50%_at_50%_50%,black,transparent)]" 
           style={{ 
-            '--primary-rgb': pageData.colors.primaryFrom.match(/\d+/g).join(','),
-          }}
+            '--primary-rgb': pageData.colors.primaryFrom.match(/\d+/g)?.join(',') || '0,0,0',
+          } as React.CSSProperties}
         />
       </div>
 
@@ -189,7 +189,7 @@ const DynamicHeroSection = ({ pageData }) => {
                     transition={{ delay: 0.8, duration: 0.8 }}
                     style={{ 
                       '--primary-from': pageData.colors.primaryFrom 
-                    }}
+                    } as React.CSSProperties}
                   />
                 </motion.span>
               </motion.h1>
@@ -278,7 +278,7 @@ const DynamicHeroSection = ({ pageData }) => {
                 style={{ 
                   '--primary-from': pageData.colors.primaryFrom,
                   '--secondary-from': pageData.colors.secondaryFrom 
-                }}
+                } as React.CSSProperties}
               >
                 {pageData.hero.ctaSecondary}
               </motion.button>
@@ -388,7 +388,7 @@ const DynamicHeroSection = ({ pageData }) => {
                 style={{ 
                   '--primary-from': pageData.colors.primaryFrom,
                   '--secondary-from': pageData.colors.secondaryFrom 
-                }}
+                } as React.CSSProperties}
               >
                 {pageData.hero.ctaSecondary}
               </motion.button>
