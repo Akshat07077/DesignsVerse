@@ -106,13 +106,13 @@ const Contact = () => {
             Contact Us
           </motion.span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">
-            Let's Start a{" "}
+            Let&apos;s Start a{" "}
             <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Conversation
             </span>
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300">
-            Have a project in mind? We'd love to hear from you. Send us a message and we'll respond within 24 hours.
+            Have a project in mind? We&apos;d love to hear from you. Send us a message and we&apos;ll respond within 24 hours.
           </p>
         </motion.div>
 
@@ -286,7 +286,7 @@ const Contact = () => {
                   viewport={{ once: true }}
                   transition={{ delay: 0.7 }}
                 >
-                  Let's bring your ideas to life together
+                  Let&apos;s bring your ideas to life together
                 </motion.p>
               </div>
             </div>
