@@ -3,19 +3,20 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 
 const WhatsAppButton = () => {
-  // WhatsApp configuration
-  const phoneNumber = "+919413466075"; // Replace with your WhatsApp number
+  const phoneNumber = "+919413466075";
   const message = "Hello! I'm interested in your services.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
-  // Animation variants for the button
   const buttonVariants = {
     initial: { scale: 1, y: 0 },
-    hover: { scale: 1.1, y: -5, transition: { type: "spring", stiffness: 300 } },
+    hover: { 
+      scale: 1.1, 
+      y: -5, 
+      transition: { stiffness: 300 }   // ✅ FIXED
+    },
     tap: { scale: 0.95 },
   };
 
-  // Animation variants for the tooltip
   const tooltipVariants = {
     hidden: { opacity: 0, y: 10 },
     visible: { opacity: 1, y: 0, transition: { duration: 0.3 } },
@@ -23,7 +24,6 @@ const WhatsAppButton = () => {
 
   return (
     <div className="fixed bottom-6 left-6 z-50">
-      {/* WhatsApp Button */}
       <motion.a
         href={whatsappUrl}
         target="_blank"
@@ -34,16 +34,16 @@ const WhatsAppButton = () => {
         whileTap="tap"
         aria-label="Chat with us on WhatsApp"
         role="button"
+        className="relative"
       >
-        {/* WhatsApp Icon */}
         <Image
-          src="/images/whatsapp/whatsapp.png" // Replace with your WhatsApp icon path
+          src="/images/whatsapp/whatsapp.png"
           alt="WhatsApp Icon"
           width={55}
           height={55}
           className="object-contain h-30 w-30"
         />
-        {/* Tooltip with Message */}
+
         <motion.span
           variants={tooltipVariants}
           initial="hidden"

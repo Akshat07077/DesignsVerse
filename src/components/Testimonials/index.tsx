@@ -75,7 +75,7 @@ const testimonialData: Testimonial[] = [
     designation: "AI Project Lead",
     content:
       "DesignsVerse offers a compelling alternative to mainstream AI platforms. Their unique approach to algorithm implementation and model optimization has significantly improved our operational efficiency.",
-    image: "/images/testimonials/auth-08.png",
+    image: "/images/testimonials/author-01.png",
     star: 5,
   },
   {
@@ -84,7 +84,7 @@ const testimonialData: Testimonial[] = [
     designation: "AI Development Manager",
     content:
       "We switched from traditional AI frameworks to DesignsVerse's platform and couldn't be happier! Their alternative approach to neural network implementation has transformed our development process.",
-    image: "/images/testimonials/auth-09.png",
+    image: "/images/testimonials/author-02.png",
     star: 5,
   },
   {
@@ -93,7 +93,7 @@ const testimonialData: Testimonial[] = [
     designation: "AI Research Director",
     content:
       "DesignsVerse's NLP solution offers a fresh perspective compared to standard AI tools. Their innovative approach to language processing has helped us achieve breakthrough results in our research projects.",
-    image: "/images/testimonials/auth-10.png",
+    image: "/images/testimonials/author-03.png",
     star: 5,
   },
   {

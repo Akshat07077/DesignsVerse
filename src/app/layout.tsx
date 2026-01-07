@@ -1,11 +1,16 @@
 import { Inter } from "next/font/google";
-import "node_modules/react-modal-video/css/modal-video.css";
 import "../styles/index.css";
-import { Metadata } from "next";
+import { Metadata, Viewport } from "next";
 import Head from "next/head"; // For additional meta tags and structured data
 import AppShell from "./AppShell";
 
 const inter = Inter({ subsets: ["latin"] });
+
+// Define Viewport separately (required in Next.js 14+)
+export const viewport: Viewport = {
+  width: "device-width",
+  initialScale: 1.0,
+};
 
 // Define Metadata for basic SEO (common for all pages)
 export const metadata: Metadata = {
@@ -18,7 +23,6 @@ export const metadata: Metadata = {
     "India",
   ],
   robots: "index, follow",
-  viewport: "width=device-width, initial-scale=1.0",
   authors: [{ name: "DesignsVerse Team", url: "https://www.designsverse.in" }],
   alternates: {
     canonical: "https://www.designsverse.in", // Updated canonical URL

@@ -54,28 +54,32 @@ const Header: React.FC = () => {
       <header
         className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${
           sticky
-            ? "bg-white/90 dark:bg-gray-900/90 shadow-lg backdrop-blur-sm py-2"
-            : "bg-transparent py-4"
+            ? "bg-white/95 dark:bg-gray-900/95 shadow-lg shadow-slate-200/60 dark:shadow-black/60 border-b border-slate-200/80 dark:border-slate-800/80 backdrop-blur-xl py-2"
+            : "bg-transparent py-3 lg:py-4"
         }`}
       >
         <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between">
+          <div className="flex items-center justify-between lg:grid lg:grid-cols-[auto,1fr,auto] lg:gap-6">
             {/* Left Section (Logo) */}
             <div className="flex-shrink-0">
               <Link href="/" onClick={closeNavbar}>
                 <Image
                   src="/images/logo/LOGO-1.png"
                   alt="Logo"
-                  width={180}
-                  height={40}
-                  className="w-40 dark:hidden"
+                  width={220}
+                  height={48}
+                  className={`w-40 sm:w-48 dark:hidden transition-all duration-300 ${
+                    sticky ? "scale-90" : "scale-100"
+                  }`}
                 />
                 <Image
                   src="/images/logo/LOGO-2.png"
                   alt="Logo"
-                  width={180}
-                  height={40}
-                  className="hidden w-40 dark:block"
+                  width={220}
+                  height={48}
+                  className={`hidden w-40 sm:w-48 dark:block transition-all duration-300 ${
+                    sticky ? "scale-90" : "scale-100"
+                  }`}
                 />
               </Link>
             </div>
@@ -112,14 +116,14 @@ const Header: React.FC = () => {
 
             {/* Navigation Menu */}
             <div
-              className={`lg:hidden fixed inset-0 z-40 bg-black/50 transition-opacity duration-300 ${
+              className={`lg:hidden fixed inset-0 z-40 bg-black/50 backdrop-blur-sm transition-opacity duration-300 ${
                 navbarOpen ? "opacity-100 visible" : "opacity-0 invisible"
               }`}
               onClick={closeNavbar}
             />
 
             <nav
-              className={`lg:flex lg:items-center lg:space-x-8 fixed lg:static top-0 left-0 h-screen lg:h-auto w-4/5 max-w-sm lg:w-auto bg-white dark:bg-gray-900 lg:bg-transparent lg:dark:bg-transparent shadow-lg lg:shadow-none z-50 transition-transform duration-300 ease-in-out ${
+              className={`lg:flex lg:items-center lg:justify-center lg:justify-self-center lg:w-max lg:space-x-9 fixed lg:static top-0 left-0 h-screen lg:h-auto w-[90%] max-w-sm lg:w-auto bg-slate-900/98 dark:bg-slate-950/98 lg:bg-transparent lg:dark:bg-transparent shadow-2xl lg:shadow-none border-r border-slate-800/80 lg:border-none rounded-r-3xl lg:rounded-none z-50 transition-transform duration-300 ease-in-out backdrop-blur-xl lg:backdrop-blur-none ${
                 navbarOpen ? "translate-x-0" : "-translate-x-full"
               } lg:translate-x-0`}
             >
@@ -130,14 +134,14 @@ const Header: React.FC = () => {
                     alt="Logo"
                     width={180}
                     height={40}
-                    className="w-40 dark:hidden"
+                    className="w-36 sm:w-40 dark:hidden"
                   />
                   <Image
                     src="/images/logo/LOGO-2.png"
                     alt="Logo"
                     width={180}
                     height={40}
-                    className="hidden w-40 dark:block"
+                    className="hidden w-36 sm:w-40 dark:block"
                   />
                 </Link>
                 <button
@@ -160,14 +164,14 @@ const Header: React.FC = () => {
                 </button>
               </div>
 
-              <ul className="flex flex-col lg:flex-row lg:space-x-6 p-6 lg:p-0 h-[calc(100%-180px)] lg:h-full overflow-y-auto">
+              <ul className="flex flex-col lg:flex-row lg:space-x-8 px-6 py-4 lg:px-0 lg:py-0 lg:h-full">
                 {menuData.map((menuItem: MenuItem, index: number) => (
                   <li key={index} className="relative group">
                     {menuItem.path ? (
                       <Link
                         href={menuItem.path}
                         onClick={closeNavbar}
-                        className={`block py-3 lg:py-0 text-base font-medium transition-colors ${
+                        className={`relative block py-2.5 lg:py-2 text-[15px] font-semibold tracking-tight transition-all duration-200 ${
                           pathname === menuItem.path
                             ? "text-primary dark:text-white"
                             : "text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white"
@@ -179,7 +183,7 @@ const Header: React.FC = () => {
                       <>
                         <button
                           onClick={() => handleSubmenu(index)}
-                          className="flex items-center justify-between w-full py-3 lg:py-0 text-base font-medium text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white"
+                          className="flex items-center justify-between w-full py-2.5 lg:py-2 text-[15px] font-semibold text-gray-700 dark:text-gray-300 hover:text-primary dark:hover:text-white transition-colors"
                         >
                           {menuItem.title}
                           <svg
@@ -201,7 +205,7 @@ const Header: React.FC = () => {
                         <div
                           className={`lg:absolute lg:top-full lg:left-0 lg:w-48 lg:bg-white lg:dark:bg-gray-900 lg:shadow-lg lg:rounded-md lg:p-2 transition-all duration-300 ${
                             openIndex === index
-                              ? "max-h-screen opacity-100"
+                              ? "max-h-screen opacity-100 mt-2"
                               : "max-h-0 opacity-0 lg:opacity-0 lg:group-hover:opacity-100 lg:group-hover:max-h-screen overflow-hidden"
                           } pl-4 lg:pl-0`}
                         >
@@ -211,7 +215,7 @@ const Header: React.FC = () => {
                                 key={subIndex}
                                 href={submenuItem.path || "#"}
                                 onClick={closeNavbar}
-                                className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary dark:hover:text-white rounded"
+                                className="block px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 hover:text-primary dark:hover:text-white rounded transition-colors"
                               >
                                 {submenuItem.title}
                               </Link>

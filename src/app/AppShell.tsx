@@ -15,8 +15,9 @@ type AppShellProps = {
 export default function AppShell({ children }: AppShellProps) {
   const pathname = usePathname();
   const isCaseStudy = pathname?.startsWith("/case-study");
+  const isBusinessExperience = pathname?.startsWith("/business/");
 
-  if (isCaseStudy) {
+  if (isCaseStudy || isBusinessExperience) {
     return <>{children}</>;
   }
 
