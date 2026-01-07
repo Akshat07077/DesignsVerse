@@ -6,35 +6,36 @@ import {
   } from 'lucide-react';
   
   // Base structure for all pages
+  // Use icon names as strings instead of component functions for serialization
   const baseGrowthOptions = [
-    { key: 'revenue', label: 'Revenue Growth', icon: TrendingUp },
-    { key: 'users', label: 'User Engagement', icon: Target },
-    { key: 'efficiency', label: 'Efficiency Gain', icon: Zap },
-    { key: 'market', label: 'Market Reach', icon: Sparkles }
+    { key: 'revenue', label: 'Revenue Growth', icon: 'TrendingUp' },
+    { key: 'users', label: 'User Engagement', icon: 'Target' },
+    { key: 'efficiency', label: 'Efficiency Gain', icon: 'Zap' },
+    { key: 'market', label: 'Market Reach', icon: 'Sparkles' }
   ];
   
   const baseFeatures = [
-    { key: 'ai', icon: Cpu, text: "AI-Powered Solutions" },
-    { key: 'support', icon: Clock, text: "24/7 Support" },
-    { key: 'security', icon: Shield, text: "Enterprise Security" },
-    { key: 'scale', icon: TrendingUp, text: "Scalable Solutions" },
-    { key: 'analytics', icon: Zap, text: "Real-time Analytics" },
-    { key: 'integration', icon: Infinity, text: "Custom Integration" }
+    { key: 'ai', icon: 'Cpu', text: "AI-Powered Solutions" },
+    { key: 'support', icon: 'Clock', text: "24/7 Support" },
+    { key: 'security', icon: 'Shield', text: "Enterprise Security" },
+    { key: 'scale', icon: 'TrendingUp', text: "Scalable Solutions" },
+    { key: 'analytics', icon: 'Zap', text: "Real-time Analytics" },
+    { key: 'integration', icon: 'Infinity', text: "Custom Integration" }
   ];
   
   const baseSocialPlatforms = [
-    { name: "Instagram", icon: Instagram, growth: "+89%", value: "1.2M" },
-    { name: "Facebook", icon: Facebook, growth: "+45%", value: "850K" },
-    { name: "Twitter", icon: Twitter, growth: "+67%", value: "450K" },
-    { name: "LinkedIn", icon: Linkedin, growth: "+112%", value: "320K" },
-    { name: "YouTube", icon: Youtube, growth: "+156%", value: "980K" }
+    { name: "Instagram", icon: 'Instagram', growth: "+89%", value: "1.2M" },
+    { name: "Facebook", icon: 'Facebook', growth: "+45%", value: "850K" },
+    { name: "Twitter", icon: 'Twitter', growth: "+67%", value: "450K" },
+    { name: "LinkedIn", icon: 'Linkedin', growth: "+112%", value: "320K" },
+    { name: "YouTube", icon: 'Youtube', growth: "+156%", value: "980K" }
   ];
   
   const baseTransformationAreas = [
     {
       id: 'digital',
       title: 'Digital Transformation',
-      icon: Smartphone,
+      icon: 'Smartphone',
       description: 'Modernize your operations with cutting-edge digital solutions',
       features: ['Cloud Migration', 'Automation Systems', 'Digital Workflows', 'Mobile Solutions'],
       impact: '65% efficiency boost'
@@ -42,7 +43,7 @@ import {
     {
       id: 'process',
       title: 'Process Optimization',
-      icon: Zap,
+      icon: 'Zap',
       description: 'Streamline operations and eliminate bottlenecks',
       features: ['Workflow Analysis', 'Bottleneck Removal', 'Quality Control', 'Continuous Improvement'],
       impact: '45% cost reduction'
@@ -50,7 +51,7 @@ import {
     {
       id: 'data',
       title: 'Data & Analytics',
-      icon: BarChart3,
+      icon: 'BarChart3',
       description: 'Leverage data for strategic decision making',
       features: ['Real-time Analytics', 'Predictive Insights', 'Dashboard Reporting', 'Data Visualization'],
       impact: '89% better decisions'
@@ -58,7 +59,7 @@ import {
     {
       id: 'customer',
       title: 'Customer Experience',
-      icon: Users,
+      icon: 'Users',
       description: 'Transform customer interactions and satisfaction',
       features: ['360° Customer View', 'Personalization', 'Support Automation', 'Feedback Systems'],
       impact: '72% satisfaction increase'
@@ -90,10 +91,10 @@ import {
         ctaPrimary: 'Get Free Consultation',
         ctaSecondary: 'Watch Demo',
         growthOptions: [
-          { key: 'revenue', value: '35%', label: 'Crop Yield', icon: TrendingUp },
-          { key: 'users', value: '67%', label: 'Farm Efficiency', icon: Target },
-          { key: 'efficiency', value: '52%', label: 'Resource Optimization', icon: Zap },
-          { key: 'market', value: '89%', label: 'Market Reach', icon: Sparkles }
+          { key: 'revenue', value: '35%', label: 'Crop Yield', icon: 'TrendingUp' },
+          { key: 'users', value: '67%', label: 'Farm Efficiency', icon: 'Target' },
+          { key: 'efficiency', value: '52%', label: 'Resource Optimization', icon: 'Zap' },
+          { key: 'market', value: '89%', label: 'Market Reach', icon: 'Sparkles' }
         ]
       },
       growthStats: {
@@ -207,10 +208,10 @@ import {
         ctaPrimary: 'Start Free Trial',
         ctaSecondary: 'Book Demo',
         growthOptions: [
-          { key: 'revenue', value: '45%', label: 'Membership Growth', icon: TrendingUp },
-          { key: 'users', value: '78%', label: 'Client Retention', icon: Target },
-          { key: 'efficiency', value: '63%', label: 'Operational Efficiency', icon: Zap },
-          { key: 'market', value: '92%', label: 'Online Presence', icon: Sparkles }
+          { key: 'revenue', value: '45%', label: 'Membership Growth', icon: 'TrendingUp' },
+          { key: 'users', value: '78%', label: 'Client Retention', icon: 'Target' },
+          { key: 'efficiency', value: '63%', label: 'Operational Efficiency', icon: 'Zap' },
+          { key: 'market', value: '92%', label: 'Online Presence', icon: 'Sparkles' }
         ]
       },
       growthStats: {
