@@ -102,7 +102,7 @@ const ServiceDetailContent = ({ post, serviceSchema, data }: ServiceDetailConten
   <span className="font-bold text-gray-700 dark:text-gray-300">✓ Verified Service</span>
   <span className="font-bold text-gray-700 dark:text-gray-300">⚡ 24hr Response</span>
   <span className="font-bold text-gray-700 dark:text-gray-300">⭐ 4.9 Rating</span>
-  <span className="font-bold text-gray-700 dark:text-gray-300">🎯 150+ Projects</span>
+  <span className="font-bold text-gray-700 dark:text-gray-300">🎯 100+ Projects</span>
   <span className="font-bold text-gray-700 dark:text-gray-300">🏆 5+ Years</span>
 </div>
 
