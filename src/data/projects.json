@@ -2,51 +2,17 @@
   "projects": [
     {
       "id": 1,
-      "slug": "autobizgpt",
-      "name": "AutoBizGPT",
-      "title": "AutoBizGPT",
-      "description": "Your Personal Business Consultant Powered by AI",
+      "slug": "opsmind",
+      "name": "OpsMind",
+      "title": "OpsMind – AI-Powered Operations & Workflow Intelligence",
+      "description": "Built an AI-powered internal operations assistant that acts as an intelligence layer over daily workflows. OpsMind analyzes tasks, tickets, and updates to provide operational clarity, detect bottlenecks, suggest priorities, and generate SOPs for startups, agencies, and remote teams.",
       "details": [
-        "AI-powered business consulting platform",
-        "Real-time market analysis and insights",
-        "Custom business strategy recommendations",
-        "Automated financial forecasting",
-        "Competitive analysis tools",
-        "Business growth optimization"
-      ],
-      "image": "/images/project/project-1/1.jpeg",
-      "imageUrl": "/images/project/1.jpeg",
-      "images": [
-        "/images/project/project-1/1.jpeg",
-        "/images/project/project-1/2.jpeg",
-        "/images/project/project-1/3.jpeg"
-      ],
-      "tags": ["E-commerce", "React", "Node.js", "AI", "Business Intelligence"],
-      "lightAccent": "bg-gradient-to-r from-purple-500 to-pink-500",
-      "darkAccent": "bg-gradient-to-r from-purple-400 to-pink-400",
-      "demoUrl": "https://autobizgpt.demo",
-      "repoUrl": "https://github.com/yourusername/autobizgpt",
-      "techStack": [
-        { "name": "React", "icon": "FaReact" },
-        { "name": "Node.js", "icon": "FaNodeJs" },
-        { "name": "TensorFlow", "icon": "SiTensorflow" },
-        { "name": "MongoDB", "icon": "SiMongodb" },
-        { "name": "AWS", "icon": "SiAmazon" },
-        { "name": "Docker", "icon": "SiDocker" }
-      ]
-    },
-    {
-      "id": 2,
-      "slug": "ai-tutor",
-      "name": "AI Tutor",
-      "title": "AI Tutor – Personalized Study Companion for Students (K-12 & College)",
-      "description": "Built an AI-powered tutoring platform that adapts to each student's pace, explains concepts step-by-step, and generates personalized quizzes based on past performance. Designed to support both independent learners and integration with school platforms like Moodle or Google Classroom.",
-      "details": [
-        "Adaptive AI tutoring using GPT-4",
-        "Quiz generation aligned with learning history",
-        "Concept explanations with curriculum-aware logic (RAG)",
-        "Student progress tracking and feedback",
-        "Optional LMS integrations (Moodle, Google Classroom)"
+        "Automated analysis of tasks, tickets, and internal updates",
+        "Daily and weekly operational summaries for founders and managers",
+        "Workflow bottleneck and delay detection",
+        "AI-driven priority and next-action recommendations",
+        "SOP generation from repeated operational workflows",
+        "Natural language Q&A over internal company data"
       ],
       "image": "/images/project/project-2/1.jpeg",
       "imageUrl": "/images/project/2.jpg",
@@ -55,22 +21,105 @@
         "/images/project/project-2/2.jpeg",
         "/images/project/project-2/3.jpeg"
       ],
-      "tags": ["AI", "Education", "GPT-4", "RAG", "LMS Integration"],
-      "lightAccent": "bg-gradient-to-r from-blue-500 to-teal-400",
-      "darkAccent": "bg-gradient-to-r from-blue-400 to-teal-300",
-      "demoUrl": "https://ai-tutor.demo",
-      "repoUrl": "https://github.com/yourusername/ai-tutor",
+      "tags": [
+        "AI",
+        "Operations",
+        "Workflow Intelligence",
+        "LLMs",
+        "Automation",
+        "Internal Tools"
+      ],
+      "lightAccent": "bg-gradient-to-r from-blue-600 to-cyan-400",
+      "darkAccent": "bg-gradient-to-r from-blue-500 to-cyan-300",
+      "demoUrl": "https://opsmind.demo",
+      "repoUrl": "https://github.com/yourusername/opsmind",
       "techStack": [
-        { "name": "LangChain", "icon": "FaLink" },
-        { "name": "Artificial Intelligence (AI)", "icon": "FaBrain" },
-        { "name": "Retrieval-Augmented Generation (RAG)", "icon": "FaSearch" },
-        { "name": "Next.js", "icon": "SiNextdotjs" },
-        { "name": "Amazon Web Services (AWS)", "icon": "SiAmazon" },
-        { "name": "PostgreSQL", "icon": "SiPostgresql" }
+        { "name": "OpenAI GPT (ChatGPT API)", "icon": "FaBrain" },
+        { "name": "Python (FastAPI)", "icon": "SiFastapi" },
+        { "name": "Vector Database (FAISS / Pinecone)", "icon": "FaDatabase" },
+        { "name": "PostgreSQL / Firebase", "icon": "SiPostgresql" },
+        { "name": "Workflow APIs & Webhooks", "icon": "FaProjectDiagram" },
+        { "name": "AWS / Azure", "icon": "SiAmazon" }
+      ]
+    },
+    
+    {
+      "id": 2,
+      "slug": "conversai",
+      "name": "ConversAI",
+      "title": "ConversAI – AI-Powered Voice Automation Assistant",
+      "description": "Built an AI-powered voice automation system capable of handling real-time phone conversations, understanding user intent, triggering backend workflows, and integrating with CRMs and email systems. Designed to help businesses scale communication without increasing human support staff.",
+      "details": [
+        "Real-time inbound call handling with natural voice conversations",
+        "Intent understanding and context-aware dialogue using GPT",
+        "Backend function calling and workflow automation",
+        "Automated email notifications and appointment booking",
+        "Conversation memory and contextual awareness",
+        "Call logging and CRM/database integration"
+      ],
+      "image": "/images/project/project-3/1.jpeg",
+      "imageUrl": "/images/project/3.jpg",
+      "images": [
+        "/images/project/project-3/1.jpeg",
+        "/images/project/project-3/2.jpeg",
+        "/images/project/project-3/3.jpeg"
+      ],
+      "tags": [
+        "AI",
+        "Voice AI",
+        "Automation",
+        "LLMs",
+        "Customer Support",
+        "Conversational AI"
+      ],
+      "lightAccent": "bg-gradient-to-r from-purple-500 to-indigo-400",
+      "darkAccent": "bg-gradient-to-r from-purple-400 to-indigo-300",
+      "demoUrl": "https://conversai.demo",
+      "repoUrl": "https://github.com/yourusername/conversai",
+      "techStack": [
+        { "name": "OpenAI GPT (ChatGPT API)", "icon": "FaBrain" },
+        { "name": "Speech-to-Text (Whisper / Deepgram)", "icon": "FaMicrophone" },
+        { "name": "Text-to-Speech (ElevenLabs / Azure TTS)", "icon": "FaVolumeUp" },
+        { "name": "Python (FastAPI / Flask)", "icon": "SiFastapi" },
+        { "name": "PostgreSQL / Firebase", "icon": "SiPostgresql" },
+        { "name": "AWS / Azure", "icon": "SiAmazon" }
       ]
     },
     {
       "id": 3,
+      "slug": "buyblend",
+      "name": "BuyBlend",
+      "title": "BuyBlend – Ethical Handcrafted Jewelry E-commerce",
+      "description": "An online e-commerce platform offering ethically handcrafted jewelry including gold plated earrings, oxidized pendants, rings, and combo collections with sustainable packaging and free delivery options. Based in Indore, India. :contentReference[oaicite:1]{index=1}",
+      "details": [
+        "Premium handcrafted jewelry products",
+        "Ethically sourced materials and sustainable practices",
+        "Free delivery over minimum order value",
+        "Easy returns and exchange policies",
+        "Curated collections with modern and traditional designs",
+        "Customer loyalty and wishlist features"
+      ],
+      "image": "/images/project/project-3/1.png",
+      "imageUrl": "/images/project/project-3/1.png",
+      "images": [
+        "/images/project/project-3/1.png",
+        "/images/project/project-3/2.png",
+        "/images/project/project-3/3.png"
+      ],
+      "tags": ["E-commerce", "Jewelry", "Ethical", "Fashion"],
+      "lightAccent": "bg-gradient-to-r from-gold-500 to-rose-500",
+      "darkAccent": "bg-gradient-to-r from-gold-400 to-rose-400",
+      "demoUrl": "https://buyblend.in",
+      "repoUrl": "",
+      "techStack": [
+        { "name": "Next.js", "icon": "SiNextdotjs" },
+        { "name": "Stripe", "icon": "SiStripe" },
+        { "name": "AWS", "icon": "SiAmazon" },
+        { "name": "MongoDB", "icon": "SiMongodb" }
+      ]
+    },
+    {
+      "id": 4,
       "slug": "best-rudraksha",
       "name": "Best Rudraksha",
       "title": "Best Rudraksha",
@@ -83,15 +132,15 @@
         "Customer loyalty program",
         "Secure payment gateway"
       ],
-      "image": "/images/project/project-3/1.png",
-      "imageUrl": "/images/project/3.png",
+      "image": "/images/project/project-4/1.png",
+      "imageUrl": "/images/project/project-4/1.png",
       "images": [
-        "/images/project/project-3/1.png",
-        "/images/project/project-3/2.png",
-        "/images/project/project-3/3.png"
+        "/images/project/project-4/1.png",
+        "/images/project/project-4/2.png",
+        "/images/project/project-4/3.png"
       ],
       "tags": ["Security", "E-commerce"],
-      "light": "bg-gradient-to-r from-amber-500 to-red-400",
+      "lightAccent": "bg-gradient-to-r from-amber-500 to-red-400",
       "darkAccent": "bg-gradient-to-r from-amber-400 to-orange-400",
       "demoUrl": "https://best-rudraksha.demo",
       "repoUrl": "https://github.com/yourusername/best-rudraksha",
@@ -104,8 +153,9 @@
         { "name": "Redis", "icon": "SiRedis" }
       ]
     },
+   
     {
-      "id": 4,
+      "id": 5,
       "slug": "mindsync-ai",
       "name": "MindSync AI",
       "title": "MindSync AI – Workflow Support Tool for Therapists & Counselors",
@@ -117,12 +167,12 @@
         "Risk marker detection (non-diagnostic)",
         "Ready for integration with platforms like Athena, PracticeBetter, and SimplePractice"
       ],
-      "image": "/images/project/project-4/2.jpeg",
-      "imageUrl": "/images/project/4.png",
+      "image": "/images/project/project-5/2.jpeg",
+      "imageUrl": "/images/project/5.png",
       "images": [
-        "/images/project/project-4/2.jpeg",
-        "/images/project/project-4/1.jpeg",
-        "/images/project/project-4/3.jpeg"
+        "/images/project/project-5/2.jpeg",
+        "/images/project/project-5/1.jpeg",
+        "/images/project/project-5/3.jpeg"
       ],
       "tags": ["Artificial Intelligence (AI)", "LangChain", "LLM", "RAG", "Next.js", "PostgreSQL"],
       "lightAccent": "bg-gradient-to-r from-rose-500 to-red-500",
