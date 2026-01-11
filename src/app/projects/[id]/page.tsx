@@ -3,6 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
+import Link from 'next/link';
 import { notFound, useParams } from 'next/navigation';
 import projectsData from '@/data/projects.json';
 import {
@@ -109,7 +110,7 @@ export default function ProjectPage() {
           transition={{ duration: 0.6 }}
           className="mb-8 md:mb-12"
         >
-          <a 
+          <Link 
             href="/projects" 
             className="inline-flex items-center gap-2 text-sm text-slate-600 dark:text-slate-400 hover:text-amber-600 dark:hover:text-amber-400 transition-colors group"
           >
@@ -117,7 +118,7 @@ export default function ProjectPage() {
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
             </svg>
             Back to Projects
-          </a>
+          </Link>
         </motion.div>
 
         {/* Hero Section - Left Aligned */}
@@ -431,12 +432,12 @@ export default function ProjectPage() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
               </a>
-              <a
+              <Link
                 href="/projects"
                 className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-full font-semibold border border-white/20 hover:bg-white/20 transition-all duration-300"
               >
                 View More Projects
-              </a>
+              </Link>
             </div>
           </div>
         </motion.div>

@@ -2,7 +2,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useCallback } from "react";
 import ThemeToggler from "./ThemeToggler";
 
 // Define the shape of menu items
@@ -29,17 +29,17 @@ const Header: React.FC = () => {
 
   // Sticky navbar state
   const [sticky, setSticky] = useState<boolean>(false);
-  const handleStickyNavbar = () => {
+  const handleStickyNavbar = useCallback(() => {
     setSticky(window.scrollY >= 80);
     if (navbarOpen) {
       closeNavbar(); // Close navbar on scroll
     }
-  };
+  }, [navbarOpen]);
 
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
     return () => window.removeEventListener("scroll", handleStickyNavbar);
-  }, [navbarOpen]);
+  }, [handleStickyNavbar]);
 
   // Submenu state
   const [openIndex, setOpenIndex] = useState<number>(-1);
