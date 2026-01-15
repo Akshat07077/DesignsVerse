@@ -14,12 +14,12 @@
         "SOP generation from repeated operational workflows",
         "Natural language Q&A over internal company data"
       ],
-      "image": "/images/project/project-1/1.jpeg",
-      "imageUrl": "/images/project/project-1/1.jpeg",
+      "image": "/images/project/project-1/1.png",
+      "imageUrl": "/images/project/project-1/1.png",
       "images": [
-        "/images/project/project-1/1.jpeg",
-        "/images/project/project-1/2.jpeg",
-        "/images/project/project-1/3.jpeg"
+        "/images/project/project-1/1.png",
+        "/images/project/project-1/2.png",
+        "/images/project/project-1/3.png"
       ],
       "tags": [
         "AI",
@@ -121,9 +121,9 @@
     {
       "id": 4,
       "slug": "best-rudraksha",
-      "name": "Best Rudraksha",
-      "title": "Best Rudraksha",
-      "description": "E-commerce platform for selling Rudraksha",
+      "name": "Best Rudraksha - Sacred Beads Store",
+      "title": "Best Rudraksha - Sacred Beads Store",
+      "description": "Premium spiritual e-commerce platform for authentic, lab-certified Rudraksha beads and malas, designed to help users easily discover, verify, and purchase the right Rudraksha for their spiritual and astrological needs",
       "details": [
         "Secure e-commerce platform",
         "Product authentication system",
@@ -168,7 +168,7 @@
         "Ready for integration with platforms like Athena, PracticeBetter, and SimplePractice"
       ],
       "image": "/images/project/project-5/2.jpeg",
-      "imageUrl": "/images/project/5.png",
+      "imageUrl": "/images/project/project-5/1.jpeg",
       "images": [
         "/images/project/project-5/2.jpeg",
         "/images/project/project-5/1.jpeg",
